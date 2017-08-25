@@ -1,0 +1,115 @@
+doctype html
+html.no-js(lang='en')
+    head
+        meta(charset='UTF-8')
+        meta(name='viewport', content='width=device-width, initial-scale=1')
+        title jalofernández design
+        meta(name='description', content='')
+        meta(name='keywords', content='')
+        meta(name='author', content='@jalofernandez')
+        meta(name='robots', content='index, follow, archive')
+        meta(name='generator', content='html5, css3, nodejs, less, pug')
+        meta(name='google', content='nositelinkssearchbox')
+        link(href='https://fonts.googleapis.com/css?family=Roboto:400,500|Roboto+Mono', rel='stylesheet')
+        link(href='//upplication.github.io/icons/upplication-icons.css', rel='stylesheet', type='text/css')
+        link(rel='stylesheet', type='text/css', href='css/normalize.css')
+        link(rel='stylesheet', type='text/css', href='css/common.css')
+        link(rel='stylesheet', type='text/css', href='css/demo.css')
+        link(rel='stylesheet', type='text/css', href='css/pieces.css')
+        link(rel='stylesheet', type='text/css', href='sponsor/pater.css')
+        script.
+            document.documentElement.className = 'js';
+    body
+        svg.hidden
+            //
+              todo: remove this Crodrops Header
+              <symbol id="icon-arrow" viewBox="0 0 24 24">
+              <title>arrow</title>
+              <polygon points="6.3,12.8 20.9,12.8 20.9,11.2 6.3,11.2 10.2,7.2 9,6 3.1,12 9,18 10.2,16.8 "/>
+              </symbol>
+              <symbol id="icon-drop" viewBox="0 0 24 24">
+              <title>drop</title>
+              <path d="M12,21c-3.6,0-6.6-3-6.6-6.6C5.4,11,10.8,4,11.4,3.2C11.6,3.1,11.8,3,12,3s0.4,0.1,0.6,0.3c0.6,0.8,6.1,7.8,6.1,11.2C18.6,18.1,15.6,21,12,21zM12,4.8c-1.8,2.4-5.2,7.4-5.2,9.6c0,2.9,2.3,5.2,5.2,5.2s5.2-2.3,5.2-5.2C17.2,12.2,13.8,7.3,12,4.8z"/><path d="M12,18.2c-0.4,0-0.7-0.3-0.7-0.7s0.3-0.7,0.7-0.7c1.3,0,2.4-1.1,2.4-2.4c0-0.4,0.3-0.7,0.7-0.7c0.4,0,0.7,0.3,0.7,0.7C15.8,16.5,14.1,18.2,12,18.2z"/>
+              </symbol>
+            symbol#icon-menu(viewbox='0 0 24 24')
+                title menu
+                path(d='M23.8,6H0.1V3h23.7C23.8,3,23.8,6,23.8,6z M23.8,10.5H0.1v3h23.7C23.8,13.5,23.8,10.5,23.8,10.5z M24,18H10v3h14V18z')
+            symbol#icon-menu-alt(viewbox='0 0 24 24')
+                title menu alt
+                path(d='M10.4,6H0V3h10.4C10.4,3,10.4,6,10.4,6z M10.4,10.5H0v3h10.4C10.4,13.5,10.4,10.5,10.4,10.5z M15.1,18H9v3h6.1V18z M23.4,6H13V3h10.4C23.4,3,23.4,6,23.4,6z M23.4,10.5H13v3h10.4C23.4,13.5,23.4,10.5,23.4,10.5z M23.5,18h-6.1v3h6.1V18z')
+        main.old-crt-effect
+            .pieces(style='background-image: url(img/normal.jpg)', data-img-alt='url(img/alt.jpg)', data-img-code='url(img/code.jpg)')
+            .overlay.overlay--hidden
+            .content
+                .content__inner
+                    .content__top
+                        h2.title
+                            span.title__inner.mode.mode--design(data-switch='', data-glitch='') @jalofernandez
+                        .controls
+                            //
+                              todo: remove this Crodrops Links
+                              <a class="codrops-icon codrops-icon--prev" href="https://tympanus.net/Development/GridLoadingAnimations/" title="Previous Demo"><svg class="icon icon--arrow"><use xlink:href="#icon-arrow"></use></svg></a>
+                              <a class="codrops-icon codrops-icon--drop" href="https://tympanus.net/codrops/?p=30725" title="Back to the article"><svg class="icon icon--drop"><use xlink:href="#icon-drop"></use></svg></a>
+                            a.icon.icon-twitter(href='', target='_blank', title='')
+                            a.icon.icon-instagram(href='', target='_blank', title='')
+                            a.icon.icon-linkedin(href='', target='_blank', title='')
+                            a.icon.icon-facebook(href='', target='_blank', title='')
+                            a.icon.icon-github(href='', target='_blank', title='')
+                            a.icon.icon-email(href='', target='_blank', title='')
+                            button.btn.btn--menu.mode.mode--design(data-switch='')
+                                svg.icon--svg.icon--menu
+                                    use(xlink:href='#icon-menu')
+                                svg.icon--svg.icon--menu-alt
+                                    use(xlink:href='#icon-menu-alt')
+                    h1.glitch(data-text='graphic designer') graphic designer
+                    .menu
+                        ul.menu__inner
+                            li.menu__item
+                                a.menu__link(data-switch='') _as graphic designer:
+                            li.menu__item
+                                a.menu__link.glitch(href='gallery.html', data-text='layout', data-switch='') layout
+                            li.menu__item
+                                a.menu__link.glitch(href='gallery.html', data-text='photography', data-switch='') photography
+                            li.menu__item
+                                a.menu__link.glitch(href='gallery.html', data-text='illustration', data-switch='') illustration
+                            li.menu__item
+                                a.menu__link.glitch(href='gallery.html', data-text='textile', data-switch='') textile
+                            li.menu__item
+                                a.menu__link.glitch(href='gallery.html', data-text='graphisms', data-switch='') graphisms
+                    .menu.menu--code
+                        ul.menu__inner
+                            li.menu__item
+                                a.menu__link(data-switch='') _as UX/UI & web developer:
+                            li.menu__item
+                                a.menu__link.glitch(href='https://www.upplication.com/en/', target='_blank', title='Upplication® App builder. Create the app for your business, no coding required, fast and simple. Android and iOS app', data-text='Upplication', data-switch='') Upplication
+                            li.menu__item
+                                a.menu__link.glitch(href='https://www.knowers.com/', target='_blank', title='Knowers is the largest source of Experts, Professionals and Specialists Worlwide', data-text='Knowers, ltd.', data-switch='') Knowers, ltd.
+                            li.menu__item
+                                a.menu__link.glitch(href='http://proyectogastronomix.org/', target='_blank', title='Gastronomix es un proyecto social gratuito de cocina, gastronomía creativa y reciclaje personal. Organizado por J.P. Morgan, Basque Culinary Center, La Casa y el Mundo y Fundación Tomillo', data-text='Gastronomix', data-switch='') Gastronomix
+                            li.menu__item
+                                a.menu__link.glitch(href='http://lfcabogados.com/', target='_blank', title='LFC Abogados y Economistas expertos en Compliance penal. Asesoramos en materia jurídico penal preventiva.', data-text='LFC; Abogados y Economistas', data-switch='') LFC; Abogados y Economistas
+                            li.menu__item
+                                a.menu__link.glitch(href='http://peluqueriacanessa.com/', target='_blank', title='Canessa ofrece servicios de peluquería y belleza canina y felina con cortes de pelo comerciales y de exposición. Servicio de autolavado y de un completo SPA canino.', data-text='Canessa', data-switch='') Canessa
+                            li.menu__item
+                                a.menu__link.glitch(href='https://github.com/jalofernandez', target='_blank', title='@jalofernandez GitHub account', data-text='> ...take a look on Github', data-switch='') > ...take a look on Github
+                    .content__bottom
+                        .switch.mode.mode--design
+                            a.switch__item.switch__item--current Designer
+                            a.switch__item
+                                span.mode.mode--design(data-switch='', data-glitch='') Coder
+                        .link-wrap
+                            a.contact-link.mode.mode--design(data-switch='', data-glitch='') _work with me
+                    //
+                      todo: remove this Sponsor section
+                      <a class="pater mode mode--design" href="http://synd.co/2p3Fi7n">
+                      <img src="sponsor/hired.png" class="pater__img" />
+                      <h2 class="pater__title" aria-label="Hired">​Get Your Next Tech Job<br> Faster. Get Hired</h2>
+                      <p class="pater__desc">On Hired, companies apply to you. Get in front of 6,000 innovative companies, looking to hire great talent.</p>
+                      </a>
+                // /content__inner
+            // /content
+            .loading
+        script(src='js/imagesloaded.pkgd.min.js')
+        script(src='js/anime.min.js')
+        script(src='js/charming.min.js')
+        script(src='js/main.js')

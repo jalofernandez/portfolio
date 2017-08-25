@@ -1,5 +1,5 @@
 /*
- * Dependencias
+ * Dependencies
  */
 var gulp = require('gulp'),
     concat = require('gulp-concat'),
@@ -13,17 +13,17 @@ var gulp = require('gulp'),
     sitemap = require('gulp-sitemap');
 
 /*
- * Configuración de la tarea 'default' (gulp) last step to publish
+ * Config 'default' (gulp) last step to publish
  */
 gulp.task('default', ['sitemap', 'css']);
 
 /*
- * Configuración de la tarea 'deploy' (gulp) first step: compile
+ * Config 'deploy' (gulp) first step: compile
  */
 gulp.task('deploy', ['js', 'jade', 'less', 'img']);
 
 /*
- * Configuración de la tarea 'js' --> gulp-concat + gulp-uglify (gulp js)
+ * Config 'js' --> gulp-concat + gulp-uglify (gulp js)
  */
 gulp.task('js', function () {
     gulp.src('js/sources/*.js')
@@ -33,7 +33,7 @@ gulp.task('js', function () {
 });
 
 /*
- * Configuración de la tarea 'less' --> gulp-less (gulp less)
+ * Config 'less' --> gulp-less (gulp less)
  */
 gulp.task('less', function () {
     return gulp.src('./less/**/[^_]*.less')
@@ -44,7 +44,7 @@ gulp.task('less', function () {
 });
 
 /*
- * Configuración de la tarea 'css' --> gulp-clean-css (gulp css)
+ * Config 'css' --> gulp-clean-css (gulp css)
  */
 gulp.task('css', function() {
     return gulp.src('css/sources/main.css')
@@ -53,7 +53,7 @@ gulp.task('css', function() {
 });
 
 /*
- * Configuración de la tarea 'img' --> gulp-imagemin (gulp img)
+ * Config 'img' --> gulp-imagemin (gulp img)
  */
 gulp.task('img', function () {
     return gulp.src(['img/sources/**/*.*'])
@@ -62,7 +62,7 @@ gulp.task('img', function () {
 });
 
 /*
- * Configuración de la tarea 'jade' --> gulp-jade (gulp jade)
+ * Config 'jade' --> gulp-jade (gulp jade)
  */
 gulp.task('jade', function () {
     var YOUR_LOCALS = {};
@@ -74,7 +74,7 @@ gulp.task('jade', function () {
 });
 
 /*
- * Configuración de la tarea 'sitemap' --> gulp-sitemap (gulp sitemap)
+ * Config 'sitemap' --> gulp-sitemap (gulp sitemap)
  */
 gulp.task('sitemap', function () {
     gulp.src('*.html', {
