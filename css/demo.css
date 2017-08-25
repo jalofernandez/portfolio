@@ -95,7 +95,7 @@ a:focus {
 	font-size: 1em;
 	margin: 0 0 0 2em;
 	padding: 0;
-	color: #585656;
+	color: #888;
 }
 
 .btn--menu .icon--menu-alt,
@@ -178,8 +178,22 @@ h1 {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	width: 9em;
+	/* width: 9em; */
 	margin: 1em 0 0 auto;
+}
+
+.controls a.icon {
+	font-size: 25px;
+	padding: 0 5px;
+    color: #888;
+}
+
+.controls a.icon:hover {
+    color: #f4692a;
+}
+
+.controls a.icon.icon-instagram {
+    padding: 0 10px;
 }
 
 .codrops-icon {
@@ -256,7 +270,7 @@ h1 {
 	display: inline-block;
 	margin: 0 1.5em 0 0;
 	padding: 0 0 0.15em;
-	color: #585656;
+	color: #888;
 }
 
 .switch__item span {
