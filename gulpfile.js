@@ -9,8 +9,16 @@ var gulp = require('gulp'),
     less = require('gulp-less'),
     gulpIgnore  = require('gulp-ignore'),
     path = require('path'),
-    jade = require('gulp-jade'),
+    pug = require('gulp-pug'),
+    data = require('gulp-data'),
+    fs = require('fs'),
     sitemap = require('gulp-sitemap');
+
+/* todo: add the following dependencies:
+var minifycss = require('gulp-minify-css'),
+    fs = require('fs');
+*/
+
 
 /*
  * Config 'default' (gulp) last step to publish
@@ -20,7 +28,7 @@ gulp.task('default', ['sitemap', 'css']);
 /*
  * Config 'deploy' (gulp) first step: compile
  */
-gulp.task('deploy', ['js', 'jade', 'less', 'img']);
+gulp.task('deploy', ['js', 'pug', 'less', 'img']);
 
 /*
  * Config 'js' --> gulp-concat + gulp-uglify (gulp js)
@@ -47,7 +55,7 @@ gulp.task('less', function () {
  * Config 'css' --> gulp-clean-css (gulp css)
  */
 gulp.task('css', function() {
-    return gulp.src('css/sources/main.css')
+    return gulp.src('css/sources/*.css')
         .pipe(cleanCSS({compatibility: 'ie8'}))
         .pipe(gulp.dest('css/dist'));
 });
@@ -62,13 +70,15 @@ gulp.task('img', function () {
 });
 
 /*
- * Config 'jade' --> gulp-jade (gulp jade)
+ * Configuración de la tarea 'pug' --> gulp-pug (gulp pug)
  */
-gulp.task('jade', function () {
-    var YOUR_LOCALS = {};
-    gulp.src('./templates/*.jade')
-        .pipe(jade({
-            locals: YOUR_LOCALS
+gulp.task('pug', function() {
+    return gulp.src('./templates/*.pug')
+        .pipe(data(function(file) {
+            return JSON.parse(fs.readFileSync('./locales/lang_es.json'))
+        }))
+        .pipe(pug({
+            pretty: true
         }))
         .pipe(gulp.dest('./'));
 });

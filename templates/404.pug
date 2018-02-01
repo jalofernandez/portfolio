@@ -1,25 +1,22 @@
 doctype html
 html.no-js(lang='en')
     head
-        meta(charset='UTF-8')
-        meta(name='viewport', content='width=device-width, initial-scale=1')
+        meta(http-equiv='Content-Type', content='text/html; charset=UTF-8')
+        meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no')
         title jalofernández page not found
-        meta(name='description', content='')
-        meta(name='keywords', content='')
-        meta(name='author', content='@jalofernandez')
-        meta(name='robots', content='index, follow, archive')
-        meta(name='generator', content='html5, css3, nodejs, less, pug')
-        meta(name='google', content='nositelinkssearchbox')
-        link(rel="manifest", href="manifest.json")
-        link(href='https://fonts.googleapis.com/css?family=Roboto:400,500|Roboto+Mono', rel='stylesheet')
-        link(rel='stylesheet', type='text/css', href='css/common.css')
-        link(rel='stylesheet', type='text/css', href='css/404.css')
+        meta(name='description', content='Página de error del portfolio y CV personal de Javier Lorenzo Fernández (aka jalofernandez). Diseñador gráfico y desarrollador web así como maravillosa persona.')
+        meta(name='keywords', content='diseño, diseño web, dibujo, maquetación, arte, creatividad, artes finales, design, web desing')
+        //- (common) Metatags in current view
+        include includes/metatags
+        //- custom styles for current view
+        link(rel='stylesheet', type='text/css', href='css/dist/404.css')
+
     body.old-crt-effect
         main
             .overlay.overlay--hidden
             .zeppelin
                 img(src='img/zeppelin.png', alt='', title='')
-                // All (body) FOCUS
+                //- All (body) FOCUS
                 .big-focus.focus-01
                 .thinny-light.neon-frame-violet.neon-001
                 .thinny-light.neon-frame-orange.neon-001
@@ -27,7 +24,7 @@ html.no-js(lang='en')
                 .thinny-light.neon-frame-violet.neon-002
                 .thinny-light.neon-frame-pink.neon-002
                 .big-focus.focus-03
-                // All (stroke) position LIGHTS
+                //- All (stroke) position LIGHTS
                 span.thinny-light.position-lights.light-01
                 span.thinny-light.position-lights.light-02
                 span.thinny-light.position-lights.light-03
@@ -46,7 +43,7 @@ html.no-js(lang='en')
                 span.thinny-light.position-lights.light-16
                 span.thinny-light.position-lights.light-17
                 span.thinny-light.position-lights.light-18
-                // All (screen frame) LIGHTS
+                //- All (screen frame) LIGHTS
                 .thinny-light.neon-frame-pink.neon-003
                 .thinny-light.neon-frame-orange.neon-003
                 span.thinny-light.neon-frame-pink.neon-01
@@ -76,7 +73,7 @@ html.no-js(lang='en')
                 span.thinny-light.neon-frame-orange.neon-18
                 span.thinny-light.neon-frame-green.neon-18
             .line-anim
-            //
+            //-
               todo: remove this section if you wasn´t it here!
               to apply a typical blink effect in old CRT monitors
               <div class="flicker"></div>

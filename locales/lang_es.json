@@ -1,0 +1,61 @@
+{
+  "index": {
+    "author": "@jalofernandez",
+    "career": "graphic designer",
+    "designer": {
+      "title": "_as graphic designer:",
+      "layout": {
+        "title": "layout"
+      },
+      "photography": {
+        "title": "photography"
+      },
+      "illustration": {
+        "title": "illustration"
+      },
+      "textile": {
+        "title": "textile"
+      },
+      "graphisms": {
+        "title": "graphisms"
+      }
+    },
+    "coder": {
+      "title": "_as UX/UI & web developer:",
+      "upplication": {
+        "title": "Upplication"
+      },
+      "knowers": {
+        "title": "Knowers, ltd."
+      },
+      "gastronomix": {
+        "title": "Gastronomix"
+      },
+      "lfcabogados": {
+        "title": "LFC; Abogados y Economistas"
+      },
+      "canessa": {
+        "title": "Canessa"
+      },
+      "others": {
+        "title": "> ...take a look on Github"
+      }
+    },
+    "footer": {
+      "designer": "Designer",
+      "coder": "Coder",
+      "work": "_work with me"
+    }
+  },
+  "gallery": {
+    "funnel": {
+      "all": "All",
+      "home": "Home >>",
+      "layout": "layout",
+      "photography": "photography",
+      "illustration": "illustration",
+      "textile": "textile",
+      "graphisms": "graphisms"
+    }
+  }
+}

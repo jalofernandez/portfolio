@@ -1,32 +1,93 @@
 *,
 *::after,
 *::before {
-	-webkit-box-sizing: border-box;
-	box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-	font-family: 'Roboto',sans-serif;
-	color: #585656;
-	background: #232323;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+  font-family: 'Roboto',sans-serif;
+  color: #585656;
+  background: #232323;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
+/* -- GLITCH EFFECT (punk links distortion) -- */
 
 .menu__link {
-	display: inline-block;
-	font-family: 'Roboto mono',sans-serif;
+  display: inline-block;
+  font-family: 'Roboto mono',sans-serif;
+
+  &:hover {
+    color: #f7f7f7;
+  }
 }
 
-.menu--code .menu__link:hover {
-	color: #f7f7f7;
+.menu--code {
+  .menu__link {
+    &.glitch {
+      &::after,
+      &::before {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.menu__link {
+  &.glitch {
+    &::after,
+    &::before {
+      opacity: 0;
+    }
+    &::after {
+      left: 2px;
+    }
+    &::before {
+      left: -2px;
+    }
+  }
+  // to animate links
+  &:hover {
+    &.glitch {
+      &::after,
+      &::before {
+        opacity: 1;
+      }
+    }
+  }
 }
 
 /* to apply font noise & distortion effect in all menus */
 /* h1 inherit classes */
 .glitch {
   position: relative;
+
+  &::after {
+    content: attr(data-text);
+    position: absolute;
+    left: 58px;
+    text-shadow: -1px 0 red;
+    top: 0;
+    color: #eee;
+    background: #232323;
+    overflow: hidden;
+    clip: rect(0, 900px, 0, 0);
+    animation: noise-anim 2s infinite linear alternate-reverse;
+  }
+  &::before {
+    content: attr(data-text);
+    position: absolute;
+    left: 54px;
+    text-shadow: 1px 0 blue;
+    top: 0;
+    color: #f7f7f7;
+    background: #232323;
+    overflow: hidden;
+    clip: rect(0, 900px, 0, 0);
+    animation: noise-anim-2 3s infinite linear alternate-reverse;
+  }
 }
 
 @keyframes noise-anim {
@@ -95,40 +156,6 @@ body {
   }
 }
 
-.menu--code .menu__link.glitch::after,
-.menu--code .menu__link.glitch::before {
-	width: 100%;
-}
-
-.menu__link.glitch::after,
-.menu__link.glitch::before {
-	opacity: 0;
-}
-.menu__link.glitch::after {
-	left: 2px;
-}
-.menu__link.glitch::before {
-	left: -2px;
-}
-
-.menu__link:hover.glitch::after,
-.menu__link:hover.glitch::before {
-	opacity: 1;
-}
-
-.glitch::after {
-  content: attr(data-text);
-  position: absolute;
-  left: 58px;
-  text-shadow: -1px 0 red;
-  top: 0;
-  color: #eee;
-  background: #232323;
-  overflow: hidden;
-  clip: rect(0, 900px, 0, 0);
-  animation: noise-anim 2s infinite linear alternate-reverse;
-}
-
 @keyframes noise-anim-2 {
   0% {
     clip: rect(55px, 9999px, 23px, 0);
@@ -195,65 +222,53 @@ body {
   }
 }
 
-.glitch::before {
-  content: attr(data-text);
-  position: absolute;
-  left: 54px;
-  text-shadow: 1px 0 blue;
-  top: 0;
-  color: #f7f7f7;
-  background: #232323;
-  overflow: hidden;
-  clip: rect(0, 900px, 0, 0);
-  animation: noise-anim-2 3s infinite linear alternate-reverse;
+/* -- to apply old CRT screen effect to main element -- */
+.old-crt-effect {
+  &::after {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(18, 16, 16, 0.1);
+    opacity: 0;
+    z-index: 2;
+    pointer-events: none;
+  }
+  &::before {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+    z-index: 2;
+    background-size: 100% 2px, 3px 100%;
+    pointer-events: none;
+  }
 }
 
-/* ... ANIMATIONS ... */
-
-/* to apply old CRT screen effect to main element */
-.old-crt-effect::after {
-  content: " ";
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  background: rgba(18, 16, 16, 0.1);
-  opacity: 0;
-  z-index: 2;
-  pointer-events: none;
-}
-
-.old-crt-effect::before {
-  content: " ";
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
-  z-index: 2;
-  background-size: 100% 2px, 3px 100%;
-  pointer-events: none;
-}
-
-.overlay::after,
-.flicker::after {
-	/* to apply classical CRT screen blink (only shown in "coder" view) */
-  content: " ";
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  background: rgba(18, 16, 16, 0.1);
-  opacity: 0;
-  z-index: 2;
-  pointer-events: none;
-	animation: flicker 300ms infinite;
+.overlay,
+.flicker {
+  &::after {
+    /* to apply classical CRT screen blink (only shown in "coder" view) */
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(18, 16, 16, 0.1);
+    opacity: 0;
+    z-index: 2;
+    pointer-events: none;
+    animation: flicker 300ms infinite;
+  }
 }
 
 @keyframes flicker {
