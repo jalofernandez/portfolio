@@ -87,9 +87,9 @@ gulp.task('pug', function() {
  * Config 'sitemap' --> gulp-sitemap (gulp sitemap)
  */
 gulp.task('sitemap', function () {
-    gulp.src('*.html', {
-        read: false
-    })
+    gulp.src('public/**/*.html', {
+          read: false
+      })
         .pipe(sitemap({
             siteUrl: 'http://www.jalofernandez.com',
             changefreq: 'weekly',
