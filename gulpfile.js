@@ -36,7 +36,7 @@ gulp.task('deploy', ['js', 'pug', 'less', 'img']);
  */
 gulp.task('js', function () {
     gulp.src('js/sources/*.js')
-        .pipe(concat('scripts.js'))
+        .pipe(concat('scripts.min.js'))
         .pipe(uglify())
         .pipe(gulp.dest('./public/js'))
 });
