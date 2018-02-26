@@ -4,6 +4,7 @@
 var gulp = require('gulp'),
     concat = require('gulp-concat'),
     uglify = require('gulp-uglify'),
+    minifycss = require('gulp-minify-css'),
     cleanCSS = require('gulp-clean-css'),
     imagemin = require('gulp-imagemin'),
     less = require('gulp-less'),
