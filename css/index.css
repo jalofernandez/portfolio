@@ -577,6 +577,7 @@ a:focus {
   margin: 0 0 0 2em;
   padding: 0;
   color: #888;
+  display: none;
 }
 .btn--menu .icon--menu-alt,
 .btn--menu.mode--code .icon--menu {
@@ -814,35 +815,59 @@ section {
 }
 
 */
-/* ... RESPONSIVE BEHAVIOUR ... */
+/* -- RESPONSIVE BEHAVIOUR -- */
 @media screen and (max-height: 38.5em) {
   .menu {
     text-align: left;
   }
 }
-/* 768px (breakpoint) */
+/* Tablets 768px (breakpoint) */
 @media screen and (max-width: 40em) {
   .content__top {
-    font-size: 0.5em;
+    font-size: 0.6em;
   }
   .content__bottom {
     font-size: 0.85em;
   }
+  .menu__item:not(:last-child) {
+    margin: 0 0 1em 0;
+  }
   .menu {
-    font-size: 1em;
+    font-size: 1.2em;
   }
   .content__inner {
     padding: 1em 1em 0;
   }
   h1 {
     padding-left: 25px;
-    font-size: .92em;
+    font-size: 1.14em;
   }
   .glitch::after {
     left: 27px;
   }
   .glitch::before {
     left: 23px;
+  }
+}
+/* Mobile (breakpoint) */
+@media screen and (max-width: 540px) {
+  .content__top {
+    flex-flow: column;
+  }
+  .controls {
+    margin: 1em 1em 2em;
+    order: 1;
+  }
+  .title {
+    order: 2;
+  }
+  h1 {
+    margin: 1em auto;
+    text-align: center;
+  }
+  .glitch::after,
+  .glitch::before {
+    left: 130px;
   }
 }
 .pieces {

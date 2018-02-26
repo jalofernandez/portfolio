@@ -53,7 +53,7 @@
         <div class="content__inner">
           <div class="content__top">
             <h2 class="title"><span class="title__inner mode mode--design" data-switch="" data-glitch="">@jalofernandez</span></h2>
-            <div class="controls"><a class="icon icon-twitter" href="" target="_blank" rel="noopener noreferrer" title=""></a><a class="icon icon-instagram" href="" target="_blank" rel="noopener noreferrer" title=""></a><a class="icon icon-linkedin" href="" target="_blank" rel="noopener noreferrer" title=""></a><a class="icon icon-facebook" href="" target="_blank" rel="noopener noreferrer" title=""></a><a class="icon icon-github" href="" target="_blank" rel="noopener noreferrer" title=""></a><a class="icon icon-email" href="" target="_blank" rel="noopener noreferrer" title=""></a>
+            <div class="controls"><a class="icon icon-twitter" href="https://twitter.com/jalofernandez" target="_blank" rel="noopener noreferrer" title="Ver cuenta de Twitter de @jalofernandez"></a><a class="icon icon-instagram" href="https://www.instagram.com/jalofernandez/?ref=badge" target="_blank" rel="noopener noreferrer" title="Ver perfil de Instagram de @jalofernandez"></a><a class="icon icon-linkedin" href="http://es.linkedin.com/in/javierlorenzofernandez" target="_blank" rel="noopener noreferrer" title="Ver perfil de LinkedIn de @jalofernandez"></a><a class="icon icon-facebook" href="https://www.facebook.com/jalofernandez?ref=tn_tnmn" target="_blank" rel="noopener noreferrer" title="Ver perfil de Facebook de @jalofernandez"></a><a class="icon icon-github" href="https://github.com/jalofernandez" target="_blank" rel="noopener noreferrer" title="Ver perfil de Github de @jalofernandez"></a><a class="icon icon-mail" href="mailto:jalofernandez@gmail.com" target="_blank" rel="noopener noreferrer" title="Enviar email a @jalofernandez"></a>
               <button class="btn btn--menu mode mode--design" type="button" value="text" name="all" aria-label="open" data-switch="">
                 <svg class="icon--svg icon--menu">
                   <use xlink:href="#icon-menu"></use>
@@ -94,7 +94,21 @@
       </div>
       <div class="loading"></div>
     </main>
-    <script src="js/scripts.js"></script>
+    <script src="js/scripts.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="sw.js"></script>
+    <script>
+      if ('serviceWorker' in navigator) {
+          window.addEventListener('load', function () {
+              navigator.serviceWorker.register('/sw.js').then(function (registration) {
+                  // Registration was successful :)
+                  console.log('ServiceWorker registration successful with scope: ', registration.scope);
+              }).catch(function (err) {
+                  // Registration failed :(
+                  console.log('ServiceWorker registration failed: ', err);
+              });
+          });
+      }
+    </script>
   </body>
 </html>
