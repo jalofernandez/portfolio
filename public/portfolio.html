@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html class="no-js" lang="es">
+  <head>
+    <meta name="encoding" charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>jalofernández Portfolio</title>
+    <meta name="description" content="Galería de trabajos del portfolio y CV personal de Javier Lorenzo Fernández (aka jalofernandez). Diseñador gráfico y desarrollador web frontend de los que ya quedan pocos.">
+    <meta name="keywords" content="diseño, diseño web, frontend, UX, UI, design, web desing, dibujo, maquetación, arte, creatividad, artes finales, diseño gráfico madrid, webmaster madrid, webmaster, diseñador web, diseñador web madrid, creatividad, inspiración, inspiration, creative">
+    <meta name="author" content="@jalofernandez">
+    <meta name="copyright" content="jalofernandez">
+    <meta name="robots" content="index, follow, archive">
+    <meta name="generator" content="html5, css3, nodejs, yarn, less, pug, gulp, jQuery, JavaScript">
+    <meta name="google" content="nositelinkssearchbox">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="lang" content="es-ES">
+    <meta name="Classification" content="Portfolio">
+    <meta name="subject" content="Personal Portfolio and Resume">
+    <meta name="rating" content="General">
+    <meta name="coverage" content="Worldwide">
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#333333">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="sitemap" href="sitemap.xml" title="Mapa general del website">
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-113398984-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-113398984-1');
+    </script>
+    <link rel="stylesheet" type="text/css" href="css/portfolio.css">
+  </head>
+  <body>
+    <main>
+      <div class="toolbar mb2 mt2">
+        <button class="btn fil-cat menu__link glitch" type="button" value="text" name="all" aria-labelledby="all" data-rel="all" data-text="All">All</button>
+        <button class="btn fil-cat menu__link glitch" type="button" value="text" name="all" aria-labelledby="all" data-rel="bcards" data-text="layout">layout</button>
+        <button class="btn fil-cat menu__link glitch" type="button" value="text" name="all" aria-labelledby="all" data-rel="web" data-text="photography">photography</button>
+        <button class="btn fil-cat menu__link glitch" type="button" value="text" name="all" aria-labelledby="all" data-rel="flyers" data-text="illustration">illustration</button>
+        <button class="btn fil-cat menu__link glitch" type="button" value="text" name="all" aria-labelledby="all" data-rel="bcards" data-text="textile">textile</button>
+        <button class="btn fil-cat menu__link glitch" type="button" value="text" name="all" aria-labelledby="all" data-rel="web" data-text="graphisms">graphisms</button><a class="btn menu__link glitch" href="index.html" data-text="Home &gt;&gt;">Home &gt;&gt;</a>
+      </div>
+      <div style="clear:both;"></div>
+      <div id="portfolio">
+        <div class="tile scale-anm web all"><img src="img/portfolio/300x234.jpg" alt="" title=""></div>
+        <div class="tile scale-anm bcards all"><img src="img/portfolio/bcard_upplication_01.jpg" alt="Upplication business card side A" title="Upplication business card side A"></div>
+        <div class="tile scale-anm bcards all"><img src="img/portfolio/bcard_upplication_02.jpg" alt="Upplication Developers business card" title="Upplication Developers business card"></div>
+        <div class="tile scale-anm web all"><img src="img/portfolio/300x201.jpg" alt="" title=""></div>
+        <div class="tile scale-anm web all"><img src="img/portfolio/300x270.jpg" alt="" title=""></div>
+        <div class="tile scale-anm flyers all"><img src="img/portfolio/350x190.png" alt="" title=""></div>
+        <div class="tile scale-anm web all"><img src="img/portfolio/200x290.png" alt="" title=""></div>
+        <div class="tile scale-anm flyers all"><img src="img/portfolio/300x300.jpg" alt="" title=""></div>
+        <div class="tile scale-anm web all"><img src="img/portfolio/200x290.png" alt="" title=""></div>
+        <div class="tile scale-anm flyers all"><img src="img/portfolio/200x290.png" alt="" title=""></div>
+        <div class="tile scale-anm web all"><img src="img/portfolio/300x300-2.jpg" alt="" title=""></div>
+        <div class="tile scale-anm bcards all"><img src="img/portfolio/300x300-3.jpg" alt="" title=""></div>
+        <div class="tile scale-anm web all"><img src="img/portfolio/350x190.png" alt="" title=""></div>
+        <div class="tile scale-anm bcards all"><img src="img/portfolio/300x201.jpg" alt="" title=""></div>
+        <div class="tile scale-anm web all"><img src="img/portfolio/300x300.jpg" alt="" title=""></div>
+        <div class="tile scale-anm web all"><img src="img/portfolio/350x190.png" alt="" title=""></div>
+        <div class="tile scale-anm bcards all"><img src="img/portfolio/200x290.png" alt="" title=""></div>
+      </div>
+      <div style="clear:both;"></div>
+    </main>
+    <script src="js/jquery.min.js"></script>
+    <script>
+      $(function () {
+          var selectedClass = "";
+          $(".fil-cat").click(function () {
+              selectedClass = $(this).attr("data-rel");
+              $("#portfolio").fadeTo(100, 0.1);
+              $("#portfolio div").not("." + selectedClass).fadeOut().removeClass('scale-anm');
+              setTimeout(function () {
+                  $("." + selectedClass).fadeIn().addClass('scale-anm');
+                  $("#portfolio").fadeTo(300, 1);
+              }, 300);
+          });
+      });
+    </script>
+  </body>
+</html>

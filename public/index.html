@@ -1,15 +1,22 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en">
+<html class="no-js" lang="es">
   <head>
-    <meta charset="UTF-8">
+    <meta name="encoding" charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>jalofernández design</title>
-    <meta name="description" content="Portfolio y CV personal de Javier Lorenzo Fernández (aka jalofernandez). Diseñador gráfico y desarrollador web así como maravillosa persona.">
-    <meta name="keywords" content="diseño, diseño web, dibujo, maquetación, arte, creatividad, artes finales, design, web desing">
+    <meta name="description" content="Portfolio y CV personal de Javier Lorenzo Fernández (aka jalofernandez). Diseñador gráfico y desarrollador web frontend así como maravillosa persona.">
+    <meta name="keywords" content="diseño, diseño web, frontend, UX, UI, design, web desing, dibujo, maquetación, arte, creatividad, artes finales, diseño gráfico madrid, webmaster madrid, webmaster, diseñador web, diseñador web madrid, creatividad, inspiración, inspiration, creative">
     <meta name="author" content="@jalofernandez">
+    <meta name="copyright" content="jalofernandez">
     <meta name="robots" content="index, follow, archive">
-    <meta name="generator" content="html5, css3, nodejs, less, pug">
+    <meta name="generator" content="html5, css3, nodejs, yarn, less, pug, gulp, jQuery, JavaScript">
     <meta name="google" content="nositelinkssearchbox">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="lang" content="es-ES">
+    <meta name="Classification" content="Portfolio">
+    <meta name="subject" content="Personal Portfolio and Resume">
+    <meta name="rating" content="General">
+    <meta name="coverage" content="Worldwide">
     <link rel="manifest" href="manifest.json">
     <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
@@ -17,7 +24,6 @@
     <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#333333">
     <meta name="theme-color" content="#ffffff">
     <link rel="sitemap" href="sitemap.xml" title="Mapa general del website">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500|Roboto+Mono" rel="stylesheet">
     <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-113398984-1"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -41,14 +47,14 @@
       </symbol>
     </svg>
     <main class="old-crt-effect">
-      <div class="pieces" style="background-image: url(img/normal.jpg);" data-img-alt="url(img/alt.jpg)" data-img-code="url(img/code.jpg)"></div>
+      <div class="pieces" style="background-image: url(img/index/normal.jpg);" data-img-alt="url(img/index/alt.jpg)" data-img-code="url(img/index/code.jpg)"></div>
       <div class="overlay overlay--hidden"></div>
       <div class="content">
         <div class="content__inner">
           <div class="content__top">
             <h2 class="title"><span class="title__inner mode mode--design" data-switch="" data-glitch="">@jalofernandez</span></h2>
             <div class="controls"><a class="icon icon-twitter" href="" target="_blank" rel="noopener noreferrer" title=""></a><a class="icon icon-instagram" href="" target="_blank" rel="noopener noreferrer" title=""></a><a class="icon icon-linkedin" href="" target="_blank" rel="noopener noreferrer" title=""></a><a class="icon icon-facebook" href="" target="_blank" rel="noopener noreferrer" title=""></a><a class="icon icon-github" href="" target="_blank" rel="noopener noreferrer" title=""></a><a class="icon icon-email" href="" target="_blank" rel="noopener noreferrer" title=""></a>
-              <button class="btn btn--menu mode mode--design" data-switch="">
+              <button class="btn btn--menu mode mode--design" type="button" value="text" name="all" aria-label="open" data-switch="">
                 <svg class="icon--svg icon--menu">
                   <use xlink:href="#icon-menu"></use>
                 </svg>
@@ -62,11 +68,11 @@
           <div class="menu">
             <ul class="menu__inner">
               <li class="menu__item"><a class="menu__link" data-switch="">_as graphic designer:</a></li>
-              <li class="menu__item"><a class="menu__link glitch" href="gallery.html" data-text="layout" data-switch="" title="">layout</a></li>
-              <li class="menu__item"><a class="menu__link glitch" href="gallery.html" data-text="photography" data-switch="" title="">photography</a></li>
-              <li class="menu__item"><a class="menu__link glitch" href="gallery.html" data-text="illustration" data-switch="" title="">illustration</a></li>
-              <li class="menu__item"><a class="menu__link glitch" href="gallery.html" data-text="textile" data-switch="" title="">textile</a></li>
-              <li class="menu__item"><a class="menu__link glitch" href="gallery.html" data-text="graphisms" data-switch="" title="">graphisms</a></li>
+              <li class="menu__item"><a class="menu__link glitch" href="portfolio.html" data-text="layout" data-switch="" title="Ver Portfolio completo de @jalofernandez">layout</a></li>
+              <li class="menu__item"><a class="menu__link glitch" href="portfolio.html" data-text="photography" data-switch="" title="Ver Portfolio completo de @jalofernandez">photography</a></li>
+              <li class="menu__item"><a class="menu__link glitch" href="portfolio.html" data-text="illustration" data-switch="" title="Ver Portfolio completo de @jalofernandez">illustration</a></li>
+              <li class="menu__item"><a class="menu__link glitch" href="portfolio.html" data-text="textile" data-switch="" title="Ver Portfolio completo de @jalofernandez">textile</a></li>
+              <li class="menu__item"><a class="menu__link glitch" href="portfolio.html" data-text="graphisms" data-switch="" title="Ver Portfolio completo de @jalofernandez">graphisms</a></li>
             </ul>
           </div>
           <div class="menu menu--code">
@@ -88,9 +94,7 @@
       </div>
       <div class="loading"></div>
     </main>
-    <script src="js/imagesloaded.pkgd.min.js"></script>
-    <script src="js/anime.min.js"></script>
-    <script src="js/charming.min.js"></script>
+    <script src="js/scripts.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>
