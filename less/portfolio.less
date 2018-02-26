@@ -227,17 +227,25 @@ a.btn {
     -moz-column-count: 4;
     column-count: 4;
   }
+  /* 820px / almost Tablet (breakpoint) */
+  @media screen and (max-width: 51.250em) {
+    margin-top: 6em;
+  }
   /* 768px (breakpoint) */
   @media screen and (max-width: 48em) {
     -webkit-column-count: 2;
     -moz-column-count: 2;
     column-count: 2;
   }
-  /* 600px (breakpoint) */
+  /* 600px / smartphone (breakpoint) */
   @media screen and (max-width: 37.5em) {
     -webkit-column-count: 1;
     -moz-column-count: 1;
     column-count: 1;
+  }
+  /* 490px / small smartphone (breakpoint) */
+  @media screen and (max-width: 30.625em) {
+    margin-top: 8em;
   }
 }
 
