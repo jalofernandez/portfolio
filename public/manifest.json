@@ -1,6 +1,8 @@
 {
-  "short_name": "jalofernandez",
+  "short_name": "jalofdez",
+  "description": "Portfolio y CV personal de Javier Lorenzo Fernández",
   "name": "jalofernandez designer portfolio",
+  "orientation": "portrait",
   "icons": [
     {
       "src": "favicon/android-chrome-48x48.png",
