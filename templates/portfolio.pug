@@ -1,0 +1,86 @@
+doctype html
+html.no-js(lang='es')
+    head
+        meta(name='encoding', charset='UTF-8')
+        meta(name='viewport', content='width=device-width, initial-scale=1')
+        title jalofernández Portfolio
+        meta(name='description', content='Galería de trabajos del portfolio y CV personal de Javier Lorenzo Fernández (aka jalofernandez). Diseñador gráfico y desarrollador web frontend de los que ya quedan pocos.')
+        meta(name='keywords', content='diseño, diseño web, frontend, UX, UI, design, web desing, dibujo, maquetación, arte, creatividad, artes finales, diseño gráfico madrid, webmaster madrid, webmaster, diseñador web, diseñador web madrid, creatividad, inspiración, inspiration, creative')
+        //- (common) Metatags in current view
+        include includes/metatags
+        //- custom styles for current view
+        link(rel='stylesheet', type='text/css', href='css/portfolio.css')
+    body
+        main
+            .toolbar.mb2.mt2
+                button.btn.fil-cat.menu__link.glitch(type='button', value='text', name='all', aria-labelledby='all', data-rel='all', data-text='All')
+                    | #{portfolio.funnel.all}
+                button.btn.fil-cat.menu__link.glitch(type='button', value='text', name='all', aria-labelledby='all', data-rel='bcards', data-text='layout')
+                    | #{portfolio.funnel.layout}
+                button.btn.fil-cat.menu__link.glitch(type='button', value='text', name='all', aria-labelledby='all', data-rel='web', data-text='photography')
+                    | #{portfolio.funnel.photography}
+                button.btn.fil-cat.menu__link.glitch(type='button', value='text', name='all', aria-labelledby='all', data-rel='flyers', data-text='illustration')
+                    | #{portfolio.funnel.illustration}
+                button.btn.fil-cat.menu__link.glitch(type='button', value='text', name='all', aria-labelledby='all', data-rel='bcards', data-text='textile')
+                    | #{portfolio.funnel.textile}
+                button.btn.fil-cat.menu__link.glitch(type='button', value='text', name='all', aria-labelledby='all', data-rel='web', data-text='graphisms')
+                    | #{portfolio.funnel.graphisms}
+                a.btn.menu__link.glitch(href='index.html', data-text='Home >>')
+                    | #{portfolio.funnel.home}
+            div(style='clear:both;')
+            #portfolio
+                .tile.scale-anm.web.all
+                    img(src='img/portfolio/300x234.jpg', alt='', title='')
+                .tile.scale-anm.bcards.all
+                    img(src='img/portfolio/bcard_upplication_01.jpg', alt='Upplication business card side A', title='Upplication business card side A')
+                .tile.scale-anm.bcards.all
+                    img(src='img/portfolio/bcard_upplication_02.jpg', alt='Upplication Developers business card', title='Upplication Developers business card')
+                .tile.scale-anm.web.all
+                    img(src='img/portfolio/300x201.jpg', alt='', title='')
+                .tile.scale-anm.web.all
+                    img(src='img/portfolio/300x270.jpg', alt='', title='')
+                .tile.scale-anm.flyers.all
+                    img(src='img/portfolio/350x190.png', alt='', title='')
+                .tile.scale-anm.web.all
+                    img(src='img/portfolio/200x290.png', alt='', title='')
+                .tile.scale-anm.flyers.all
+                    img(src='img/portfolio/300x300.jpg', alt='', title='')
+                .tile.scale-anm.web.all
+                    img(src='img/portfolio/200x290.png', alt='', title='')
+                .tile.scale-anm.flyers.all
+                    img(src='img/portfolio/200x290.png', alt='', title='')
+                .tile.scale-anm.web.all
+                    img(src='img/portfolio/300x300-2.jpg', alt='', title='')
+                .tile.scale-anm.bcards.all
+                    img(src='img/portfolio/300x300-3.jpg', alt='', title='')
+                .tile.scale-anm.web.all
+                    img(src='img/portfolio/350x190.png', alt='', title='')
+                .tile.scale-anm.bcards.all
+                    img(src='img/portfolio/300x201.jpg', alt='', title='')
+                .tile.scale-anm.web.all
+                    img(src='img/portfolio/300x300.jpg', alt='', title='')
+                .tile.scale-anm.web.all
+                    img(src='img/portfolio/350x190.png', alt='', title='')
+                .tile.scale-anm.bcards.all
+                    img(src='img/portfolio/200x290.png', alt='', title='')
+            div(style='clear:both;')
+            //-
+              todo: to add "old fashion" computer blink effect!
+              <div class="flicker"></div>
+
+        //- jQuery v3.2.1
+        script(src='js/jquery.min.js')
+        //- custom javascript for current view
+        script.
+            $(function () {
+                var selectedClass = "";
+                $(".fil-cat").click(function () {
+                    selectedClass = $(this).attr("data-rel");
+                    $("#portfolio").fadeTo(100, 0.1);
+                    $("#portfolio div").not("." + selectedClass).fadeOut().removeClass('scale-anm');
+                    setTimeout(function () {
+                        $("." + selectedClass).fadeIn().addClass('scale-anm');
+                        $("#portfolio").fadeTo(300, 1);
+                    }, 300);
+                });
+            });
