@@ -35,8 +35,8 @@ gulp.task('deploy', ['js', 'pug', 'less', 'img']);
  * Config 'js' --> gulp-concat + gulp-uglify (gulp js)
  */
 gulp.task('js', function () {
-    gulp.src('js/*.js')
-        .pipe(concat('otherscripts.js'))
+    gulp.src('js/sources/*.js')
+        .pipe(concat('scripts.js'))
         .pipe(uglify())
         .pipe(gulp.dest('./public/js'))
 });
