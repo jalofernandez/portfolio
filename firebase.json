@@ -5,6 +5,17 @@
       "firebase.json",
       "**/.*",
       "**/node_modules/**"
-    ]
+    ],
+    "rewrites": [ {
+      "source": "**",
+      "destination": "/index.html"
+    } ],
+    "redirects": [ {
+      "source" : "https://jalofernandez.com/index.html",
+      "destination" : "https://jalofernandez.com/",
+      "type" : 302
+    } ],
+    "cleanUrls": true,
+    "trailingSlash": false
   }
 }
