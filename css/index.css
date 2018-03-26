@@ -474,6 +474,74 @@ body {
     opacity: 0.81776;
   }
 }
+/* ... LINE from Top to Bottom animation ... */
+.line-anim {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+.line-anim::before {
+  content: '';
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  height: 5px;
+  background: #fff;
+  background: linear-gradient(to bottom, rgba(255, 0, 0, 0) 0%, #fffafa 50%, rgba(255, 255, 255, 0.98) 51%, rgba(255, 0, 0, 0) 100%);
+  opacity: .1;
+  -webkit-animation: line-anim 5s linear infinite;
+  animation: line-anim 5s linear infinite;
+}
+.line-anim::after {
+  box-shadow: 0 2px 6px rgba(25, 25, 25, 0.2), inset 0 1px rgba(50, 50, 50, 0.1), inset 0 3px rgba(50, 50, 50, 0.05), inset 0 3px 8px rgba(64, 64, 64, 0.05), inset 0 -5px 10px rgba(25, 25, 25, 0.1);
+}
+@-webkit-keyframes line-anim {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: 100%;
+  }
+}
+@keyframes line-anim {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: 100%;
+  }
+}
+/* ... "Coming Soon" quote with glitch effect ... */
+.coming-soon {
+  width: 100%;
+  max-width: 300px;
+  text-align: center;
+  font-size: 2rem;
+  color: #29cc00;
+}
+.coming-soon .glitch::after {
+  left: 48px;
+  background: #030203;
+}
+.coming-soon .glitch::before {
+  left: 36px;
+  background: #030203;
+}
+/* ... "Social media" icons ... */
+.icon.icon-mail:before,
+.icon.icon-youtube:before {
+  position: relative;
+}
+.icon.icon-mail:before {
+  top: 4px;
+}
+.icon.icon-youtube:before {
+  top: 4px;
+  left: 3px;
+}
 main {
   display: flex;
   overflow: hidden;
@@ -517,6 +585,7 @@ a:focus {
   content: '- - -';
   font-family: 'Roboto Mono', monospace;
   font-size: 1.5em;
+  color: #f4692a;
   position: absolute;
   top: 0;
   left: 0;
@@ -525,6 +594,7 @@ a:focus {
   align-items: center;
   width: 100%;
   height: 100%;
+  -webkit-animation: animLoader 1s infinite alternate forwards;
   animation: animLoader 1s infinite alternate forwards;
 }
 @keyframes animLoader {

@@ -55,7 +55,12 @@
       "photography": "photography",
       "illustration": "illustration",
       "textile": "textile",
-      "graphisms": "graphisms"
+      "graphisms": "graphisms",
+      "web": "UX/UI/Web"
     }
+  },
+  "resume": {
+    "coming": "Coming Soon...!",
+    "back": "Volver a Index"
   }
 }

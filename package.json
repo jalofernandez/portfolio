@@ -1,6 +1,6 @@
 {
   "name": "portfolio",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "Portfolio template including landing page and filterable gallery for designers or web developers",
   "main": "gulpfile.js",
   "scripts": {

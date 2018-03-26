@@ -1,5 +1,6 @@
 @import '_vars';
 @import '_common';
+@import 'index';
 
 body {
   background-color: @bg-color;
@@ -18,6 +19,8 @@ main {
 .zeppelin {
   margin: 0;
   padding: 0;
+  max-width: 814px;
+  max-height: 501px;
   position: relative;
   top: 20%;
   left: 15%;
@@ -124,43 +127,43 @@ main {
   width: 15px;
   height: 15px;
   top: 260px;
-  right: 250px;
+  right: 9px;
 }
 .light-13 {
   width: 8px;
   height: 8px;
   top: 203px;
-  right: 282px;
+  right: 40px;
 }
 .light-14 {
   width: 8px;
   height: 8px;
   top: 252px;
-  right: 321px
+  right: 78px;
 }
 .light-15 {
   width: 8px;
   height: 8px;
   top: 308px;
-  right: 285px;
+  right: 42px;
 }
 .light-16 {
   width: 8px;
   height: 8px;
   top: 330px;
-  right: 300px;
+  right: 57px;
 }
 .light-17 {
   width: 8px;
   height: 8px;
   top: 365px;
-  right: 347px;
+  right: 103px;
 }
 .light-18 {
   width: 8px;
   height: 8px;
   top: 457px;
-  right: 314px;
+  right: 71px;
 }
 
 @-webkit-keyframes flash-1 {
@@ -482,46 +485,4 @@ main {
   height: 16px;
   top: 428px;
   left: 563px;
-}
-
-/* ... LINE from Top to Bottom animation ... */
-
-.line-anim {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 4100;
-
-  &::before {
-    content : '';
-    position : absolute;
-    top : 0px;
-    width : 100%;
-    height : 5px;
-    background : #fff;
-    background: linear-gradient(to bottom, rgba(255,0,0,0) 0%,rgba(255,250,250,1) 50%,rgba(255,255,255,0.98) 51%,rgba(255,0,0,0) 100%);
-    opacity : .1;
-    -webkit-animation: line-anim 5s linear infinite;
-    animation: line-anim 5s linear infinite;
-  }
-
-  &::after {
-    box-shadow: 0 2px 6px rgba(25,25,25,0.2),
-                inset 0 1px rgba(50,50,50,0.1),
-                inset 0 3px rgba(50,50,50,0.05),
-                inset 0 3px 8px rgba(64,64,64,0.05),
-                inset 0 -5px 10px rgba(25,25,25,0.1);
-  }
-}
-
-@-webkit-keyframes line-anim {
-  0%   { top: 0;}
-  100% { top: 100%;}
-}
-@keyframes line-anim {
-  0%   { top: 0;}
-  100% { top: 100%;}
 }
