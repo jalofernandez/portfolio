@@ -3,9 +3,9 @@ html.no-js(lang='es')
     head
         meta(name='encoding', charset='UTF-8')
         meta(name='viewport', content='width=device-width, initial-scale=1')
-        title jalofernández design webmaster diseño gráfico
+        title jalofernández design webmaster frontend diseño gráfico
         meta(name='description', content='Portfolio y CV personal de Javier Lorenzo Fernández (aka jalofernandez). Diseñador gráfico y desarrollador web frontend así como maravillosa persona.')
-        meta(name='keywords', content='diseño, diseño web, frontend, UX, UI, design, web desing, dibujo, maquetación, arte, creatividad, artes finales, diseño gráfico madrid, webmaster madrid, webmaster, diseñador web, diseñador web madrid, creatividad, inspiración, inspiration, creative')
+        //- meta(name='keywords', content='diseño, diseño web, frontend, UX, UI, design, web desing, dibujo, maquetación, arte, creatividad, artes finales, diseño gráfico madrid, webmaster madrid, webmaster, diseñador web, diseñador web madrid, creatividad, inspiración, inspiration, creative')
         link(rel='canonical', href='https://jalofernandez.com/')
         //- (common) Metatags in current view
         include includes/metatags
@@ -13,8 +13,16 @@ html.no-js(lang='es')
         link(href='//upplication.github.io/icons/upplication-icons.css', rel='stylesheet', type='text/css')
         //- custom styles for current view
         link(rel='stylesheet', type='text/css', href='css/index.css')
-        //-
-            link(rel='stylesheet', type='text/css', href='sponsor/pater.css')
+        //- Structured Data:
+        //- (Open Graph)
+        include open-graph/og-index
+        //- (Twitter cards)
+        include twitter-card/tw-index
+        //- (Schema)
+        include schema/schema-index
+
+        //- link(rel='stylesheet', type='text/css', href='sponsor/pater.css')
+
         script.
             document.documentElement.className = 'js';
     body
