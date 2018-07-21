@@ -1,11 +1,7 @@
 var CACHE_NAME = 'jalofernandez-cache';
 var urlsToCache = [
     '/',
-    '/index.html',
-    '/css/index.css',
-    '/css/portfolio.css',
     '/js/jquery.min.js',
-    '/js/main.js',
     '/js/scripts.min.js'
 ];
 
