@@ -2,7 +2,7 @@
 meta(name='author', content='@jalofernandez')
 meta(name='copyright', content='jalofernandez')
 meta(name='robots', content='index, follow, archive')
-meta(name='generator', content='html5, css3, nodejs, yarn, less, pug, gulp, jQuery, JavaScript')
+meta(name='generator', content='html5, css3, nodejs, yarn, pwa, less, pug, gulp, jQuery, javascript')
 meta(name='google', content='nositelinkssearchbox')
 meta(name='apple-mobile-web-app-capable', content='yes')
 meta(name='lang', content='es-ES')
@@ -10,15 +10,33 @@ meta(name='Classification', content='Portfolio')
 meta(name='subject', content='Personal Portfolio and Resume')
 meta(name='rating', content='General')
 meta(name='coverage', content='Worldwide')
-//- FAVICON
+//- MANIFEST and Browsers specs
 link(rel="manifest", href="manifest.json")
+//- FAVICON and (all devices) Icons
 link(rel="apple-touch-icon", sizes="180x180", href="favicon/apple-touch-icon.png")
+//- TODO: all the following images are needed!
+  link(rel='apple-touch-icon', href='/favicon/app-icon-57x57.png', sizes='57x57')
+  link(rel='apple-touch-icon', href='/favicon/app-icon-60x60.png', sizes='60x60')
+  link(rel='apple-touch-icon', href='/favicon/app-icon-72x72.png', sizes='72x72')
+  link(rel='apple-touch-icon', href='/favicon/app-icon-76x76.png', sizes='76x76')
+  link(rel='apple-touch-icon', href='/favicon/app-icon-114x114.png', sizes='114x114')
+  link(rel='apple-touch-icon', href='/favicon/app-icon-120x120.png', sizes='120x120')
+  link(rel='apple-touch-icon', href='/favicon/app-icon-144x144.png', sizes='144x144')
+  link(rel='apple-touch-icon', href='/favicon/app-icon-152x152.png', sizes='152x152')
+  link(rel='apple-touch-icon', href='/favicon/app-icon-180x180.png', sizes='180x180')
 link(rel="icon", type="image/png", sizes="32x32", href="favicon/favicon-32x32.png")
 link(rel="icon", type="image/png", sizes="16x16", href="favicon/favicon-16x16.png")
 //- Browsers Tabs
 link(rel="mask-icon", href="favicon/safari-pinned-tab.svg", color="#333333")
-//- to customize browsers top navbar
-meta(name="theme-color", content="#ffffff")
+//- to customize (all browsers) top navbar
+meta(name='theme-color', content='#f4692a')
+//- to Webkit (iOS Safari) browsers
+meta(name='apple-mobile-web-app-capable', content='yes')
+meta(name='apple-mobile-web-app-status-bar-style', content='black')
+meta(name='apple-mobile-web-app-title', content='@jalofernandez')
+//- to IE (windows phone) browsers
+meta(name='msapplication-TileImage', content='/src/images/icons/app-icon-144x144.png')
+meta(name='msapplication-TileColor', content='#232323')
 //- SiteMap
 link(rel='sitemap', href='sitemap.xml', title='Mapa general del website')
 //- Google Analytics track id

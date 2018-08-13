@@ -1,8 +1,8 @@
 {
+  "name": "@jalofernandez designer & web developer portfolio",
   "short_name": "jalofdez",
   "description": "Portfolio y CV personal de Javier Lorenzo Fernández",
-  "name": "jalofernandez designer portfolio",
-  "orientation": "portrait",
+  "orientation": "portrait-primary",
   "icons": [
     {
       "src": "favicon/android-chrome-48x48.png",
@@ -25,8 +25,11 @@
       "type": "image/png"
     }
   ],
-  "theme_color": "#ffffff",
-  "background_color": "#ffffff",
+  "theme_color": "#f4692a",
+  "background_color": "#232323",
   "display": "standalone",
-  "start_url": "index.html?launcher=true"
+  "start_url": "index.html?launcher=true",
+  "scope": ".",
+  "dir": "ltr",
+  "lang": "es-ES"
 }
