@@ -1,0 +1,50 @@
+//- All "modal dialogs" to load each big image modal...
+//- ...with SuperScale Effect when it loads
+
+//- 1.(mixin declaration) common "close" BTN
+mixin btn
+  button(data-text='X Close me!').btn.menu__link.glitch.js-modal-close X Close me!
+  
+//- 2. All modal dialogs with mixin BTN applied
+#modal-01.md-modal.md-effect-16
+  .md-content
+    img(src='img/portfolio/upp_ebook-movistar_img-promo.png',
+        alt='Upplication + Movistar eBook promo pic by @jalofernandez',
+        title='Upplication + Movistar eBook promo pic by @jalofernandez')
+    p Upplication + Movistar eBook promo pic
+    +btn
+    
+#modal-02.md-modal.md-effect-16
+  .md-content
+    img(src='img/portfolio/bcard_upplication_01.jpg',
+        alt='Upplication business card side A by @jalofernandez',
+        title='Upplication business card side A by @jalofernandez')
+    p Upplication corporate business card side A
+    +btn
+    
+#modal-03.md-modal.md-effect-16
+  .md-content
+    img(src='img/portfolio/bcard_upplication_02.jpg',
+        alt='Upplication business card side B by @jalofernandez',
+        title='Upplication business card side B by @jalofernandez')
+    p Upplication corporate business card side B
+    +btn
+    
+#modal-04.md-modal.md-effect-16
+  .md-content
+    img(src='img/portfolio/upp_pwa-infography_01.png',
+        alt='Upplication PWA infography layout by @jalofernandez',
+        title='Upplication PWA infography layout by @jalofernandez')
+    p Upplication PWA infography layout
+    +btn
+            
+#modal-05.md-modal.md-effect-16
+  .md-content
+    img(src='img/portfolio/app_sample-pic_restaurant-module.png',
+        alt='Upplication App (Restaurant module) by @jalofernandez',
+        title='Upplication App (Restaurant module) by @jalofernandez')
+    p Upplication App UX / UI of a Restaurant module
+    +btn
+    
+//- overlay (element) common in all Modals      
+.th-modal-overlay.flicker

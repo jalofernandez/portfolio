@@ -1,6 +1,17 @@
 /* -- COLOR vars -- */
-/* -- (Google Fonts) ROBOTO Regular & Monospace -- */
 @import url('https://fonts.googleapis.com/css?family=Roboto+Mono|Roboto:400,500');
+:root {
+  --color-designer-color: #29cc00;
+  --color-coder-color: #f4692a;
+  --color-white: #f1f1f1;
+  --color-black: #232323;
+  --color-dark-grey: #888888;
+  --color-bg-color: #030203;
+  --color-bg-overlay: rgba(35, 35, 35, 0.85);
+  --font-family-text: 'Roboto', sans-serif;
+  --font-family-links: 'Roboto mono', sans-serif;
+}
+/* -- (Google Fonts) ROBOTO Regular & Monospace -- */
 /* -- (common) -- */
 *,
 *::after,

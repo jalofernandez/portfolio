@@ -11,6 +11,11 @@ html.no-js(lang='es')
         //- custom styles for current view
         link(rel='stylesheet', type='text/css', href='css/portfolio.css')
     body
+        //- All "modal dialogs" to load each big image modal
+        //- IMP! We need modals just above main content page cause some CSS properties
+        include includes/modals
+        
+        //- main content
         main
             .toolbar.mb2.mt2
                 button.btn.fil-cat.menu__link.glitch(type='button', value='text', name='all', aria-labelledby='all', data-rel='all', data-text='All')
@@ -29,79 +34,113 @@ html.no-js(lang='es')
                     | #{portfolio.funnel.home}
             div(style='clear:both;')
             #portfolio
-                .tile.scale-anm.layout.all
-                    img(src='img/portfolio/upp_ebook-movistar_img-promo.png', alt='Upplication + Movistar eBook promo pic by @jalofernandez', title='Upplication + Movistar eBook promo pic by @jalofernandez')
-                .tile.scale-anm.layout.all
+                //- 1.(mixin declaration) common "overlay" Text
+                mixin overlay
+                  .overlay Click me to make me bigger
+                //- 2. Gallery image list with mixin applied
+                .tile.scale-anm.js-modal-trigger.layout.all(data-modal='modal-01')
+                    img(src='img/portfolio/upp_ebook-movistar_img-promo.png', alt='Upplication + Movistar eBook promo pic by @jalofernandez', title='Upplication + Movistar eBook promo pic by @jalofernandez') 
+                    +overlay
+                .tile.scale-anm.js-modal-trigger.layout.all(data-modal='modal-02')
                     img(src='img/portfolio/bcard_upplication_01.jpg', alt='Upplication business card side A by @jalofernandez', title='Upplication business card side A by @jalofernandez')
-                .tile.scale-anm.layout.all
+                    +overlay
+                .tile.scale-anm.js-modal-trigger.layout.all(data-modal='modal-03')
                     img(src='img/portfolio/bcard_upplication_02.jpg', alt='Upplication Developers business card by @jalofernandez', title='Upplication Developers business card by @jalofernandez')
-                .tile.scale-anm.layout.web.all
+                    +overlay
+                .tile.scale-anm.js-modal-trigger.layout.web.all(data-modal='modal-04')
                     img(src='img/portfolio/upp_pwa-infography_01.png', alt='Upplication PWA infography layout by @jalofernandez', title='Upplication PWA infography layout by @jalofernandez')
-                .tile.scale-anm.layout.web.all
+                    +overlay
+                .tile.scale-anm.js-modal-trigger.layout.web.all(data-modal='modal-05')
                     img(src='img/portfolio/app_sample-pic_restaurant-module.png', alt='Upplication App (Restaurant module) by @jalofernandez', title='Upplication App (Restaurant module) by @jalofernandez')
-                //-
-                    .tile.scale-anm.flyers.all
+                    +overlay
+                //- .tile.scale-anm.js-modal-triggerflyers.all
                         img(src='img/portfolio/350x190.png', alt='', title='')
-                .tile.scale-anm.layout.all
+                        +overlay
+                .tile.scale-anm.js-modal-triggerlayout.all(data-modal='modal-06')
                     img(src='img/portfolio/acens-upplication-acens_infografia-comercial_01.png', alt='Upplication + Acens infografía comercial by @jalofernandez', title='Upplication + Acens infografía comercial by @jalofernandez')
-                .tile.scale-anm.graph.draw.all
+                    +overlay
+                .tile.scale-anm.js-modal-triggergraph.draw.all(data-modal='modal-07')
                     img(src='img/portfolio/upp_san-valentin_pink-querubin.png', alt='Upplication Valentines Day promo artwork by @jalofernandez', title='Upplication Valentines Day promo artwork by @jalofernandez')
-                .tile.scale-anm.layout.all
+                    +overlay
+                .tile.scale-anm.js-modal-triggerlayout.all(data-modal='modal-08')
                     img(src='img/portfolio/acens-upplication-acens_infografia-comercial_02.png', alt='Upplication + Acens infografía comercial by @jalofernandez', title='Upplication + Acens infografía comercial by @jalofernandez')
-                .tile.scale-anm.layout.all
+                    +overlay
+                .tile.scale-anm.js-modal-triggerlayout.all(data-modal='modal-09')
                     img(src='img/portfolio/upp_ebook_conseguir-1000-descargas-tu-app.png', alt='Upplication eBook layout sample by @jalofernandez', title='Upplication eBook layout sample by @jalofernandez')
-                .tile.scale-anm.graph.draw.all
+                    +overlay
+                .tile.scale-anm.js-modal-triggergraph.draw.all(data-modal='modal-10')
                     img(src='img/portfolio/upp_sticker-promo_crea-tu-app.png', alt='Upplication promo sticker by @jalofernandez', title='Upplication promo sticker by @jalofernandez')
-                .tile.scale-anm.graph.draw.layout.all
+                    +overlay
+                .tile.scale-anm.js-modal-triggergraph.draw.layout.all(data-modal='modal-11')
                     img(src='img/portfolio/upp_promo_2017-02-27_hiring-back-dev.png', alt='Upplication backend developer to hire artwork by @jalofernandez', title='Upplication backend developer to hire artwork by @jalofernandez')
-                .tile.scale-anm.web.layout.all
+                    +overlay
+                .tile.scale-anm.js-modal-triggerweb.layout.all(data-modal='modal-12')
                     img(src='img/portfolio/app_sample-pic_mcommerce-module.png', alt='Upplication App (mCommerce module) by @jalofernandez', title='Upplication App (mCommerce module) by @jalofernandez')
-                .tile.scale-anm.web.layout.all
+                    +overlay
+                .tile.scale-anm.js-modal-triggerweb.layout.all(data-modal='modal-13')
                     img(src='img/portfolio/upp_customer-account_dashb.png', alt='Upplication to promo dashboard feature by @jalofernandez', title='Upplication to promo dashboard feature by @jalofernandez')
-                .tile.scale-anm.graph.draw.all
+                    +overlay
+                .tile.scale-anm.js-modal-triggergraph.draw.all(data-modal='modal-14')
                     img(src='img/portfolio/upp_iOS-template_promo.png', alt='Upplication to promo iOS Template by @jalofernandez', title='Upplication to promo iOS Template by @jalofernandez')
-                //-
-                    .tile.scale-anm.web.all
+                    +overlay
+                //- .tile.scale-anm.js-modal-triggerweb.all
                         img(src='img/portfolio/350x190.png', alt='', title='')
-                .tile.scale-anm.layout.graph.draw.all
+                        +overlay
+                .tile.scale-anm.js-modal-triggerlayout.graph.draw.all(data-modal='modal-15')
                     img(src='img/portfolio/upp_movistar_rollup.png', alt='Upplication + Movistar promo rollup by @jalofernandez', title='Upplication + Movistar promo rollup by @jalofernandez')
+                    +overlay
                 //- TODO: images gallery BASE
-                    .tile.scale-anm.web.all
+                    .tile.scale-anm.js-modal-triggerweb.all
                         img(src='img/portfolio/300x201.jpg', alt='', title='')
-                    .tile.scale-anm.web.all
+                        +overlay
+                    .tile.scale-anm.js-modal-triggerweb.all
                         img(src='img/portfolio/300x270.jpg', alt='', title='')
-                    .tile.scale-anm.flyers.all
+                        +overlay
+                    .tile.scale-anm.js-modal-triggerflyers.all
                         img(src='img/portfolio/350x190.png', alt='', title='')
-                    .tile.scale-anm.web.all
+                        +overlay
+                    .tile.scale-anm.js-modal-triggerweb.all
                         img(src='img/portfolio/200x290.png', alt='', title='')
-                    .tile.scale-anm.flyers.all
+                        +overlay
+                    .tile.scale-anm.js-modal-triggerflyers.all
                         img(src='img/portfolio/300x300.jpg', alt='', title='')
-                    .tile.scale-anm.web.all
+                        +overlay
+                    .tile.scale-anm.js-modal-triggerweb.all
                         img(src='img/portfolio/200x290.png', alt='', title='')
-                    .tile.scale-anm.flyers.all
+                        +overlay
+                    .tile.scale-anm.js-modal-triggerflyers.all
                         img(src='img/portfolio/200x290.png', alt='', title='')
-                    .tile.scale-anm.web.all
+                        +overlay
+                    .tile.scale-anm.js-modal-triggerweb.all
                         img(src='img/portfolio/300x300-2.jpg', alt='', title='')
-                    .tile.scale-anm.bcards.all
+                        +overlay
+                    .tile.scale-anm.js-modal-triggerbcards.all
                         img(src='img/portfolio/300x300-3.jpg', alt='', title='')
-                    .tile.scale-anm.web.all
+                        +overlay
+                    .tile.scale-anm.js-modal-triggerweb.all
                         img(src='img/portfolio/350x190.png', alt='', title='')
-                    .tile.scale-anm.bcards.all
+                        +overlay
+                    .tile.scale-anm.js-modal-triggerbcards.all
                         img(src='img/portfolio/300x201.jpg', alt='', title='')
-                    .tile.scale-anm.web.all
+                        +overlay
+                    .tile.scale-anm.js-modal-triggerweb.all
                         img(src='img/portfolio/300x300.jpg', alt='', title='')
-                    .tile.scale-anm.web.all
+                        +overlay
+                    .tile.scale-anm.js-modal-triggerweb.all
                         img(src='img/portfolio/350x190.png', alt='', title='')
-                    .tile.scale-anm.bcards.all
+                        +overlay
+                    .tile.scale-anm.js-modal-triggerbcards.all
                         img(src='img/portfolio/200x290.png', alt='', title='')
+                        +overlay
             div(style='clear:both;')
-            //-
-              todo: to add "old fashion" computer blink effect!
-              <div class="flicker"></div>
-
+            //- TODO: to add "old fashion" computer blink effect!
+              .flicker
+      
         //- jQuery v3.2.1
         script(src='js/jquery.min.js')
-        //- custom javascript for current view
+        //- custom javascript for Modal Dialogs behaviour
+        script(src='js/modals.min.js')
+        //- custom javascript for filterin´(portfolio) items animation
         script.
             $(function () {
                 var selectedClass = "";
@@ -117,3 +156,15 @@ html.no-js(lang='es')
             });
         //- To register Service Worker & validate it by console log
         include includes/serviceworker
+
+        //- TODO: remove all the following code!!
+        //- classie.js by @desandro: https://github.com/desandro/classie
+          script(src='js/modals/classie.js')
+          script(src='js/modals/modalEffects.js')
+        //- for the blur effect
+        //- by @derSchepp https://github.com/Schepp/CSS-Filters-Polyfill
+          script.
+            //- this is important for IEs
+            var polyfilter_scriptpath = '/js/';
+          script(src='js/modals/cssParser.js')
+          script(src='js/modals/css-filters-polyfill.js')

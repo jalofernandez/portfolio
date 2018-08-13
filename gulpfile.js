@@ -38,6 +38,10 @@ var minifycss = require('gulp-minify-css'),
 gulp.task('default', ['clean', 'img', 'pug', 'less', 'js', 'css', 'sitemap'], function(){
   console.log('Gulpjs task by default is running...');
 });
+// Gulpjs Task to compile all code in modal dialogs development
+gulp.task('modal', ['less', 'pug', 'modaljs'], function(){
+  console.log('Gulpjs Task to compile all code in modal dialogs development is running...');
+});
 
 /*
  * Config 'js' --> gulp-concat + gulp-uglify (gulp js)
@@ -59,6 +63,19 @@ gulp.task('js', function () {
         }))
         .pipe(uglify())
         .pipe(concat('main.min.js'))
+        //.pipe(sourcemaps.write()) // sourcemaps here not usefull (more heavy files)
+        .pipe(gulp.dest('./public/js'))
+});
+// Gulpjs Task to compile (JS) modal dialogs dependencies
+gulp.task('modaljs', function () {
+    console.log('JS modal dialogs task is running...');
+    gulp.src(['./js/modals/classie.js', './js/modals/modalEffects.js'])
+        //.pipe(sourcemaps.init()) // sourcemaps here not usefull (more heavy files)
+        .pipe(babel({
+          presets: ['es2015']
+        }))
+        .pipe(uglify())
+        .pipe(concat('modals.min.js'))
         //.pipe(sourcemaps.write()) // sourcemaps here not usefull (more heavy files)
         .pipe(gulp.dest('./public/js'))
 });
