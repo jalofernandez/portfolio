@@ -13,31 +13,53 @@ var gulp = require('gulp'),
     pug = require('gulp-pug'),
     data = require('gulp-data'),
     fs = require('fs'),
-    sitemap = require('gulp-sitemap');
+    sitemap = require('gulp-sitemap'),
+    sourcemaps = require('gulp-sourcemaps'),
+    babel = require('gulp-babel'),
+    autoprefixer = require('gulp-autoprefixer'),
+    LessAutoprefix = require('less-plugin-autoprefix'),
+    imageminPngquant = require('imagemin-pngquant'),
+    imageminJpegRecompress = require('imagemin-jpeg-recompress'),
+    del = require('del');
+
+// we need to init "autoprefix" less plugin
+var lessAutoprefix = new LessAutoprefix({
+    browsers: ['last 2 versions']
+});
 
 /* todo: add the following dependencies:
 var minifycss = require('gulp-minify-css'),
     fs = require('fs');
 */
 
-
 /*
  * Config 'default' (gulp) last step to publish
  */
-gulp.task('default', ['sitemap', 'css']);
-
-/*
- * Config 'deploy' (gulp) first step: compile
- */
-gulp.task('deploy', ['js', 'pug', 'less', 'img']);
+gulp.task('default', ['clean', 'img', 'pug', 'less', 'js', 'css', 'sitemap'], function(){
+  console.log('Gulpjs task by default is running...');
+});
 
 /*
  * Config 'js' --> gulp-concat + gulp-uglify (gulp js)
  */
+ /* TODO: old task to remove it!
 gulp.task('js', function () {
     gulp.src('js/sources/*.js')
         .pipe(concat('scripts.min.js'))
         .pipe(uglify())
+        .pipe(gulp.dest('./public/js'))
+});
+*/
+gulp.task('js', function () {
+    console.log('JS task is running...');
+    gulp.src('./js/main.js')
+        //.pipe(sourcemaps.init()) // sourcemaps here not usefull (more heavy files)
+        .pipe(babel({
+          presets: ['es2015']
+        }))
+        .pipe(uglify())
+        .pipe(concat('main.min.js'))
+        //.pipe(sourcemaps.write()) // sourcemaps here not usefull (more heavy files)
         .pipe(gulp.dest('./public/js'))
 });
 
@@ -46,9 +68,12 @@ gulp.task('js', function () {
  */
 gulp.task('less', function () {
     return gulp.src('./less/**/[^_]*.less')
+        /*
         .pipe(less({
             paths: [ path.join(__dirname, 'less', 'includes') ]
         }))
+        */
+        .pipe(less())
         .pipe(gulp.dest('./css'));
 });
 
@@ -57,7 +82,13 @@ gulp.task('less', function () {
  */
 gulp.task('css', function() {
     return gulp.src('css/*.css')
-        .pipe(cleanCSS({compatibility: 'ie8'}))
+        //.pipe(sourcemaps.init()) // sourcemaps here not usefull (more heavy files)
+        .pipe(autoprefixer())
+        .pipe(cleanCSS({debug: true}, (details) => {
+          console.log(`${details.name}: ${details.stats.originalSize}`);
+          console.log(`${details.name}: ${details.stats.minifiedSize}`);
+        }))
+        //.pipe(sourcemaps.write()) // sourcemaps here not usefull (more heavy files)
         .pipe(gulp.dest('./public/css'));
 });
 
@@ -65,8 +96,19 @@ gulp.task('css', function() {
  * Config 'img' --> gulp-imagemin (gulp img)
  */
 gulp.task('img', function () {
-    return gulp.src(['img/**/*.*'])
-        .pipe(imagemin())
+    console.log('Images task is running...');
+    return gulp.src('img/**/*.{jpeg,jpg,png,svg,gif}')
+        //.pipe(imagemin()) // without plugins
+        .pipe(imagemin(
+          [
+            imagemin.gifsicle(),
+            imagemin.jpegtran(),
+            imagemin.optipng(),
+            imagemin.svgo(),
+            imageminPngquant(),
+            imageminJpegRecompress()
+          ]
+        ))
         .pipe(gulp.dest('./public/img'));
 });
 
@@ -97,4 +139,15 @@ gulp.task('sitemap', function () {
             priority: '1.0'
         }))
         .pipe(gulp.dest('./public'));
+});
+
+/*
+ * REMOVE files & folders gulp task
+*/
+gulp.task('clean', function(){
+  return del.sync([
+    './public/img/',
+    './public/js/main.min.js',
+    './public/css/*.css'
+  ]);
 });

@@ -1179,8 +1179,6 @@ main {
   width: 13px;
   height: 13px;
   background: #ffeef5;
-  -webkit-animation: neon-pink 0.5s ease-in-out infinite alternate;
-  -moz-animation: neon-pink 0.5s ease-in-out infinite alternate;
   animation: neon-pink 0.5s ease-in-out infinite alternate;
 }
 @-webkit-keyframes neon-pink {
@@ -1203,8 +1201,6 @@ main {
   width: 10px;
   height: 10px;
   background: #fbefff;
-  -webkit-animation: neon-violet 1s ease-in-out infinite alternate;
-  -moz-animation: neon-violet 1s ease-in-out infinite alternate;
   animation: neon-violet 1s ease-in-out infinite alternate;
 }
 @-webkit-keyframes neon-violet {
@@ -1227,8 +1223,6 @@ main {
   width: 11px;
   height: 11px;
   background: #fff8ee;
-  -webkit-animation: neon-orange 0.9s ease-in-out infinite alternate;
-  -moz-animation: neon-orange 0.9s ease-in-out infinite alternate;
   animation: neon-orange 0.9s ease-in-out infinite alternate;
 }
 @-webkit-keyframes neon-orange {
@@ -1251,8 +1245,6 @@ main {
   width: 12px;
   height: 12px;
   background: #f5ffdd;
-  -webkit-animation: neon-orange 0.7s ease-in-out infinite alternate;
-  -moz-animation: neon-orange 0.7s ease-in-out infinite alternate;
   animation: neon-orange 0.7s ease-in-out infinite alternate;
 }
 @-webkit-keyframes neon-green {
@@ -1412,8 +1404,6 @@ main {
   width: 11px;
   height: 11px;
   background: #fff8ee;
-  -webkit-animation: neon-orange 0.7s ease-in-out infinite alternate;
-  -moz-animation: neon-orange 0.7s ease-in-out infinite alternate;
   animation: neon-orange 0.7s ease-in-out infinite alternate;
 }
 .neon-001 {
