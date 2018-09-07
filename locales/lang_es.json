@@ -10,14 +10,14 @@
       "photography": {
         "title": "photography"
       },
-      "illustration": {
-        "title": "illustration"
+      "web": {
+        "title": "UX & UI Web design"
       },
-      "textile": {
-        "title": "textile"
+      "packaging": {
+        "title": "packaging"
       },
       "graphisms": {
-        "title": "graphisms"
+        "title": "graphisms & draws"
       }
     },
     "coder": {
@@ -53,12 +53,12 @@
   "portfolio": {
     "funnel": {
       "all": "All",
-      "home": "Home >>",
+      "home": "<< Home",
       "layout": "layout",
       "photography": "photography",
-      "illustration": "illustration",
+      "illustration": "packaging",
       "textile": "textile",
-      "graphisms": "graphisms",
+      "graphisms": "graphs/draws",
       "web": "UX/UI/Web"
     }
   },

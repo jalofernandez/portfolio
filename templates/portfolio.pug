@@ -18,6 +18,8 @@ html.no-js(lang='es')
         //- main content
         main
             .toolbar.mb2.mt2
+                a.btn.menu__link.glitch(href='/', data-text='<< Home')
+                    | #{portfolio.funnel.home}
                 button.btn.fil-cat.menu__link.glitch(type='button', value='text', name='all', aria-labelledby='all', data-rel='all', data-text='All')
                     | #{portfolio.funnel.all}
                 button.btn.fil-cat.menu__link.glitch(type='button', value='text', name='all', aria-labelledby='all', data-rel='layout', data-text='layout')
@@ -26,20 +28,21 @@ html.no-js(lang='es')
                     | #{portfolio.funnel.photography}
                 button.btn.fil-cat.menu__link.glitch(type='button', value='text', name='all', aria-labelledby='all', data-rel='web', data-text='UX/UI/Web')
                     | #{portfolio.funnel.web}
-                button.btn.fil-cat.menu__link.glitch(type='button', value='text', name='all', aria-labelledby='all', data-rel='draw', data-text='illustration')
+                button.btn.fil-cat.menu__link.glitch(type='button', value='text', name='all', aria-labelledby='all', data-rel='pack', data-text='packaging')
                     | #{portfolio.funnel.illustration}
-                button.btn.fil-cat.menu__link.glitch(type='button', value='text', name='all', aria-labelledby='all', data-rel='graph', data-text='graphisms')
+                button.btn.fil-cat.menu__link.glitch(type='button', value='text', name='all', aria-labelledby='all', data-rel='graph', data-text='graphs/draws')
                     | #{portfolio.funnel.graphisms}
-                a.btn.menu__link.glitch(href='/', data-text='Home >>')
-                    | #{portfolio.funnel.home}
             div(style='clear:both;')
             #portfolio
                 //- 1.(mixin declaration) common "overlay" Text
                 mixin overlay
                   .overlay Click me to make me bigger
                 //- 2. Gallery image list with mixin applied
-                .tile.scale-anm.js-modal-trigger.layout.all(data-modal='modal-01')
-                    img(src='img/portfolio/upp_ebook-movistar_img-promo.png', alt='Upplication + Movistar eBook promo pic by @jalofernandez', title='Upplication + Movistar eBook promo pic by @jalofernandez') 
+                .tile.scale-anm.js-modal-trigger.graph.all(data-modal='modal-01')
+                    img(src='img/portfolio/movistar-upplication_promo-rollup_by-jalofernandez.jpg', alt='Upplication + Movistar promo rollup by @jalofernandez', title='Upplication + Movistar promo rollup by @jalofernandez')
+                    +overlay
+                .tile.scale-anm.js-modal-trigger.pack.photo.all(data-modal='modal-20')
+                    img(src='img/portfolio/britishknights_packaging-shoesbox_by-jalofernandez.jpg', alt='British Knights shoesbox packaging by @jalofernandez', title='British Knights shoesbox packaging by @jalofernandez') 
                     +overlay
                 .tile.scale-anm.js-modal-trigger.layout.all(data-modal='modal-02')
                     img(src='img/portfolio/bcard_upplication_01.jpg', alt='Upplication business card side A by @jalofernandez', title='Upplication business card side A by @jalofernandez')
@@ -47,89 +50,186 @@ html.no-js(lang='es')
                 .tile.scale-anm.js-modal-trigger.layout.all(data-modal='modal-03')
                     img(src='img/portfolio/bcard_upplication_02.jpg', alt='Upplication Developers business card by @jalofernandez', title='Upplication Developers business card by @jalofernandez')
                     +overlay
-                .tile.scale-anm.js-modal-trigger.layout.web.all(data-modal='modal-04')
-                    img(src='img/portfolio/upp_pwa-infography_01.png', alt='Upplication PWA infography layout by @jalofernandez', title='Upplication PWA infography layout by @jalofernandez')
+                .tile.scale-anm.js-modal-trigger.layout.web.all(data-modal='modal-19')
+                    img(src='img/portfolio/ecomerzpro_email-template-marketplace_by-jalofernandez.jpg', alt='EcomerzPro email layout by @jalofernandez', title='EcomerzPro email layout by @jalofernandez')
                     +overlay
-                .tile.scale-anm.js-modal-trigger.layout.web.all(data-modal='modal-05')
+                .tile.scale-anm.js-modal-trigger.layout.all(data-modal='modal-04')
+                    img(src='img/portfolio/upplication_pwa-infography_by-jalofernandez.jpg', alt='Upplication PWA infography layout by @jalofernandez', title='Upplication PWA infography layout by @jalofernandez')
+                    +overlay
+                .tile.scale-anm.js-modal-trigger.web.all(data-modal='modal-05')
                     img(src='img/portfolio/app_sample-pic_restaurant-module.png', alt='Upplication App (Restaurant module) by @jalofernandez', title='Upplication App (Restaurant module) by @jalofernandez')
                     +overlay
-                //- .tile.scale-anm.js-modal-triggerflyers.all
-                        img(src='img/portfolio/350x190.png', alt='', title='')
-                        +overlay
-                .tile.scale-anm.js-modal-triggerlayout.all(data-modal='modal-06')
-                    img(src='img/portfolio/acens-upplication-acens_infografia-comercial_01.png', alt='Upplication + Acens infografía comercial by @jalofernandez', title='Upplication + Acens infografía comercial by @jalofernandez')
+                .tile.scale-anm.js-modal-trigger.layout.photo.all(data-modal='modal-42')
+                    img(src='img/portfolio/britishknights_promo-collection_by-jalofernandez.jpg', alt='British Knights tees promo poster @jalofernandez', title='British Knights tees promo poster @jalofernandez')
                     +overlay
-                .tile.scale-anm.js-modal-triggergraph.draw.all(data-modal='modal-07')
-                    img(src='img/portfolio/upp_san-valentin_pink-querubin.png', alt='Upplication Valentines Day promo artwork by @jalofernandez', title='Upplication Valentines Day promo artwork by @jalofernandez')
+                .tile.scale-anm.js-modal-trigger.layout.all(data-modal='modal-43')
+                    img(src='img/portfolio/salondejuegos_bcard-invitation_by-jalofernandez.jpg', alt='Salón de Juegos business card + invitation by @jalofernandez', title='Salón de Juegos business card + invitation by @jalofernandez')
                     +overlay
-                .tile.scale-anm.js-modal-triggerlayout.all(data-modal='modal-08')
-                    img(src='img/portfolio/acens-upplication-acens_infografia-comercial_02.png', alt='Upplication + Acens infografía comercial by @jalofernandez', title='Upplication + Acens infografía comercial by @jalofernandez')
+                .tile.scale-anm.js-modal-trigger.layout.all(data-modal='modal-44')
+                    img(src='img/portfolio/laparadadelosmonstruos-bar_flyer-halloween_by-jalofernandez.jpg', alt='La Parada de los Monstruos flyer by @jalofernandez', title='La Parada de los Monstruos flyer by @jalofernandez')
                     +overlay
-                .tile.scale-anm.js-modal-triggerlayout.all(data-modal='modal-09')
+                        
+                .tile.scale-anm.js-modal-trigger.graph.all(data-modal='modal-37')
+                    img(src='img/portfolio/domolock-app_concept-logo_by-jalofernandez.jpg', alt='Domolock App concept logo by @jalofernandez', title='Domolock App concept logo by @jalofernandez')
+                    +overlay
+                .tile.scale-anm.js-modal-trigger.graph.all(data-modal='modal-38')
+                    img(src='img/portfolio/puntoycoma_comic_strip_n32_by-jalofernandez.jpg', alt='Comic strip to Punto y Coma magazine by @jalofernandez', title='Comic strip to Punto y Coma magazine by @jalofernandez')
+                    +overlay
+                .tile.scale-anm.js-modal-trigger.layout.graph.all(data-modal='modal-39')
+                    img(src='img/portfolio/brithisknights_hoddie-specs_by-jalofernandez.jpg', alt='British Knights hoddie chart sheet by @jalofernandez', title='British Knights hoddie chart sheet by @jalofernandez')
+                    +overlay
+                .tile.scale-anm.js-modal-trigger.layout.all(data-modal='modal-21')
+                    img(src='img/portfolio/wellness_promo-flyerA5-sideA_by-jalofernandez.jpg', alt='Wellness promo flyer layout by @jalofernandez', title='Wellness promo flyer layout by @jalofernandez')
+                    +overlay
+                .tile.scale-anm.js-modal-trigger.layout.all(data-modal='modal-22')
+                    img(src='img/portfolio/wellness_promo-flyerA5-sideB_by-jalofernandez.jpg', alt='Wellness promo flyer layout by @jalofernandez', title='Wellness promo flyer layout by @jalofernandez')
+                    +overlay
+                .tile.scale-anm.js-modal-trigger.layout.photo.all(data-modal='modal-23')
+                    img(src='img/portfolio/britishknights_winter-catalog_by-jalofernandez.jpg', alt='British Knights winter catalog page by @jalofernandez', title='British Knights winter catalog page by @jalofernandez')
+                    +overlay
+                .tile.scale-anm.js-modal-trigger.graph.all(data-modal='modal-45')
+                    img(src='img/portfolio/aiba_adoption-campaign-logo_by-jalofernandez.jpg', alt='Aiba adoption campaign logotype by @jalofernandez', title='Aiba adoption campaign logotype by @jalofernandez')
+                    +overlay    
+                .tile.scale-anm.js-modal-trigger.layout.web.all(data-modal='modal-24')
+                    img(src='img/portfolio/widitrade_manager-offer-details_by-jalofernandez.jpg', alt='Widitrade manager offer detail view by @jalofernandez', title='Widitrade manager offer detail view by @jalofernandez')
+                    +overlay
+                .tile.scale-anm.js-modal-trigger.graph.all(data-modal='modal-07')
+                    img(src='img/portfolio/upplication_socialmedia-promo-artwork_by-jalofernandez.jpg', alt='Upplication Valentines Day promo artwork to social media by @jalofernandez', title='Upplication Valentines Day promo artwork to social media by @jalofernandez')
+                    +overlay
+                .tile.scale-anm.js-modal-trigger.layout.web.all(data-modal='modal-25')
+                    img(src='img/portfolio/byeinsects_landing-page-with-counterdown_by-jalofernandez.jpg', alt='Bye Insects landing page by @jalofernandez', title='Bye Insects landing page by @jalofernandez')
+                    +overlay
+                .tile.scale-anm.js-modal-trigger.layout.web.all(data-modal='modal-26')
+                    img(src='img/portfolio/byeinsects_landing-page-desktop_by-jalofernandez.jpg', alt='Bye Insects landing page by @jalofernandez', title='Bye Insects landing page by @jalofernandez')
+                    +overlay
+                .tile.scale-anm.js-modal-trigger.layout.graph.all(data-modal='modal-06')
+                    img(src='img/portfolio/acens-upplication_infography-cover_by-jalofernandez.jpg', alt='Upplication + Acens infography cover by @jalofernandez', title='Upplication + Acens infography cover by @jalofernandez')
+                    +overlay
+                .tile.scale-anm.js-modal-trigger.layout.graph.all(data-modal='modal-08')
+                    img(src='img/portfolio/acens-upplication_infography-page_by-jalofernandez.jpg', alt='Upplication + Acens commercial infography by @jalofernandez', title='Upplication + Acens commercial infography by @jalofernandez')
+                    +overlay
+                .tile.scale-anm.js-modal-trigger.layout.photo.all(data-modal='modal-27')
+                    img(src='img/portfolio/spalding_promo-flyer-basket_by-jalofernandez.jpg', alt='Spalding promo flyer layout by @jalofernandez', title='Spalding promo flyer layout by @jalofernandez')
+                    +overlay                    
+                .tile.scale-anm.js-modal-trigger.layout.web.all(data-modal='modal-28')
+                    img(src='img/portfolio/ecomerzpro-club_landing-page_by-jalofernandez.jpg', alt='Ecomerz Pro landing page by @jalofernandez', title='Ecomerz Pro landing page by @jalofernandez')
+                    +overlay
+                .tile.scale-anm.js-modal-trigger.layout.graph.all(data-modal='modal-29')
+                    img(src='img/portfolio/oportino_bcard-sideA_by-jalofernandez.jpg', alt='O´Portiño business card side A by @jalofernandez', title='O´Portiño business card side A by @jalofernandez')
+                    +overlay                  
+                .tile.scale-anm.js-modal-trigger.layout.photo.all(data-modal='modal-30')
+                    img(src='img/portfolio/medion_promo-triptico-exterior_by-jalofernandez.jpg', alt='Medion promo flyer layout by @jalofernandez', title='Medion promo flyer layout by @jalofernandez')
+                    +overlay
+                .tile.scale-anm.js-modal-trigger.layout.photo.all(data-modal='modal-31')
+                    img(src='img/portfolio/medion_promo-triptico-interior_by-jalofernandez.jpg', alt='Medion promo flyer layout by @jalofernandez', title='Medion promo flyer layout by @jalofernandez')
+                    +overlay
+                .tile.scale-anm.js-modal-trigger.layout.graph.all(data-modal='modal-32')
+                    img(src='img/portfolio/brithisknights_swimsuit-mix-specs_by-jalofernandez.jpg', alt='British Knights swinsuit chart sheet by @jalofernandez', title='British Knights swinsuit chart sheet by @jalofernandez')
+                    +overlay
+                .tile.scale-anm.js-modal-trigger.web.all(data-modal='modal-46')
+                    img(src='img/portfolio/wellness_website-newsletter-sign_by-jalofernandez.jpg', alt='Wellness newsletter sign layout by @jalofernandez', title='Wellness newsletter sign layout by by @jalofernandez')
+                    +overlay                       
+                .tile.scale-anm.js-modal-trigger.graph.all(data-modal='modal-33')
+                    img(src='img/portfolio/britishknights_baseball-logo_designed-by-jalofernandez.jpg', alt='British Knights baseball logo by @jalofernandez', title='British Knights baseball logo by @jalofernandez')
+                    +overlay 
+                .tile.scale-anm.js-modal-trigger.graph.all(data-modal='modal-34')
+                    img(src='img/portfolio/puntoycoma_comic_strip_n28_by-jalofernandez.jpg', alt='Comic strip to Punto y Coma magazine by @jalofernandez', title='Comic strip to Punto y Coma magazine by @jalofernandez')
+                    +overlay              
+                .tile.scale-anm.js-modal-trigger.layout.graph.all(data-modal='modal-09')
                     img(src='img/portfolio/upp_ebook_conseguir-1000-descargas-tu-app.png', alt='Upplication eBook layout sample by @jalofernandez', title='Upplication eBook layout sample by @jalofernandez')
                     +overlay
-                .tile.scale-anm.js-modal-triggergraph.draw.all(data-modal='modal-10')
-                    img(src='img/portfolio/upp_sticker-promo_crea-tu-app.png', alt='Upplication promo sticker by @jalofernandez', title='Upplication promo sticker by @jalofernandez')
+                .tile.scale-anm.js-modal-trigger.layout.all(data-modal='modal-10')
+                    img(src='img/portfolio/abc_bcard-front-claram_designed-by-jalofernandez.jpg', alt='ABC architecture business card side A by @jalofernandez', title='ABC architecture business card side A by @jalofernandez')
                     +overlay
-                .tile.scale-anm.js-modal-triggergraph.draw.layout.all(data-modal='modal-11')
-                    img(src='img/portfolio/upp_promo_2017-02-27_hiring-back-dev.png', alt='Upplication backend developer to hire artwork by @jalofernandez', title='Upplication backend developer to hire artwork by @jalofernandez')
+                .tile.scale-anm.js-modal-trigger.layout.all(data-modal='modal-11')
+                    img(src='img/portfolio/abc_bcard-back-claram_designed-by-jalofernandez.jpg', alt='ABC architecture business card side B by @jalofernandez', title='ABC architecture business card side B by @jalofernandez')
                     +overlay
-                .tile.scale-anm.js-modal-triggerweb.layout.all(data-modal='modal-12')
-                    img(src='img/portfolio/app_sample-pic_mcommerce-module.png', alt='Upplication App (mCommerce module) by @jalofernandez', title='Upplication App (mCommerce module) by @jalofernandez')
+                .tile.scale-anm.js-modal-trigger.layout.web.all(data-modal='modal-51')
+                    img(src='img/portfolio/gastronomix_website-footer_by-jalofernandez.jpg', alt='Gastronomix website by @jalofernandez', title='Gastronomix website by @jalofernandez')
+                    +overlay                    
+                .tile.scale-anm.js-modal-trigger.graph.all(data-modal='modal-12')
+                    img(src='img/portfolio/upplication_promo-sticker_by-jalofernandez.jpg', alt='Upplication promo sticker by @jalofernandez', title='Upplication promo sticker by @jalofernandez')
                     +overlay
-                .tile.scale-anm.js-modal-triggerweb.layout.all(data-modal='modal-13')
-                    img(src='img/portfolio/upp_customer-account_dashb.png', alt='Upplication to promo dashboard feature by @jalofernandez', title='Upplication to promo dashboard feature by @jalofernandez')
+                .tile.scale-anm.js-modal-trigger.layout.photo.all(data-modal='modal-48')
+                    img(src='img/portfolio/lepainquotidien_daily-menu-promo-poster_by-jalofernandez.jpg', alt='Le Pain Quotidien promo poster by @jalofernandez', title='Le Pain Quotidien promo poster by @jalofernandez')
                     +overlay
-                .tile.scale-anm.js-modal-triggergraph.draw.all(data-modal='modal-14')
-                    img(src='img/portfolio/upp_iOS-template_promo.png', alt='Upplication to promo iOS Template by @jalofernandez', title='Upplication to promo iOS Template by @jalofernandez')
+                .tile.scale-anm.js-modal-trigger.layout.pack.all(data-modal='modal-49')
+                    img(src='img/portfolio/teayudamosavendermas_folder_by-jalofernandez.jpg', alt='Te ayudamos a vender más promo folders by @jalofernandez', title='Te ayudamos a vender más promo folders by @jalofernandez')
                     +overlay
-                //- .tile.scale-anm.js-modal-triggerweb.all
-                        img(src='img/portfolio/350x190.png', alt='', title='')
-                        +overlay
-                .tile.scale-anm.js-modal-triggerlayout.graph.draw.all(data-modal='modal-15')
-                    img(src='img/portfolio/upp_movistar_rollup.png', alt='Upplication + Movistar promo rollup by @jalofernandez', title='Upplication + Movistar promo rollup by @jalofernandez')
+                .tile.scale-anm.js-modal-trigger.layout.all(data-modal='modal-50')
+                    img(src='img/portfolio/artsclubmadrid_drinks-card_by-jalofernandez.jpg', alt='Arts Club Madrid drinks card page by @jalofernandez', title='Arts Club Madrid drinks card page by @jalofernandez')
+                    +overlay
+                .tile.scale-anm.js-modal-trigger.layout.web.all(data-modal='modal-47')
+                    img(src='img/portfolio/knowers_about-us-page_by-jalofernandez.jpg', alt='Knowers landing page layout by @jalofernandez', title='Knowers landing page layout by @jalofernandez')
+                    +overlay
+                .tile.scale-anm.js-modal-trigger.graph.all(data-modal='modal-13')
+                    img(src='img/portfolio/upplication_socialmedia-hiring-artwork_by-jalofernandez.jpg', alt='Knowers landing page layout by @jalofernandez', title='Knowers landing page layout by @jalofernandez')
+                    +overlay
+                .tile.scale-anm.js-modal-trigger.layout.web.all(data-modal='modal-14')
+                    img(src='img/portfolio/app_sample-pic_mcommerce-module.png', alt='Upplication mCommerce module for Apps by @jalofernandez', title='Upplication mCommerce module for Apps by @jalofernandez')
+                    +overlay
+                .tile.scale-anm.js-modal-trigger.layout.web.all(data-modal='modal-15')
+                    img(src='img/portfolio/upp_dashboard_shipping-charges-view_by-jalofernandez.jpg', alt='Upplication dashboard shipping charges feature by @jalofernandez', title='Upplication dashboard shipping charges feature by @jalofernandez')
+                    +overlay
+                .tile.scale-anm.js-modal-trigger.graph.all(data-modal='modal-16')
+                    img(src='img/portfolio/upplication_ios-template-promo_by-jalofernandez.jpg', alt='Upplication iOS Template promo artwork by @jalofernandez', title='Upplication iOS Template promo artworkby @jalofernandez')
+                    +overlay
+                .tile.scale-anm.js-modal-trigger.layout.graph.all(data-modal='modal-18')
+                    img(src='img/portfolio/upplication_dashboard-custom-forms-feature_by-jalofernandez.jpg', alt='Upplication dashboard promo feature by @jalofernandez', title='Upplication dashboard promo feature by @jalofernandez')
+                    +overlay
+                .tile.scale-anm.js-modal-trigger.layout.all(data-modal='modal-35')
+                    img(src='img/portfolio/wellness_bcard-sideA-designed-by-jalofernandez.jpg', alt='Wellness business card side A by @jalofernandez', title='Wellness business card side A by @jalofernandez')
+                    +overlay
+                .tile.scale-anm.js-modal-trigger.layout.all(data-modal='modal-36')
+                    img(src='img/portfolio/wellness_bcard-sideB-designed-by-jalofernandez.jpg', alt='Wellness business card side B by @jalofernandez', title='Wellness business card side B by @jalofernandez')
+                    +overlay
+                .tile.scale-anm.js-modal-trigger.layout.all(data-modal='modal-40')
+                    img(src='img/portfolio/rusty_parka-snow-labels-sideA_by-jalofernandez.jpg', alt='Rusty labels to winter jackets by @jalofernandez', title='Rusty labels to winter jackets by @jalofernandez') 
+                    +overlay
+                .tile.scale-anm.js-modal-trigger.layout.all(data-modal='modal-41')
+                    img(src='img/portfolio/rusty_parka-snow-labels-sideB_by-jalofernandez.jpg', alt='Rusty labels to winter jackets by @jalofernandez', title='Rusty labels to winter jackets by @jalofernandez') 
                     +overlay
                 //- TODO: images gallery BASE
-                    .tile.scale-anm.js-modal-triggerweb.all
+                    .tile.scale-anm.js-modal-trigger.web.all
                         img(src='img/portfolio/300x201.jpg', alt='', title='')
                         +overlay
-                    .tile.scale-anm.js-modal-triggerweb.all
+                    .tile.scale-anm.js-modal-trigger.web.all
                         img(src='img/portfolio/300x270.jpg', alt='', title='')
                         +overlay
-                    .tile.scale-anm.js-modal-triggerflyers.all
+                    .tile.scale-anm.js-modal-trigger.flyers.all
                         img(src='img/portfolio/350x190.png', alt='', title='')
                         +overlay
-                    .tile.scale-anm.js-modal-triggerweb.all
+                    .tile.scale-anm.js-modal-trigger.web.all
                         img(src='img/portfolio/200x290.png', alt='', title='')
                         +overlay
-                    .tile.scale-anm.js-modal-triggerflyers.all
+                    .tile.scale-anm.js-modal-trigger.flyers.all
                         img(src='img/portfolio/300x300.jpg', alt='', title='')
                         +overlay
-                    .tile.scale-anm.js-modal-triggerweb.all
+                    .tile.scale-anm.js-modal-trigger.web.all
                         img(src='img/portfolio/200x290.png', alt='', title='')
                         +overlay
-                    .tile.scale-anm.js-modal-triggerflyers.all
+                    .tile.scale-anm.js-modal-trigger.flyers.all
                         img(src='img/portfolio/200x290.png', alt='', title='')
                         +overlay
-                    .tile.scale-anm.js-modal-triggerweb.all
+                    .tile.scale-anm.js-modal-trigger.web.all
                         img(src='img/portfolio/300x300-2.jpg', alt='', title='')
                         +overlay
-                    .tile.scale-anm.js-modal-triggerbcards.all
+                    .tile.scale-anm.js-modal-trigger.bcards.all
                         img(src='img/portfolio/300x300-3.jpg', alt='', title='')
                         +overlay
-                    .tile.scale-anm.js-modal-triggerweb.all
+                    .tile.scale-anm.js-modal-trigger.web.all
                         img(src='img/portfolio/350x190.png', alt='', title='')
                         +overlay
-                    .tile.scale-anm.js-modal-triggerbcards.all
+                    .tile.scale-anm.js-modal-trigger.bcards.all
                         img(src='img/portfolio/300x201.jpg', alt='', title='')
                         +overlay
-                    .tile.scale-anm.js-modal-triggerweb.all
+                    .tile.scale-anm.js-modal-trigger.web.all
                         img(src='img/portfolio/300x300.jpg', alt='', title='')
                         +overlay
-                    .tile.scale-anm.js-modal-triggerweb.all
+                    .tile.scale-anm.js-modal-trigger.web.all
                         img(src='img/portfolio/350x190.png', alt='', title='')
                         +overlay
-                    .tile.scale-anm.js-modal-triggerbcards.all
+                    .tile.scale-anm.js-modal-trigger.bcards.all
                         img(src='img/portfolio/200x290.png', alt='', title='')
                         +overlay
             div(style='clear:both;')

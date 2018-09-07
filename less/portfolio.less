@@ -295,6 +295,7 @@ a.btn {
     text-align: center;
     position: absolute;
     bottom: 1rem; /* same as parent magin bottom */
+    cursor: pointer;
     opacity: 0;
     -webkit-transition: .5s ease;
     transition: .5s ease;
@@ -444,6 +445,50 @@ p {
     height: auto;
     border-radius: 3px;
     */
+    // WEIGHT control by mediaqueries
+    @media (max-width: 419px) {
+      max-width: 300px;
+    }
+    @media (min-width: 420px) and (max-width: 519px) {
+      max-width: 400px;
+    }
+    @media (min-width: 520px) and (max-width: 629px) {
+      max-width: 500px;
+    }
+    @media (min-width: 630px) and (max-width: 749px) {
+      max-width: 600px;
+    }
+    @media (min-width: 750px) and (max-width: 859px) {
+      max-width: 700px;
+    }
+    @media (min-width: 860px) and (max-width: 979px) {
+      max-width: 800px;
+    }
+    @media (min-width: 980px) and (max-width: 1049px) {
+      max-width: 900px;
+    }
+    // HEIGHT control by mediaqueries
+    @media (max-height: 359px) {
+      max-height: 200px;
+    }
+    @media (min-height: 360px) and (max-height: 479px) {
+      max-height: 250px;
+    }
+    @media (min-height: 480px) and (max-height: 579px) {
+      max-height: 350px;
+    }
+    @media (min-height: 580px) and (max-height: 650px) {
+      max-height: 450px;
+    }
+    @media (min-height: 651px) and (max-height: 767px) {
+      max-height: 500px;
+    }
+    @media (min-height: 768px) and (max-height: 900px) {
+      max-height: 600px;
+    }
+    @media (min-height: 901px) {
+      max-height: 700px;
+    }
   }
 
   > p {
