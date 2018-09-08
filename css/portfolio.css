@@ -1,10 +1,11 @@
 /* -- COLOR vars -- */
 @import url('https://fonts.googleapis.com/css?family=Roboto+Mono|Roboto:400,500');
 :root {
-  --color-designer-color: #29cc00;
-  --color-coder-color: #f4692a;
+  --color-designer: #f4692a;
+  --color-coder: #29cc00;
   --color-white: #f1f1f1;
   --color-black: #232323;
+  --color-pure-back: #000000;
   --color-dark-grey: #888888;
   --color-bg-color: #030203;
   --color-bg-overlay: rgba(35, 35, 35, 0.85);
@@ -25,6 +26,35 @@ body {
   background: #232323;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+.btn {
+  min-width: 100px;
+  font-size: 1rem;
+  font-weight: normal;
+  text-decoration: none;
+  cursor: pointer;
+  color: #29cc00;
+  line-height: normal;
+  padding: 10px;
+  margin: 0;
+  height: auto;
+  border: none;
+  vertical-align: middle;
+  -webkit-appearance: none;
+  background-color: rgba(0, 0, 0, 0);
+}
+.btn:hover {
+  color: #f7f7f7;
+  text-decoration: none;
+}
+.btn:focus {
+  outline: none;
+  border-color: var(--darken-2);
+  box-shadow: 0 0 0 3px var(--darken-3);
+}
+.btn.menu__link.glitch::after,
+.btn.menu__link.glitch::before {
+  padding: 10px;
 }
 /* -- GLITCH EFFECT (punk links distortion) -- */
 .menu__link {
@@ -365,7 +395,7 @@ body {
   max-width: 300px;
   text-align: center;
   font-size: 2rem;
-  color: #29cc00;
+  color: #f4692a;
 }
 .coming-soon .glitch::after {
   left: 48px;
@@ -520,37 +550,8 @@ main {
   align-items: center;
   align-content: space-around;
 }
-.btn {
-  min-width: 100px;
-  font-size: 1rem;
-  font-weight: normal;
-  text-decoration: none;
-  cursor: pointer;
-  color: #f4692a;
-  line-height: normal;
-  padding: 10px;
-  margin: 0;
-  height: auto;
-  border: none;
-  vertical-align: middle;
-  -webkit-appearance: none;
-  background-color: rgba(0, 0, 0, 0);
-}
-.btn:hover {
-  color: #f7f7f7;
-  text-decoration: none;
-}
-.btn:focus {
-  outline: none;
-  border-color: var(--darken-2);
-  box-shadow: 0 0 0 3px var(--darken-3);
-}
-.btn.menu__link.glitch::after,
-.btn.menu__link.glitch::before {
-  padding: 10px;
-}
 a.btn {
-  color: #29cc00;
+  color: #f4692a;
   text-align: center;
 }
 ::-moz-focus-inner {
@@ -789,7 +790,7 @@ p:hover {
 }
 /* Content styles */
 .md-content {
-  color: var(--color-designer-color);
+  color: var(--color-designer);
   background: transparent;
   position: relative;
   border-radius: 3px;

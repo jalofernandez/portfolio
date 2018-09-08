@@ -47,7 +47,7 @@
     "footer": {
       "designer": "Designer",
       "coder": "Coder",
-      "work": "_work with me"
+      "work": "_check my profile"
     }
   },
   "portfolio": {
@@ -65,5 +65,9 @@
   "resume": {
     "coming": "Coming Soon...!",
     "back": "Volver a Index"
+  },
+  "error": {
+    "notfound": "Error 404: Page Not Found",
+    "back": "<< Back home"
   }
 }

@@ -11,89 +11,36 @@ html.no-js(lang='es')
         //- (external dependency) "upplication" Icons
         link(href='//upplication.github.io/icons/upplication-icons.css', rel='stylesheet', type='text/css')
         //- custom styles for current view
-        link(rel='stylesheet', type='text/css', href='css/404.css')
+        link(rel='stylesheet', type='text/css', href='css/index.css')
 
     body.old-crt-effect
-        main
+        main.old-crt-effect
+            .pieces(style='background-image: url(img/resume/fire.gif)', data-img-alt='url(img/index/alt.jpg)', data-img-code='url(img/index/code.jpg)')
             .overlay.overlay--hidden
-            .zeppelin
-                img(src='img/404/zeppelin.jpg', alt='@jalofernandez sky zeppelin', title='@jalofernandez sky zeppelin')
-                //- All (body) FOCUS
-                .big-focus.focus-01
-                .thinny-light.neon-frame-violet.neon-001
-                .thinny-light.neon-frame-orange.neon-001
-                .big-focus.focus-02
-                .thinny-light.neon-frame-violet.neon-002
-                .thinny-light.neon-frame-pink.neon-002
-                .big-focus.focus-03
-                //- All (stroke) position LIGHTS
-                span.thinny-light.position-lights.light-01
-                span.thinny-light.position-lights.light-02
-                span.thinny-light.position-lights.light-03
-                span.thinny-light.position-lights.light-04
-                span.thinny-light.position-lights.light-05
-                span.thinny-light.position-lights.light-06
-                span.thinny-light.position-lights.light-07
-                span.thinny-light.position-lights.light-08
-                span.thinny-light.position-lights.light-09
-                span.thinny-light.position-lights.light-10
-                span.thinny-light.position-lights.light-11
-                span.thinny-light.position-lights.light-12
-                span.thinny-light.position-lights.light-13
-                span.thinny-light.position-lights.light-14
-                span.thinny-light.position-lights.light-15
-                span.thinny-light.position-lights.light-16
-                span.thinny-light.position-lights.light-17
-                span.thinny-light.position-lights.light-18
-                //- All (screen frame) LIGHTS
-                .thinny-light.neon-frame-pink.neon-003
-                .thinny-light.neon-frame-orange.neon-003
-                span.thinny-light.neon-frame-pink.neon-01
-                span.thinny-light.neon-frame-violet.neon-02
-                span.thinny-light.neon-frame-orange.neon-02
-                span.thinny-light.neon-frame-orange.neon-03
-                span.thinny-light.neon-frame-violet.neon-03
-                span.thinny-light.neon-frame-pink.neon-04
-                span.thinny-light.neon-frame-violet.neon-05
-                span.thinny-light.neon-frame-orange.neon-05
-                span.thinny-light.neon-frame-orange.neon-06
-                span.thinny-light.neon-frame-pink.neon-07
-                span.thinny-light.neon-frame-orange.neon-07
-                span.thinny-light.neon-frame-violet.neon-08
-                span.thinny-light.neon-frame-orange.neon-09
-                span.thinny-light.neon-frame-pink.neon-10
-                span.thinny-light.neon-frame-violet.neon-10
-                span.thinny-light.neon-frame-orange.neon-11
-                span.thinny-light.neon-frame-pink.neon-12
-                span.thinny-light.neon-frame-orange.neon-13
-                span.thinny-light.neon-frame-violet.neon-13
-                span.thinny-light.neon-frame-pink.neon-14
-                span.thinny-light.neon-frame-orange.neon-15
-                span.thinny-light.neon-frame-green.neon-16
-                span.thinny-light.neon-frame-violet.neon-17
-                span.thinny-light.neon-frame-pink.neon-17
-                span.thinny-light.neon-frame-orange.neon-18
-                span.thinny-light.neon-frame-green.neon-18
+            //-include includes/zeppelin
             .content
                 .content__inner
-                    .content__top
-                        h2.title
-                            span.title__inner.mode.mode--design(data-switch='', data-glitch='') #{index.author}
-                        .controls
-                            a.icon.icon-twitter(href='https://twitter.com/jalofernandez', target='_blank', rel='noopener noreferrer', title='Ver cuenta de Twitter de @jalofernandez')
-                            a.icon.icon-instagram(href='https://www.instagram.com/jalofernandez/?ref=badge', target='_blank', rel='noopener noreferrer', title='Ver perfil de Instagram de @jalofernandez')
-                            a.icon.icon-linkedin(href='https://www.linkedin.com/in/javierlorenzofernandez/', target='_blank', rel='noopener noreferrer', title='Ver perfil de LinkedIn de @jalofernandez')
-                            a.icon.icon-youtube(href='https://www.youtube.com/channel/UCtwY5GMTiS7VQ7kYzGomUsw', target='_blank', rel='noopener noreferrer', title='Ver canal de Youtube de @jalofernandez')
-                            a.icon.icon-facebook(href='https://www.facebook.com/jalofernandez?ref=tn_tnmn', target='_blank', rel='noopener noreferrer', title='Ver perfil de Facebook de @jalofernandez')
-                            a.icon.icon-github(href='https://github.com/jalofernandez', target='_blank', rel='noopener noreferrer', title='Ver perfil de Github de @jalofernandez')
-                            a.icon.icon-mail(href='mailto:jalofernandez@gmail.com', target='_blank', rel='noopener noreferrer', title='Enviar email a @jalofernandez')
-                            button.btn.btn--menu.mode.mode--design(type='button', value='text', name='all', aria-label='open', data-switch='')
-                                svg.icon--svg.icon--menu
-                                    use(xlink:href='#icon-menu')
-                                svg.icon--svg.icon--menu-alt
-                                    use(xlink:href='#icon-menu-alt')
-                    h1.glitch(href='index.html', title='Volver al índice del Website de @jalofernandez', data-text='graphic designer') #{index.career}
-                    h3.glitch.coming-soon(data-text='Coming Soon...!') #{resume.coming}
+                    //- main & common Header with website name & social media links:
+                    include includes/header
+                    //-h3.glitch.coming-soon(data-text='Coming Soon...!') #{resume.coming}
+                    .menu.menu--code
+                        ul.menu__inner
+                            li.menu__item
+                                a.menu__link(data-switch='') #{index.coder.title}
+                            li.menu__item
+                                a.menu__link.glitch(href='https://www.upplication.com/en/', target='_blank', rel='noopener noreferrer', title='Upplication® App builder. Create the app for your business, no coding required, fast and simple. Android and iOS app', data-text='Upplication', data-switch='') #{index.coder.upplication.title}
+                            li.menu__item
+                                a.menu__link.glitch(href='http://proyectogastronomix.org/', target='_blank', rel='noopener noreferrer', title='Gastronomix es un proyecto social gratuito de cocina, gastronomía creativa y reciclaje personal. Organizado por J.P. Morgan, Basque Culinary Center, La Casa y el Mundo y Fundación Tomillo', data-text='Gastronomix', data-switch='') #{index.coder.gastronomix.title}
+                            li.menu__item
+                                a.menu__link.glitch(href='https://widitrade.com/', target='_blank', rel='noopener noreferrer', title='Widitrade to Increase Your Online Sales Now!', data-text='Widitrade', data-switch='') #{index.coder.widitrade.title}
+                            li.menu__item
+                                a.menu__link.glitch(href='https://peluqueriacanessa.com/', target='_blank', rel='noopener noreferrer', title='Canessa ofrece servicios de peluquería y belleza canina y felina con cortes de pelo comerciales y de exposición. Servicio de autolavado y de un completo SPA canino.', data-text='Canessa', data-switch='') #{index.coder.canessa.title}
+                            li.menu__item
+                                a.menu__link.glitch(href='https://ecomerzpro.net/', target='_blank', rel='noopener noreferrer', title='Ecomerzpro Club for ecommerce offers and discounts', data-text='Ecomerzpro Club', data-switch='') #{index.coder.ecomerzpro.title}
+                            li.menu__item
+                                a.menu__link.glitch(href='https://jalofernandez.github.io/lfcabogados/', target='_blank', rel='noopener noreferrer', title='LFC Abogados y Economistas expertos en Compliance penal. Asesoramos en materia jurídico penal preventiva.', data-text='LFC; Abogados y Economistas', data-switch='') #{index.coder.lfcabogados.title}
+                            li.menu__item
+                                a.menu__link.glitch(href='https://github.com/jalofernandez', target='_blank', rel='noopener noreferrer', title='@jalofernandez GitHub account', data-text='> ...take a look on Github', data-switch='') #{index.coder.others.title}
                 //- TODO: code to add a "back to index" BTN
                     .content__bottom
                         .switch.mode.mode--design

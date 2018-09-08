@@ -11,7 +11,7 @@ main {
 
 a {
   text-decoration: none;
-  color: #f4692a;
+  color: var(--color-designer);
   outline: none;
   cursor: pointer;
 }
@@ -39,7 +39,7 @@ a:focus {
   left: 0;
   width: 100%;
   height: 100%;
-  background: #232323;
+  background: var(--color-black);
   -webkit-transition: opacity 0.3s;
   transition: opacity 0.3s;
 }
@@ -51,9 +51,9 @@ a:focus {
 
 .js .loading::after {
   content: '- - -';
-  font-family: 'Roboto Mono', monospace;
+  font-family: var(--font-family-links);
   font-size: 1.5em;
-  color: @coder-color;
+  color: var(--color-coder);
   position: absolute;
   top: 0;
   left: 0;
@@ -175,7 +175,7 @@ a:focus {
   margin: 0;
   font-size: 1em;
   font-weight: normal;
-  color: #f4692a;
+  color: var(--color-designer);
   line-height: 1;
 }
 
@@ -184,7 +184,7 @@ h1 {
   width: 100%;
   margin: 0;
   padding-left: 56px;
-  font-family: 'Roboto Mono', monospace;
+  font-family: var(--font-family-links);
   font-size: 1.8em;
   color: #ccc;
   text-align: left;
@@ -214,7 +214,7 @@ h1 {
 }
 
 .controls a.icon:hover {
-  color: #f4692a;
+  color: var(--color-designer);
 }
 
 .controls a.icon.icon-instagram {
@@ -227,9 +227,9 @@ h1 {
 
 .mode--code,
 .menu--code .menu__link {
-  font-family: 'Roboto Mono', monospace;
+  font-family: var(--font-family-links);
   text-transform: lowercase;
-  color: #29cc00;
+  color: var(--color-coder);
 }
 
 .menu {
@@ -306,13 +306,13 @@ h1 {
 
 .switch__item--current {
   pointer-events: none;
-  color: #232323;
-  background-color: #f4692a;
+  color: var(--color-black);
+  background-color: var(--color-designer);
 }
 
 .mode--code .switch__item--current {
-  color: #232323;
-  background-color: #29cc00;
+  color: var(--color-black);
+  background-color: var(--color-coder);
 }
 
 .switch__item:first-child::after {
@@ -336,6 +336,14 @@ h1 {
 .contact-link {
   display: inline-block;
   padding: 1em 0;
+  font-size: 24px;
+  //
+  @media (max-width: 768px) {
+    font-size: 20px;
+  }
+  @media (max-width: 450px) {
+    font-size: 18px;
+  }
 }
 
 .overlay {

@@ -167,10 +167,11 @@ table {
 }
 /* -- COLOR vars -- */
 :root {
-  --color-designer-color: #29cc00;
-  --color-coder-color: #f4692a;
+  --color-designer: #f4692a;
+  --color-coder: #29cc00;
   --color-white: #f1f1f1;
   --color-black: #232323;
+  --color-pure-back: #000000;
   --color-dark-grey: #888888;
   --color-bg-color: #030203;
   --color-bg-overlay: rgba(35, 35, 35, 0.85);
@@ -191,6 +192,35 @@ body {
   background: #232323;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+.btn {
+  min-width: 100px;
+  font-size: 1rem;
+  font-weight: normal;
+  text-decoration: none;
+  cursor: pointer;
+  color: #29cc00;
+  line-height: normal;
+  padding: 10px;
+  margin: 0;
+  height: auto;
+  border: none;
+  vertical-align: middle;
+  -webkit-appearance: none;
+  background-color: rgba(0, 0, 0, 0);
+}
+.btn:hover {
+  color: #f7f7f7;
+  text-decoration: none;
+}
+.btn:focus {
+  outline: none;
+  border-color: var(--darken-2);
+  box-shadow: 0 0 0 3px var(--darken-3);
+}
+.btn.menu__link.glitch::after,
+.btn.menu__link.glitch::before {
+  padding: 10px;
 }
 /* -- GLITCH EFFECT (punk links distortion) -- */
 .menu__link {
@@ -531,7 +561,7 @@ body {
   max-width: 300px;
   text-align: center;
   font-size: 2rem;
-  color: #29cc00;
+  color: #f4692a;
 }
 .coming-soon .glitch::after {
   left: 48px;
@@ -560,7 +590,7 @@ main {
 }
 a {
   text-decoration: none;
-  color: #f4692a;
+  color: var(--color-designer);
   outline: none;
   cursor: pointer;
 }
@@ -584,7 +614,7 @@ a:focus {
   left: 0;
   width: 100%;
   height: 100%;
-  background: #232323;
+  background: var(--color-black);
   -webkit-transition: opacity 0.3s;
   transition: opacity 0.3s;
 }
@@ -594,9 +624,9 @@ a:focus {
 }
 .js .loading::after {
   content: '- - -';
-  font-family: 'Roboto Mono', monospace;
+  font-family: var(--font-family-links);
   font-size: 1.5em;
-  color: #f4692a;
+  color: var(--color-coder);
   position: absolute;
   top: 0;
   left: 0;
@@ -706,7 +736,7 @@ a:focus {
   margin: 0;
   font-size: 1em;
   font-weight: normal;
-  color: #f4692a;
+  color: var(--color-designer);
   line-height: 1;
 }
 h1 {
@@ -714,7 +744,7 @@ h1 {
   width: 100%;
   margin: 0;
   padding-left: 56px;
-  font-family: 'Roboto Mono', monospace;
+  font-family: var(--font-family-links);
   font-size: 1.8em;
   color: #ccc;
   text-align: left;
@@ -740,7 +770,7 @@ h1 {
   color: #888;
 }
 .controls a.icon:hover {
-  color: #f4692a;
+  color: var(--color-designer);
 }
 .controls a.icon.icon-instagram {
   padding: 0 10px;
@@ -750,9 +780,9 @@ h1 {
 }
 .mode--code,
 .menu--code .menu__link {
-  font-family: 'Roboto Mono', monospace;
+  font-family: var(--font-family-links);
   text-transform: lowercase;
-  color: #29cc00;
+  color: var(--color-coder);
 }
 .menu {
   font-size: 1.85em;
@@ -816,12 +846,12 @@ h1 {
 }
 .switch__item--current {
   pointer-events: none;
-  color: #232323;
-  background-color: #f4692a;
+  color: var(--color-black);
+  background-color: var(--color-designer);
 }
 .mode--code .switch__item--current {
-  color: #232323;
-  background-color: #29cc00;
+  color: var(--color-black);
+  background-color: var(--color-coder);
 }
 .switch__item:first-child::after {
   content: '';
@@ -842,6 +872,17 @@ h1 {
 .contact-link {
   display: inline-block;
   padding: 1em 0;
+  font-size: 24px;
+}
+@media (max-width: 768px) {
+  .contact-link {
+    font-size: 20px;
+  }
+}
+@media (max-width: 450px) {
+  .contact-link {
+    font-size: 18px;
+  }
 }
 .overlay {
   position: fixed;

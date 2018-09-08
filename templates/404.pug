@@ -8,75 +8,30 @@ html.no-js(lang='es')
         //- meta(name='keywords', content='diseño, diseño web, dibujo, maquetación, arte, creatividad, artes finales, design, web design, 404, error 404, creatividad, inspiración, inspiration, creative')
         //- (common) Metatags in current view
         include includes/metatags
+        //- (external dependency) "upplication" Icons
+        link(href='//upplication.github.io/icons/upplication-icons.css', rel='stylesheet', type='text/css')
         //- custom styles for current view
         link(rel='stylesheet', type='text/css', href='css/404.css')
 
     body.old-crt-effect
-        main
+        main.old-crt-effect
+            .pieces(style='background-image: url(img/resume/fire.gif)', data-img-alt='url(img/index/alt.jpg)', data-img-code='url(img/index/code.jpg)')
             .overlay.overlay--hidden
-            .zeppelin
-                img(src='img/404/zeppelin.jpg', alt='404: Page not found', title='404: Page not found')
-                //- All (body) FOCUS
-                .big-focus.focus-01
-                .thinny-light.neon-frame-violet.neon-001
-                .thinny-light.neon-frame-orange.neon-001
-                .big-focus.focus-02
-                .thinny-light.neon-frame-violet.neon-002
-                .thinny-light.neon-frame-pink.neon-002
-                .big-focus.focus-03
-                //- All (stroke) position LIGHTS
-                span.thinny-light.position-lights.light-01
-                span.thinny-light.position-lights.light-02
-                span.thinny-light.position-lights.light-03
-                span.thinny-light.position-lights.light-04
-                span.thinny-light.position-lights.light-05
-                span.thinny-light.position-lights.light-06
-                span.thinny-light.position-lights.light-07
-                span.thinny-light.position-lights.light-08
-                span.thinny-light.position-lights.light-09
-                span.thinny-light.position-lights.light-10
-                span.thinny-light.position-lights.light-11
-                span.thinny-light.position-lights.light-12
-                span.thinny-light.position-lights.light-13
-                span.thinny-light.position-lights.light-14
-                span.thinny-light.position-lights.light-15
-                span.thinny-light.position-lights.light-16
-                span.thinny-light.position-lights.light-17
-                span.thinny-light.position-lights.light-18
-                //- All (screen frame) LIGHTS
-                .thinny-light.neon-frame-pink.neon-003
-                .thinny-light.neon-frame-orange.neon-003
-                span.thinny-light.neon-frame-pink.neon-01
-                span.thinny-light.neon-frame-violet.neon-02
-                span.thinny-light.neon-frame-orange.neon-02
-                span.thinny-light.neon-frame-orange.neon-03
-                span.thinny-light.neon-frame-violet.neon-03
-                span.thinny-light.neon-frame-pink.neon-04
-                span.thinny-light.neon-frame-violet.neon-05
-                span.thinny-light.neon-frame-orange.neon-05
-                span.thinny-light.neon-frame-orange.neon-06
-                span.thinny-light.neon-frame-pink.neon-07
-                span.thinny-light.neon-frame-orange.neon-07
-                span.thinny-light.neon-frame-violet.neon-08
-                span.thinny-light.neon-frame-orange.neon-09
-                span.thinny-light.neon-frame-pink.neon-10
-                span.thinny-light.neon-frame-violet.neon-10
-                span.thinny-light.neon-frame-orange.neon-11
-                span.thinny-light.neon-frame-pink.neon-12
-                span.thinny-light.neon-frame-orange.neon-13
-                span.thinny-light.neon-frame-violet.neon-13
-                span.thinny-light.neon-frame-pink.neon-14
-                span.thinny-light.neon-frame-orange.neon-15
-                span.thinny-light.neon-frame-green.neon-16
-                span.thinny-light.neon-frame-violet.neon-17
-                span.thinny-light.neon-frame-pink.neon-17
-                span.thinny-light.neon-frame-orange.neon-18
-                span.thinny-light.neon-frame-green.neon-18
+            .content
+                .content__inner
+                    //- main & common Header with website name & social media links:
+                    include includes/header
+                    //-h3.glitch.coming-soon(data-text='Coming Soon...!') #{resume.coming}
+                    .typewriter
+                        h3.mode--code #{error.notfound}
+                    .content__bottom
+                        .switch.mode.mode--code
+                            //-a.switch__item(title='') #{error.back}
+                            a.btn.menu__link.glitch(href='/', data-text='<< Home')
+                                | << Home
+            //- to apply a typical blink effect in old CRT monitors
             .line-anim
-            //-
-              todo: remove this section if you wasn´t it here!
-              to apply a typical blink effect in old CRT monitors
-              <div class="flicker"></div>
-
+                .flicker
+            
         //- To register Service Worker & validate it by console log
         include includes/serviceworker
