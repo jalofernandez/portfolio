@@ -1,7 +1,8 @@
 {
+  "back": "<< Home",
   "index": {
     "author": "@jalofernandez",
-    "career": "graphic designer",
+    "career": "designer + coder",
     "designer": {
       "title": "_as graphic designer:",
       "layout": {
@@ -67,7 +68,6 @@
     "back": "Volver a Index"
   },
   "error": {
-    "notfound": "Error 404: Page Not Found",
-    "back": "<< Back home"
+    "notfound": "Error 404: Page Not Found"
   }
 }

@@ -11,7 +11,7 @@ html.no-js(lang='es')
         //- (external dependency) "upplication" Icons
         link(href='//upplication.github.io/icons/upplication-icons.css', rel='stylesheet', type='text/css')
         //- custom styles for current view
-        link(rel='stylesheet', type='text/css', href='css/index.css')
+        link(rel='stylesheet', type='text/css', href='css/resume.css')
 
     body.old-crt-effect
         main.old-crt-effect
@@ -22,29 +22,28 @@ html.no-js(lang='es')
                 .content__inner
                     //- main & common Header with website name & social media links:
                     include includes/header
-                    //-h3.glitch.coming-soon(data-text='Coming Soon...!') #{resume.coming}
-                    .menu.menu--code
+                    //- skills list as a coder & designer
+                    .typewriter
+                        p.mode--code HTML5, CSS3, PWA, jQuery, javascript,
+                        p.mode--code ... nodejs, yarn, less, pug, gulp ...
+                        p.mode--code Photography, video edition, design
+                    //-.menu
                         ul.menu__inner
                             li.menu__item
-                                a.menu__link(data-switch='') #{index.coder.title}
+                                a.menu__link(data-switch='') #{index.designer.title}
                             li.menu__item
-                                a.menu__link.glitch(href='https://www.upplication.com/en/', target='_blank', rel='noopener noreferrer', title='Upplication® App builder. Create the app for your business, no coding required, fast and simple. Android and iOS app', data-text='Upplication', data-switch='') #{index.coder.upplication.title}
+                                a.menu__link.glitch(href='portfolio.html', data-text='layout', data-switch='', title='Ver Portfolio completo de @jalofernandez') #{index.designer.layout.title}
                             li.menu__item
-                                a.menu__link.glitch(href='http://proyectogastronomix.org/', target='_blank', rel='noopener noreferrer', title='Gastronomix es un proyecto social gratuito de cocina, gastronomía creativa y reciclaje personal. Organizado por J.P. Morgan, Basque Culinary Center, La Casa y el Mundo y Fundación Tomillo', data-text='Gastronomix', data-switch='') #{index.coder.gastronomix.title}
+                                a.menu__link.glitch(href='portfolio.html', data-text='photography', data-switch='', title='Ver Portfolio completo de @jalofernandez') #{index.designer.photography.title}
                             li.menu__item
-                                a.menu__link.glitch(href='https://widitrade.com/', target='_blank', rel='noopener noreferrer', title='Widitrade to Increase Your Online Sales Now!', data-text='Widitrade', data-switch='') #{index.coder.widitrade.title}
+                                a.menu__link.glitch(href='portfolio.html', data-text='UX & UI Web design', data-switch='', title='Ver Portfolio completo de @jalofernandez') #{index.designer.web.title}
                             li.menu__item
-                                a.menu__link.glitch(href='https://peluqueriacanessa.com/', target='_blank', rel='noopener noreferrer', title='Canessa ofrece servicios de peluquería y belleza canina y felina con cortes de pelo comerciales y de exposición. Servicio de autolavado y de un completo SPA canino.', data-text='Canessa', data-switch='') #{index.coder.canessa.title}
+                                a.menu__link.glitch(href='portfolio.html', data-text='packaging', data-switch='', title='Ver Portfolio completo de @jalofernandez') #{index.designer.packaging.title}
                             li.menu__item
-                                a.menu__link.glitch(href='https://ecomerzpro.net/', target='_blank', rel='noopener noreferrer', title='Ecomerzpro Club for ecommerce offers and discounts', data-text='Ecomerzpro Club', data-switch='') #{index.coder.ecomerzpro.title}
-                            li.menu__item
-                                a.menu__link.glitch(href='https://jalofernandez.github.io/lfcabogados/', target='_blank', rel='noopener noreferrer', title='LFC Abogados y Economistas expertos en Compliance penal. Asesoramos en materia jurídico penal preventiva.', data-text='LFC; Abogados y Economistas', data-switch='') #{index.coder.lfcabogados.title}
-                            li.menu__item
-                                a.menu__link.glitch(href='https://github.com/jalofernandez', target='_blank', rel='noopener noreferrer', title='@jalofernandez GitHub account', data-text='> ...take a look on Github', data-switch='') #{index.coder.others.title}
-                //- TODO: code to add a "back to index" BTN
+                                a.menu__link.glitch(href='portfolio.html', data-text='graphisms & draws', data-switch='', title='Ver Portfolio completo de @jalofernandez') #{index.designer.graphisms.title}
                     .content__bottom
-                        .switch.mode.mode--design
-                            a.switch__item.switch__item--current(href='index.html', title='Volver al índice del Website de @jalofernandez') #{resume.back}
+                        .switch.mode.mode--code
+                            a.btn.menu__link.glitch(href='/', data-text='<< Home') #{back}
             //- to apply a typical blink effect in old CRT monitors
             .line-anim
                 .flicker

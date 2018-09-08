@@ -1,0 +1,116 @@
+@import '_vars';
+@import '_common';
+@import 'index';
+
+// comoon) to enable "fire.gif" animation
+body {
+  background-color: var(--color-pure-back);
+}
+
+.pieces {
+  background-position: bottom center;
+  margin-bottom: 0;
+}
+
+main {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.btn {
+  font-size: 1.5rem;
+  //color: var(--color-designer);
+  color: var(--color-coder);
+}
+
+.typewriter {
+  .mode--code {
+    padding-right: 5px;
+    border-right: .15em solid var(--color-coder);
+    font-family: var(--font-family-links);
+    color: var(--color-coder);
+    font-size: 1.5em;
+    @media (max-width: 640px) {
+      font-size: 1em;
+    }
+    white-space: nowrap;
+    overflow: hidden;
+    width: 22em;
+    // (skills) paragraph 01
+    &:nth-child(1) {
+      -webkit-animation: type 2s steps(40, end);
+      animation: type 2s steps(40, end);
+      -webkit-animation-fill-mode: forwards;
+      animation-fill-mode: forwards;
+      -webkit-animation-delay: .5s;
+      animation-delay: .5s;
+    }
+    // (skills) paragraph 01
+    &:nth-child(2) {
+      opacity: 0;
+      -webkit-animation: type2 2s steps(40, end);
+      animation: type2 2s steps(40, end);
+      -webkit-animation-delay: 2s;
+      animation-delay: 2s;
+      -webkit-animation-fill-mode: forwards;
+      animation-fill-mode: forwards;
+    }
+    // (skills) paragraph 01
+    &:nth-child(3) {
+      opacity: 0;
+      -webkit-animation: type3 2s steps(20, end), blink .5s step-end infinite alternate;
+      animation: type3 2s steps(20, end), blink .5s step-end infinite alternate;
+      -webkit-animation-delay: 4s;
+      animation-delay: 4s;
+      -webkit-animation-fill-mode: forwards;
+      animation-fill-mode: forwards;
+    }
+  }
+}
+
+@keyframes type {
+  0% { width: 0; }
+  99.9% { border-right: .15em solid var(--color-coder); }
+  100% { border: none; }
+}
+@-webkit-keyframes type {
+  0% { width: 0; }
+  99.9% { border-right: .15em solid var(--color-coder); }
+  100% { border: none; }
+}
+
+@keyframes type2 {
+  0% { width: 0; }
+  1% { opacity: 1; }
+  99.9% { border-right: .15em solid var(--color-coder); }
+  100% { opacity: 1; border: none; }
+}
+@-webkit-keyframes type2 {
+  0% { width: 0; }
+  1% { opacity: 1; }
+  99.9% { border-right: .15em solid var(--color-coder); }
+  100% { opacity: 1; border: none; }
+}
+
+@keyframes type3 {
+  0% { width: 0; }
+  1% { opacity: 1; }
+  100% { opacity: 1; }
+}
+@-webkit-keyframes type3 {
+  0% { width: 0; }
+  1% { opacity: 1; }
+  100% { opacity: 1; }
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+@-webkit-keyframes blink {
+  50% { border-color: transparent; }
+}

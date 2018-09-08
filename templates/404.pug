@@ -21,14 +21,11 @@ html.no-js(lang='es')
                 .content__inner
                     //- main & common Header with website name & social media links:
                     include includes/header
-                    //-h3.glitch.coming-soon(data-text='Coming Soon...!') #{resume.coming}
                     .typewriter
                         h3.mode--code #{error.notfound}
                     .content__bottom
                         .switch.mode.mode--code
-                            //-a.switch__item(title='') #{error.back}
-                            a.btn.menu__link.glitch(href='/', data-text='<< Home')
-                                | << Home
+                            a.btn.menu__link.glitch(href='/', data-text='<< Home') #{back}
             //- to apply a typical blink effect in old CRT monitors
             .line-anim
                 .flicker
