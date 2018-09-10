@@ -14,6 +14,24 @@
   */
   -webkit-animation: on-move 50s infinite linear;
   animation: on-move 50s infinite linear;
+  @-webkit-keyframes on-move {
+    0%   {left:-500px; top:-500px;}
+    100% {left:800px; top:800px;}
+  }
+  @keyframes on-move {
+    0%   {left:-500px; top:-500px;}
+    100% {left:800px; top:800px;}
+  }
+  @media (max-width: 540px) {
+    @-webkit-keyframes on-move {
+      0%   {left:-500px; top:-500px;}
+      100% {left:800px; top:1500px;}
+    }
+    @keyframes on-move {
+      0%   {left:-500px; top:-500px;}
+      100% {left:800px; top:1500px;}
+    }
+  }
 
   .thinny-light {
     position: absolute;
@@ -22,15 +40,6 @@
     display: inline-block;
     border-radius: 50%;
   }
-}
-
-@-webkit-keyframes on-move {
-  0%   {left:-500px; top:-500px;}
-  100% {left:800px; top:800px;}
-}
-@keyframes on-move {
-  0%   {left:-500px; top:-500px;}
-  100% {left:800px; top:800px;}
 }
 
 /* ... POSITION LIGHTS (around zeppeling estructure) ... */

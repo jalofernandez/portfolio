@@ -1052,7 +1052,7 @@ section {
   position: relative;
   display: flex;
   flex-wrap: wrap;
-  background-size: 100% auto;
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: 0 0;
 }
@@ -1081,13 +1081,6 @@ section {
   -webkit-animation: on-move 50s infinite linear;
   animation: on-move 50s infinite linear;
 }
-.zeppelin .thinny-light {
-  position: absolute;
-  margin: 0;
-  padding: 0;
-  display: inline-block;
-  border-radius: 50%;
-}
 @-webkit-keyframes on-move {
   0% {
     left: -500px;
@@ -1107,6 +1100,35 @@ section {
     left: 800px;
     top: 800px;
   }
+}
+@media (max-width: 540px) {
+  @-webkit-keyframes on-move {
+    0% {
+      left: -500px;
+      top: -500px;
+    }
+    100% {
+      left: 800px;
+      top: 1500px;
+    }
+  }
+  @keyframes on-move {
+    0% {
+      left: -500px;
+      top: -500px;
+    }
+    100% {
+      left: 800px;
+      top: 1500px;
+    }
+  }
+}
+.zeppelin .thinny-light {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  border-radius: 50%;
 }
 /* ... POSITION LIGHTS (around zeppeling estructure) ... */
 .position-lights {
