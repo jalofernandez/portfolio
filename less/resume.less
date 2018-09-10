@@ -1,10 +1,17 @@
 @import '_vars';
 @import '_common';
 @import 'index';
+@import '_zeppelin';
 
 // comoon) to enable "fire.gif" animation
 body {
-  background-color: var(--color-pure-back);
+  background-color: var(--color-bg-zeppelin); /* caused by "zeppelin" img BG color */
+}
+
+.glitch {
+  &::after, &::before {
+    background-color: var(--color-bg-zeppelin);
+  }
 }
 
 .pieces {

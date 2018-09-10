@@ -6,6 +6,7 @@
   --color-white: #f1f1f1;
   --color-black: #232323;
   --color-pure-back: #000000;
+  --color-bg-zeppelin: #232120;
   --color-dark-grey: #888888;
   --color-bg-color: #030203;
   --color-bg-overlay: rgba(35, 35, 35, 0.85);
@@ -159,7 +160,7 @@ main {
   text-shadow: -1px 0 red;
   top: 0;
   color: #eee;
-  background: #232323;
+  background-color: #232323;
   overflow: hidden;
   clip: rect(0, 900px, 0, 0);
   animation: noise-anim 2s infinite linear alternate-reverse;
@@ -171,7 +172,7 @@ main {
   text-shadow: 1px 0 blue;
   top: 0;
   color: #f7f7f7;
-  background: #232323;
+  background-color: #232323;
   overflow: hidden;
   clip: rect(0, 900px, 0, 0);
   animation: noise-anim-2 3s infinite linear alternate-reverse;
@@ -1026,7 +1027,7 @@ section {
     flex-flow: column;
   }
   .controls {
-    margin: 1em 1em 2em;
+    margin: 1em 1em 5em;
     order: 1;
   }
   .title {
@@ -1038,7 +1039,7 @@ section {
   }
   .glitch::after,
   .glitch::before {
-    left: 130px;
+    left: 100px;
   }
 }
 .pieces {
@@ -1064,8 +1065,463 @@ section {
 .piece {
   pointer-events: none;
 }
+/* -- {LESS} ZEPPELIN style sheet -- */
+.zeppelin {
+  margin: 0;
+  padding: 0;
+  max-width: 814px;
+  max-height: 501px;
+  position: relative;
+  /*
+  top: 20%;
+  left: 15%;
+  top: 0;
+  left: 0;
+  */
+  -webkit-animation: on-move 50s infinite linear;
+  animation: on-move 50s infinite linear;
+}
+.zeppelin .thinny-light {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  border-radius: 50%;
+}
+@-webkit-keyframes on-move {
+  0% {
+    left: -500px;
+    top: -500px;
+  }
+  100% {
+    left: 800px;
+    top: 800px;
+  }
+}
+@keyframes on-move {
+  0% {
+    left: -500px;
+    top: -500px;
+  }
+  100% {
+    left: 800px;
+    top: 800px;
+  }
+}
+/* ... POSITION LIGHTS (around zeppeling estructure) ... */
+.position-lights {
+  background: #ECDE18;
+  box-shadow: 0 4.66667px 24px 3px #ECDE18;
+  -webkit-animation: flash-1 2s infinite both;
+  animation: flash-1 2s infinite both;
+}
+.light-01 {
+  width: 12px;
+  height: 12px;
+  top: 105px;
+  left: 20px;
+}
+.light-02 {
+  width: 9px;
+  height: 9px;
+  top: 61px;
+  left: 112px;
+}
+.light-03 {
+  width: 8px;
+  height: 8px;
+  top: 38px;
+  left: 181px;
+}
+.light-04 {
+  width: 9px;
+  height: 9px;
+  top: 164px;
+  left: 13px;
+}
+.light-05 {
+  width: 7px;
+  height: 7px;
+  top: 204px;
+  left: 24px;
+}
+.light-06 {
+  width: 12px;
+  height: 12px;
+  top: 256px;
+  left: 38px;
+}
+.light-07 {
+  width: 8px;
+  height: 8px;
+  top: 284px;
+  left: 121px;
+}
+.light-08 {
+  width: 8px;
+  height: 8px;
+  top: 317px;
+  left: 175px;
+}
+.light-09 {
+  width: 12px;
+  height: 12px;
+  top: 14px;
+  left: 278px;
+}
+.light-10 {
+  width: 15px;
+  height: 15px;
+  top: 50px;
+  left: 376px;
+}
+.light-11 {
+  width: 15px;
+  height: 15px;
+  top: 60px;
+  left: 477px;
+}
+.light-12 {
+  width: 15px;
+  height: 15px;
+  top: 260px;
+  right: 9px;
+}
+.light-13 {
+  width: 8px;
+  height: 8px;
+  top: 203px;
+  right: 40px;
+}
+.light-14 {
+  width: 8px;
+  height: 8px;
+  top: 252px;
+  right: 78px;
+}
+.light-15 {
+  width: 8px;
+  height: 8px;
+  top: 308px;
+  right: 42px;
+}
+.light-16 {
+  width: 8px;
+  height: 8px;
+  top: 330px;
+  right: 57px;
+}
+.light-17 {
+  width: 8px;
+  height: 8px;
+  top: 365px;
+  right: 103px;
+}
+.light-18 {
+  width: 8px;
+  height: 8px;
+  top: 457px;
+  right: 71px;
+}
+@-webkit-keyframes flash-1 {
+  0%,
+  100% {
+    background: #ECDE18;
+    box-shadow: 0px 4.66667px 24px 3px #ECDE18;
+  }
+  50% {
+    background: rgba(236, 222, 24, 0.4);
+    box-shadow: 0px 4.66667px 24px 3px rgba(236, 222, 24, 0.2);
+  }
+  0% {
+    opacity: 0;
+  }
+  20%,
+  80% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes flash-1 {
+  0%,
+  100% {
+    background: #ECDE18;
+    box-shadow: 0 4.66667px 24px 3px #ECDE18;
+  }
+  50% {
+    background: rgba(236, 222, 24, 0.4);
+    box-shadow: 0 4.66667px 24px 3px rgba(236, 222, 24, 0.2);
+  }
+  0% {
+    opacity: 0;
+  }
+  20%,
+  80% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+/* ... NEON FRAME (around zeppeling video frame) ... */
+.neon-frame-pink {
+  width: 13px;
+  height: 13px;
+  background: #ffeef5;
+  animation: neon-pink 0.5s ease-in-out infinite alternate;
+}
+@-webkit-keyframes neon-pink {
+  from {
+    box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FF1177, 0 0 70px #FF1177, 0 0 80px #FF1177, 0 0 100px #FF1177, 0 0 150px #FF1177;
+  }
+  to {
+    box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FF1177, 0 0 35px #FF1177, 0 0 40px #FF1177, 0 0 50px #FF1177, 0 0 75px #FF1177;
+  }
+}
+@keyframes neon-pink {
+  from {
+    box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FF1177, 0 0 70px #FF1177, 0 0 80px #FF1177, 0 0 100px #FF1177, 0 0 150px #FF1177;
+  }
+  to {
+    box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FF1177, 0 0 35px #FF1177, 0 0 40px #FF1177, 0 0 50px #FF1177, 0 0 75px #FF1177;
+  }
+}
+.neon-frame-violet {
+  width: 10px;
+  height: 10px;
+  background: #fbefff;
+  animation: neon-violet 1s ease-in-out infinite alternate;
+}
+@-webkit-keyframes neon-violet {
+  from {
+    box-shadow: 0 0 25px #fff, 0 0 35px #fff, 0 0 55px #fff, 0 0 80px #ff00de, 0 0 110px #ff00de, 0 0 125px #ff00de, 0 0 155px #ff00de, 0 0 210px #ff00de;
+  }
+  to {
+    box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ff00de, 0 0 35px #ff00de, 0 0 40px #ff00de, 0 0 50px #ff00de, 0 0 75px #ff00de;
+  }
+}
+@keyframes neon-violet {
+  from {
+    box-shadow: 0 0 25px #fff, 0 0 35px #fff, 0 0 55px #fff, 0 0 80px #ff00de, 0 0 110px #ff00de, 0 0 125px #ff00de, 0 0 155px #ff00de, 0 0 210px #ff00de;
+  }
+  to {
+    box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ff00de, 0 0 35px #ff00de, 0 0 40px #ff00de, 0 0 50px #ff00de, 0 0 75px #ff00de;
+  }
+}
+.neon-frame-orange {
+  width: 11px;
+  height: 11px;
+  background: #fff8ee;
+  animation: neon-orange 0.9s ease-in-out infinite alternate;
+}
+@-webkit-keyframes neon-orange {
+  from {
+    box-shadow: 0 0 30px #fff, 0 0 50px #fff, 0 0 50px #fff, 0 0 70px #FF9900, 0 0 100px #FF9900, 0 0 120px #FF9900, 0 0 150px #FF9900, 0 0 250px #FF9900;
+  }
+  to {
+    box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FF9900, 0 0 35px #FF9900, 0 0 40px #FF9900, 0 0 50px #FF9900, 0 0 75px #FF9900;
+  }
+}
+@keyframes neon-orange {
+  from {
+    box-shadow: 0 0 30px #fff, 0 0 50px #fff, 0 0 50px #fff, 0 0 70px #FF9900, 0 0 100px #FF9900, 0 0 120px #FF9900, 0 0 150px #FF9900, 0 0 250px #FF9900;
+  }
+  to {
+    box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FF9900, 0 0 35px #FF9900, 0 0 40px #FF9900, 0 0 50px #FF9900, 0 0 75px #FF9900;
+  }
+}
+.neon-frame-green {
+  width: 12px;
+  height: 12px;
+  background: #f5ffdd;
+  animation: neon-orange 0.7s ease-in-out infinite alternate;
+}
+@-webkit-keyframes neon-green {
+  from {
+    text-shadow: 0 0 45px #fff, 0 0 80px #fff, 0 0 90px #fff, 0 0 40px #B6FF00, 0 0 200px #B6FF00, 0 0 220px #B6FF00, 0 0 300px #B6FF00, 0 0 450px #B6FF00;
+  }
+  to {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #B6FF00, 0 0 35px #B6FF00, 0 0 40px #B6FF00, 0 0 50px #B6FF00, 0 0 75px #B6FF00;
+  }
+}
+@keyframes neon-green {
+  from {
+    text-shadow: 0 0 45px #fff, 0 0 80px #fff, 0 0 90px #fff, 0 0 40px #B6FF00, 0 0 200px #B6FF00, 0 0 220px #B6FF00, 0 0 300px #B6FF00, 0 0 450px #B6FF00;
+  }
+  to {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #B6FF00, 0 0 35px #B6FF00, 0 0 40px #B6FF00, 0 0 50px #B6FF00, 0 0 75px #B6FF00;
+  }
+}
+/* positions */
+.neon-01 {
+  top: 118px;
+  left: 507px;
+}
+.neon-02 {
+  top: 120px;
+  left: 532px;
+}
+.neon-03 {
+  top: 130px;
+  left: 552px;
+}
+.neon-04 {
+  top: 123px;
+  left: 575px;
+}
+.neon-05 {
+  top: 133px;
+  left: 598px;
+}
+.neon-06 {
+  top: 155px;
+  left: 640px;
+}
+.neon-07 {
+  top: 165px;
+  left: 661px;
+}
+.neon-08 {
+  top: 189px;
+  left: 660px;
+}
+.neon-09 {
+  top: 196px;
+  left: 675px;
+}
+.neon-10 {
+  top: 205px;
+  left: 693px;
+}
+.neon-11 {
+  top: 222px;
+  left: 707px;
+}
+.neon-12 {
+  top: 247px;
+  left: 701px;
+}
+.neon-13 {
+  top: 273px;
+  left: 690px;
+}
+.neon-14 {
+  top: 298px;
+  left: 679px;
+}
+.neon-15 {
+  top: 325px;
+  left: 669px;
+}
+.neon-16 {
+  top: 350px;
+  left: 659px;
+}
+.neon-17 {
+  top: 377px;
+  left: 647px;
+}
+.neon-18 {
+  top: 403px;
+  left: 634px;
+}
+/* ... FOCUS BIG LIGHTS (in bodys zeppeling) ... */
+.big-focus {
+  border: 5px solid #fff;
+  border-radius: 50%;
+  -webkit-filter: blur(5px);
+  filter: blur(5px);
+  margin: -15px 0 0 -15px;
+  opacity: 1;
+  position: absolute;
+  -webkit-animation: pulsate 2s ease-out infinite;
+  animation: pulsate 2s ease-out infinite;
+}
+.focus-01 {
+  width: 100px;
+  height: 100px;
+  top: 258px;
+  left: 308px;
+}
+.focus-02 {
+  width: 150px;
+  height: 150px;
+  top: 281px;
+  left: 224px;
+  -webkit-animation-duration: 3s;
+  animation-duration: 3s;
+}
+.focus-03 {
+  width: 90px;
+  height: 90px;
+  top: 407px;
+  left: 542px;
+  -webkit-animation-duration: 2.5s;
+  animation-duration: 2.5s;
+  /*
+  -webkit-transform: rotate(33deg);
+  transform: rotate(33deg);
+  */
+}
+@-webkit-keyframes pulsate {
+  0% {
+    transform: scale(0.1);
+    opacity: 0.0;
+  }
+  15% {
+    opacity: 1;
+  }
+  35% {
+    transform: scale(1.2);
+    opacity: 0;
+  }
+}
+@keyframes pulsate {
+  0% {
+    transform: scale(0.1);
+    opacity: 0.0;
+  }
+  15% {
+    opacity: 1;
+  }
+  35% {
+    transform: scale(1.2);
+    opacity: 0;
+  }
+}
+.neon-frame-orange {
+  width: 11px;
+  height: 11px;
+  background: #fff8ee;
+  animation: neon-orange 0.7s ease-in-out infinite alternate;
+}
+.neon-001 {
+  width: 20px;
+  height: 20px;
+  top: 282px;
+  left: 333px;
+}
+.neon-002 {
+  width: 18px;
+  height: 18px;
+  top: 335px;
+  left: 273px;
+}
+.neon-003 {
+  width: 16px;
+  height: 16px;
+  top: 428px;
+  left: 563px;
+}
 body {
-  background-color: var(--color-pure-back);
+  background-color: var(--color-bg-zeppelin);
+  /* caused by "zeppelin" img BG color */
+}
+.glitch::after,
+.glitch::before {
+  background-color: var(--color-bg-zeppelin);
 }
 .pieces {
   background-position: bottom center;
