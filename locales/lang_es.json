@@ -1,5 +1,8 @@
 {
-  "back": "<< Home",
+  "link": {
+    "home": "<< Home",
+    "portfolio": "Portfolio >>"
+  },
   "index": {
     "author": "@jalofernandez",
     "career": "designer + coder",
@@ -64,8 +67,15 @@
     }
   },
   "resume": {
-    "coming": "Coming Soon...!",
-    "back": "Volver a Index"
+    "title": "<span>[</span> Why <span>]</span> do you want to work with me?!",
+    "skills": [
+      "HTML5, pug, twig, CSS3, less, sass,",
+      "jQuery, javascript, PWA, SEO,",
+      "npm, yarn, gulp, bower, nodejs,",
+      "git, gitHub, bitbucket, subversion,",
+      "scrum, agile, trello, jira, slack,",
+      "responsive design, photo, video..."
+    ]
   },
   "error": {
     "notfound": "Error 404: Page Not Found"

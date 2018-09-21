@@ -825,9 +825,6 @@ h1 {
 .controls a.icon.icon-instagram {
   padding: 0 10px;
 }
-.codrops-icon {
-  color: #484545;
-}
 .mode--code,
 .menu--code .menu__link {
   font-family: var(--font-family-links);
@@ -876,6 +873,13 @@ h1 {
   position: relative;
   display: flex;
   align-items: center;
+}
+.switch.switch--navbar {
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  width: 100%;
+  bottom: 10px;
 }
 .switch__content {
   display: flex;
@@ -934,6 +938,20 @@ h1 {
     font-size: 18px;
   }
 }
+/* to apply a typewritter effect
+.typermark {
+  padding-right: 5px;
+  border-right: .15em solid var(--color-coder);
+  -webkit-animation: blink .5s step-end infinite alternate;
+  animation: blink .5s step-end infinite alternate;
+}
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+@-webkit-keyframes blink {
+  50% { border-color: transparent; }
+}
+*/
 .overlay {
   position: fixed;
   top: 0;
@@ -944,13 +962,13 @@ h1 {
   opacity: 0;
 }
 /* ... ABOUT ME (section) ... */
-/* TODO: apply it in other Sections */
+/* TODO: "turn on an old CRT display" animation effect */
+/*
 section {
   animation: turn-on 4s linear;
   animation-fill-mode: forwards;
   transition-delay: 5s;
 }
-/*
 
 @keyframes turn-on {
   0% {
@@ -1052,7 +1070,7 @@ section {
   position: relative;
   display: flex;
   flex-wrap: wrap;
-  background-size: contain;
+  background-size: 100% auto!important;
   background-repeat: no-repeat;
   background-position: 0 0;
 }
@@ -1086,7 +1104,19 @@ main {
   left: 0;
 }
 .btn {
+  padding: 15px;
   font-size: 1.5rem;
+}
+@media (max-width: 640px) {
+  .btn {
+    font-size: 1.2em;
+  }
+}
+.btn.btn--coder {
+  color: var(--color-coder);
+}
+.btn.btn--designer {
+  color: var(--color-designer);
 }
 .typewriter {
   margin-top: 5rem;

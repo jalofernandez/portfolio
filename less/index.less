@@ -221,10 +221,6 @@ h1 {
   padding: 0 10px;
 }
 
-.codrops-icon {
-  color: #484545;
-}
-
 .mode--code,
 .menu--code .menu__link {
   font-family: var(--font-family-links);
@@ -282,6 +278,14 @@ h1 {
   position: relative;
   display: flex;
   align-items: center;
+  // bottom navbar links:
+  &.switch--navbar {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    width: 100%;
+    bottom: 10px;
+  }
 }
 
 .switch__content {
@@ -296,12 +300,12 @@ h1 {
   margin: 0 1.5em 0 0;
   padding: 0 0 0.15em;
   color: #888;
-}
 
-.switch__item span {
-  position: relative;
-  display: inline-block;
-  pointer-events: none;
+  span {
+    position: relative;
+    display: inline-block;
+    pointer-events: none;
+  }
 }
 
 .switch__item--current {
@@ -346,6 +350,21 @@ h1 {
   }
 }
 
+/* to apply a typewritter effect
+.typermark {
+  padding-right: 5px;
+  border-right: .15em solid var(--color-coder);
+  -webkit-animation: blink .5s step-end infinite alternate;
+  animation: blink .5s step-end infinite alternate;
+}
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+@-webkit-keyframes blink {
+  50% { border-color: transparent; }
+}
+*/
+
 .overlay {
   position: fixed;
   top: 0;
@@ -359,17 +378,13 @@ h1 {
 /* ... ABOUT ME (section) ... */
 
 
-
-
-
-/* TODO: apply it in other Sections */
+/* TODO: "turn on an old CRT display" animation effect */
+/*
 section {
   animation: turn-on 4s linear;
   animation-fill-mode: forwards;
   transition-delay: 5s;
 }
-
-/*
 
 @keyframes turn-on {
   0% {
@@ -406,7 +421,6 @@ section {
 }
 
 */
-
 
 /* -- RESPONSIVE BEHAVIOUR -- */
 
@@ -478,8 +492,8 @@ section {
   position: relative;
   display: flex;
   flex-wrap: wrap;
-  background-size: contain;
-  //background-size: 100% auto;
+  //background-size: contain;
+  background-size: 100% auto!important;
   background-repeat: no-repeat;
   background-position: 0 0;
   // Media query (responsive behaviour)

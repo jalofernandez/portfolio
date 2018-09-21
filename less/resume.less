@@ -30,12 +30,56 @@ main {
 }
 
 .btn {
+  padding: 15px;
   font-size: 1.5rem;
-  //color: var(--color-designer);
-  color: var(--color-coder);
+  @media (max-width: 640px) {
+    font-size: 1.2em;
+  }
+  &.btn--coder {
+    color: var(--color-coder);
+  }
+  &.btn--designer {
+    color: var(--color-designer);
+  }
 }
 
+.content__inner {
+  align-items: flex-start;
+}
+
+.skills-list {
+  max-width: 600px;
+  margin: 2em auto 0 auto;
+}
+
+.resume-skills-title {
+  font-family: var(--font-family-links);
+  font-size: 1.5rem;
+  @media (max-width: 640px) {
+    font-size: .95em;
+  }
+  font-weight: 400;
+  color: var(--color-dark-grey);
+  span {
+    color: #cfcfcf;
+  }
+}
+
+/* to add more "typewritting" Text (block closer)
+.typewrite {
+  padding-right: 5px;
+  font-family: var(--font-family-text);
+  font-size: 1.5em;
+  @media (max-width: 640px) {
+    font-size: 1em;
+  }
+}
+*/
+
 .typewriter {
+  min-height: 340px;
+  text-align: left;
+  // each row of skills list:
   .mode--code {
     padding-right: 5px;
     border-right: .15em solid var(--color-coder);
@@ -47,11 +91,12 @@ main {
     }
     white-space: nowrap;
     overflow: hidden;
-    width: 22em;
+    opacity: 0;
     // (skills) paragraph 01
     &:nth-child(1) {
-      -webkit-animation: type 2s steps(40, end);
-      animation: type 2s steps(40, end);
+      width: 21em;
+      -webkit-animation: typewritting 2s steps(40, end);
+      animation: typewritting 2s steps(40, end);
       -webkit-animation-fill-mode: forwards;
       animation-fill-mode: forwards;
       -webkit-animation-delay: .5s;
@@ -59,9 +104,9 @@ main {
     }
     // (skills) paragraph 01
     &:nth-child(2) {
-      opacity: 0;
-      -webkit-animation: type2 2s steps(40, end);
-      animation: type2 2s steps(40, end);
+      width: 18em;
+      -webkit-animation: typewritting2 1.5s steps(40, end);
+      animation: typewritting2 1.5s steps(40, end);
       -webkit-animation-delay: 2s;
       animation-delay: 2s;
       -webkit-animation-fill-mode: forwards;
@@ -69,9 +114,40 @@ main {
     }
     // (skills) paragraph 01
     &:nth-child(3) {
-      opacity: 0;
-      -webkit-animation: type3 2s steps(20, end), blink .5s step-end infinite alternate;
-      animation: type3 2s steps(20, end), blink .5s step-end infinite alternate;
+      width: 19em;
+      -webkit-animation: typewritting2 1.8s steps(20, end);
+      animation: typewritting2 1.8s steps(20, end);
+      -webkit-animation-delay: 4s;
+      animation-delay: 4s;
+      -webkit-animation-fill-mode: forwards;
+      animation-fill-mode: forwards;
+    }
+
+    // (skills) paragraph 04
+    &:nth-child(4) {
+      width: 21em;
+      -webkit-animation: typewritting 1.5s steps(40, end);
+      animation: typewritting 1.5s steps(40, end);
+      -webkit-animation-fill-mode: forwards;
+      animation-fill-mode: forwards;
+      -webkit-animation-delay: .5s;
+      animation-delay: .5s;
+    }
+    // (skills) paragraph 05
+    &:nth-child(5) {
+      width: 21em;
+      -webkit-animation: typewritting2 1.8s steps(40, end);
+      animation: typewritting2 1.8s steps(40, end);
+      -webkit-animation-delay: 2s;
+      animation-delay: 2s;
+      -webkit-animation-fill-mode: forwards;
+      animation-fill-mode: forwards;
+    }
+    // (skills) paragraph 06
+    &:nth-child(6) {
+      width: 21em;
+      -webkit-animation: typewritting3 2s steps(20, end), blink .5s step-end infinite alternate;
+      animation: typewritting3 2s steps(20, end), blink .5s step-end infinite alternate;
       -webkit-animation-delay: 4s;
       animation-delay: 4s;
       -webkit-animation-fill-mode: forwards;
@@ -80,36 +156,36 @@ main {
   }
 }
 
-@keyframes type {
+@keyframes typewritting {
   0% { width: 0; }
   99.9% { border-right: .15em solid var(--color-coder); }
-  100% { border: none; }
+  100% { opacity: 1; border: none; }
 }
-@-webkit-keyframes type {
+@-webkit-keyframes typewritting {
   0% { width: 0; }
   99.9% { border-right: .15em solid var(--color-coder); }
-  100% { border: none; }
+  100% { opacity: 1; border: none; }
 }
 
-@keyframes type2 {
+@keyframes typewritting2 {
   0% { width: 0; }
   1% { opacity: 1; }
   99.9% { border-right: .15em solid var(--color-coder); }
   100% { opacity: 1; border: none; }
 }
-@-webkit-keyframes type2 {
+@-webkit-keyframes typewritting2 {
   0% { width: 0; }
   1% { opacity: 1; }
   99.9% { border-right: .15em solid var(--color-coder); }
   100% { opacity: 1; border: none; }
 }
 
-@keyframes type3 {
+@keyframes typewritting3 {
   0% { width: 0; }
   1% { opacity: 1; }
   100% { opacity: 1; }
 }
-@-webkit-keyframes type3 {
+@-webkit-keyframes typewritting3 {
   0% { width: 0; }
   1% { opacity: 1; }
   100% { opacity: 1; }

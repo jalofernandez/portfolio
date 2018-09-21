@@ -23,33 +23,84 @@ html.no-js(lang='es')
                     //- main & common Header with website name & social media links:
                     include includes/header
                     //- skills list as a coder & designer
-                    .typewriter
-                        p.mode--code HTML5, CSS3, PWA, jQuery, javascript,
-                        p.mode--code ... nodejs, yarn, less, pug, gulp ...
-                        p.mode--code Photography, video edition, design
-                    //-.menu
-                        ul.menu__inner
-                            li.menu__item
-                                a.menu__link(data-switch='') #{index.designer.title}
-                            li.menu__item
-                                a.menu__link.glitch(href='portfolio.html', data-text='layout', data-switch='', title='Ver Portfolio completo de @jalofernandez') #{index.designer.layout.title}
-                            li.menu__item
-                                a.menu__link.glitch(href='portfolio.html', data-text='photography', data-switch='', title='Ver Portfolio completo de @jalofernandez') #{index.designer.photography.title}
-                            li.menu__item
-                                a.menu__link.glitch(href='portfolio.html', data-text='UX & UI Web design', data-switch='', title='Ver Portfolio completo de @jalofernandez') #{index.designer.web.title}
-                            li.menu__item
-                                a.menu__link.glitch(href='portfolio.html', data-text='packaging', data-switch='', title='Ver Portfolio completo de @jalofernandez') #{index.designer.packaging.title}
-                            li.menu__item
-                                a.menu__link.glitch(href='portfolio.html', data-text='graphisms & draws', data-switch='', title='Ver Portfolio completo de @jalofernandez') #{index.designer.graphisms.title}
+                    .skills-list
+                        h3.mode--code.resume-skills-title !{resume.title}
+                        .typewriter
+                            //- for each loop to load all copies in "locales" json file/s
+                            each skill, i in resume.skills
+                              p.mode--code #{skill}
+                        //- to add more "typewritting" Text (block closer)
+                        a.typewrite(href='', data-period='2000', data-type='[ "Hi, I´m @jalofernandez...", "...a creative designer...", "...and a wonderfull coder...", "...go to my portfolio to check it!" ]')
+                            span.wrap
+                    //- (bottom) navbar links
                     .content__bottom
-                        .switch.mode.mode--code
-                            a.btn.menu__link.glitch(href='/', data-text='<< Home') #{back}
+                        .switch.switch--navbar.mode.mode--code
+                            a.btn.btn--coder.menu__link.glitch(href='/', data-text='<< Home') #{link.home}
+                            a.btn.btn--designer.menu__link.glitch(href='portfolio.html', data-text='Portfolio >>') #{link.portfolio}
             //- to apply a typical blink effect in old CRT monitors
             .line-anim
                 .flicker
 
         //- (js) Files
-        script(src='js/scripts.min.js')
-        script(src='js/main.min.js')
+          script(src='js/scripts.min.js')
+          script(src='js/main.min.js')
+          //- to add more "typewritting" Text (block closer)
+          script.
+              var TxtType = function(el, toRotate, period) {
+                  this.toRotate = toRotate;
+                  this.el = el;
+                  this.loopNum = 0;
+                  this.period = parseInt(period, 10) || 2000;
+                  this.txt = '';
+                  this.tick();
+                  this.isDeleting = false;
+              };
+
+              TxtType.prototype.tick = function() {
+                  var i = this.loopNum % this.toRotate.length;
+                  var fullTxt = this.toRotate[i];
+
+                  if (this.isDeleting) {
+                  this.txt = fullTxt.substring(0, this.txt.length - 1);
+                  } else {
+                  this.txt = fullTxt.substring(0, this.txt.length + 1);
+                  }
+
+                  this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+
+                  var that = this;
+                  var delta = 200 - Math.random() * 100;
+
+                  if (this.isDeleting) { delta /= 2; }
+
+                  if (!this.isDeleting && this.txt === fullTxt) {
+                  delta = this.period;
+                  this.isDeleting = true;
+                  } else if (this.isDeleting && this.txt === '') {
+                  this.isDeleting = false;
+                  this.loopNum++;
+                  delta = 500;
+                  }
+
+                  setTimeout(function() {
+                  that.tick();
+                  }, delta);
+              };
+
+              window.onload = function() {
+                  var elements = document.getElementsByClassName('typewrite');
+                  for (var i=0; i<elements.length; i++) {
+                      var toRotate = elements[i].getAttribute('data-type');
+                      var period = elements[i].getAttribute('data-period');
+                      if (toRotate) {
+                        new TxtType(elements[i], JSON.parse(toRotate), period);
+                      }
+                  }
+                  //- INJECT CSS
+                  var css = document.createElement("style");
+                  css.type = "text/css";
+                  css.innerHTML = ".typewrite > .wrap { border-right: .15em solid var(--color-designer) }";
+                  document.body.appendChild(css);
+              };
         //- To register Service Worker & validate it by console log
         include includes/serviceworker

@@ -825,9 +825,6 @@ h1 {
 .controls a.icon.icon-instagram {
   padding: 0 10px;
 }
-.codrops-icon {
-  color: #484545;
-}
 .mode--code,
 .menu--code .menu__link {
   font-family: var(--font-family-links);
@@ -876,6 +873,13 @@ h1 {
   position: relative;
   display: flex;
   align-items: center;
+}
+.switch.switch--navbar {
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  width: 100%;
+  bottom: 10px;
 }
 .switch__content {
   display: flex;
@@ -934,6 +938,20 @@ h1 {
     font-size: 18px;
   }
 }
+/* to apply a typewritter effect
+.typermark {
+  padding-right: 5px;
+  border-right: .15em solid var(--color-coder);
+  -webkit-animation: blink .5s step-end infinite alternate;
+  animation: blink .5s step-end infinite alternate;
+}
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+@-webkit-keyframes blink {
+  50% { border-color: transparent; }
+}
+*/
 .overlay {
   position: fixed;
   top: 0;
@@ -944,13 +962,13 @@ h1 {
   opacity: 0;
 }
 /* ... ABOUT ME (section) ... */
-/* TODO: apply it in other Sections */
+/* TODO: "turn on an old CRT display" animation effect */
+/*
 section {
   animation: turn-on 4s linear;
   animation-fill-mode: forwards;
   transition-delay: 5s;
 }
-/*
 
 @keyframes turn-on {
   0% {
@@ -1052,7 +1070,7 @@ section {
   position: relative;
   display: flex;
   flex-wrap: wrap;
-  background-size: contain;
+  background-size: 100% auto!important;
   background-repeat: no-repeat;
   background-position: 0 0;
 }
@@ -1072,6 +1090,7 @@ section {
   max-width: 814px;
   max-height: 501px;
   position: relative;
+  filter: blur(2px);
   /*
   top: 20%;
   left: 15%;
@@ -1085,20 +1104,38 @@ section {
   0% {
     left: -500px;
     top: -500px;
+    opacity: 0.85;
+  }
+  20%,
+  60% {
+    opacity: 0.5;
+  }
+  40% {
+    opacity: 0.85;
   }
   100% {
     left: 800px;
     top: 800px;
+    opacity: 0.85;
   }
 }
 @keyframes on-move {
   0% {
     left: -500px;
     top: -500px;
+    opacity: 0.85;
+  }
+  20%,
+  60% {
+    opacity: 0.5;
+  }
+  40% {
+    opacity: 0.85;
   }
   100% {
     left: 800px;
     top: 800px;
+    opacity: 0.85;
   }
 }
 @media (max-width: 540px) {
@@ -1109,7 +1146,7 @@ section {
     }
     100% {
       left: 800px;
-      top: 1500px;
+      top: 150px;
     }
   }
   @keyframes on-move {
@@ -1119,7 +1156,7 @@ section {
     }
     100% {
       left: 800px;
-      top: 1500px;
+      top: 150px;
     }
   }
 }
@@ -1559,8 +1596,54 @@ main {
   left: 0;
 }
 .btn {
+  padding: 15px;
   font-size: 1.5rem;
+}
+@media (max-width: 640px) {
+  .btn {
+    font-size: 1.2em;
+  }
+}
+.btn.btn--coder {
   color: var(--color-coder);
+}
+.btn.btn--designer {
+  color: var(--color-designer);
+}
+.content__inner {
+  align-items: flex-start;
+}
+.skills-list {
+  max-width: 600px;
+  margin: 2em auto 0 auto;
+}
+.resume-skills-title {
+  font-family: var(--font-family-links);
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--color-dark-grey);
+}
+@media (max-width: 640px) {
+  .resume-skills-title {
+    font-size: .95em;
+  }
+}
+.resume-skills-title span {
+  color: #cfcfcf;
+}
+/* to add more "typewritting" Text (block closer)
+.typewrite {
+  padding-right: 5px;
+  font-family: var(--font-family-text);
+  font-size: 1.5em;
+  @media (max-width: 640px) {
+    font-size: 1em;
+  }
+}
+*/
+.typewriter {
+  min-height: 340px;
+  text-align: left;
 }
 .typewriter .mode--code {
   padding-right: 5px;
@@ -1570,7 +1653,7 @@ main {
   font-size: 1.5em;
   white-space: nowrap;
   overflow: hidden;
-  width: 22em;
+  opacity: 0;
 }
 @media (max-width: 640px) {
   .typewriter .mode--code {
@@ -1578,32 +1661,60 @@ main {
   }
 }
 .typewriter .mode--code:nth-child(1) {
-  -webkit-animation: type 2s steps(40, end);
-  animation: type 2s steps(40, end);
+  width: 21em;
+  -webkit-animation: typewritting 2s steps(40, end);
+  animation: typewritting 2s steps(40, end);
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
   -webkit-animation-delay: .5s;
   animation-delay: .5s;
 }
 .typewriter .mode--code:nth-child(2) {
-  opacity: 0;
-  -webkit-animation: type2 2s steps(40, end);
-  animation: type2 2s steps(40, end);
+  width: 18em;
+  -webkit-animation: typewritting2 1.5s steps(40, end);
+  animation: typewritting2 1.5s steps(40, end);
   -webkit-animation-delay: 2s;
   animation-delay: 2s;
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
 }
 .typewriter .mode--code:nth-child(3) {
-  opacity: 0;
-  -webkit-animation: type3 2s steps(20, end), blink 0.5s step-end infinite alternate;
-  animation: type3 2s steps(20, end), blink 0.5s step-end infinite alternate;
+  width: 19em;
+  -webkit-animation: typewritting2 1.8s steps(20, end);
+  animation: typewritting2 1.8s steps(20, end);
   -webkit-animation-delay: 4s;
   animation-delay: 4s;
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
 }
-@keyframes type {
+.typewriter .mode--code:nth-child(4) {
+  width: 21em;
+  -webkit-animation: typewritting 1.5s steps(40, end);
+  animation: typewritting 1.5s steps(40, end);
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-delay: .5s;
+  animation-delay: .5s;
+}
+.typewriter .mode--code:nth-child(5) {
+  width: 21em;
+  -webkit-animation: typewritting2 1.8s steps(40, end);
+  animation: typewritting2 1.8s steps(40, end);
+  -webkit-animation-delay: 2s;
+  animation-delay: 2s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+.typewriter .mode--code:nth-child(6) {
+  width: 21em;
+  -webkit-animation: typewritting3 2s steps(20, end), blink 0.5s step-end infinite alternate;
+  animation: typewritting3 2s steps(20, end), blink 0.5s step-end infinite alternate;
+  -webkit-animation-delay: 4s;
+  animation-delay: 4s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+@keyframes typewritting {
   0% {
     width: 0;
   }
@@ -1611,10 +1722,11 @@ main {
     border-right: 0.15em solid var(--color-coder);
   }
   100% {
+    opacity: 1;
     border: none;
   }
 }
-@-webkit-keyframes type {
+@-webkit-keyframes typewritting {
   0% {
     width: 0;
   }
@@ -1622,10 +1734,11 @@ main {
     border-right: 0.15em solid var(--color-coder);
   }
   100% {
+    opacity: 1;
     border: none;
   }
 }
-@keyframes type2 {
+@keyframes typewritting2 {
   0% {
     width: 0;
   }
@@ -1640,7 +1753,7 @@ main {
     border: none;
   }
 }
-@-webkit-keyframes type2 {
+@-webkit-keyframes typewritting2 {
   0% {
     width: 0;
   }
@@ -1655,7 +1768,7 @@ main {
     border: none;
   }
 }
-@keyframes type3 {
+@keyframes typewritting3 {
   0% {
     width: 0;
   }
@@ -1666,7 +1779,7 @@ main {
     opacity: 1;
   }
 }
-@-webkit-keyframes type3 {
+@-webkit-keyframes typewritting3 {
   0% {
     width: 0;
   }

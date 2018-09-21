@@ -24,8 +24,9 @@ html.no-js(lang='es')
                     .typewriter
                         h3.mode--code #{error.notfound}
                     .content__bottom
-                        .switch.mode.mode--code
-                            a.btn.menu__link.glitch(href='/', data-text='<< Home') #{back}
+                      .switch.switch--navbar.mode.mode--code
+                          a.btn.btn--coder.menu__link.glitch(href='/', data-text='<< Home') #{link.home}
+                          a.btn.btn--designer.menu__link.glitch(href='portfolio.html', data-text='Portfolio >>') #{link.portfolio}
             //- to apply a typical blink effect in old CRT monitors
             .line-anim
                 .flicker

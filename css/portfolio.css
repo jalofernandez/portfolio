@@ -600,6 +600,9 @@ main {
   align-items: center;
   align-content: space-around;
 }
+.btn {
+  font-size: 1.2rem;
+}
 a.btn {
   color: #f4692a;
   text-align: center;

@@ -28,7 +28,17 @@ main {
 }
 
 .btn {
+  padding: 15px;
   font-size: 1.5rem;
+  @media (max-width: 640px) {
+    font-size: 1.2em;
+  }
+  &.btn--coder {
+    color: var(--color-coder);
+  }
+  &.btn--designer {
+    color: var(--color-designer);
+  }
 }
 
 .typewriter {

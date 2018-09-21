@@ -47,7 +47,7 @@ html.no-js(lang='es')
                 title menu alt
                 path(d='M10.4,6H0V3h10.4C10.4,3,10.4,6,10.4,6z M10.4,10.5H0v3h10.4C10.4,13.5,10.4,10.5,10.4,10.5z M15.1,18H9v3h6.1V18z M23.4,6H13V3h10.4C23.4,3,23.4,6,23.4,6z M23.4,10.5H13v3h10.4C23.4,13.5,23.4,10.5,23.4,10.5z M23.5,18h-6.1v3h6.1V18z')
         main.old-crt-effect
-            .pieces(style='background-image: url(img/index/normal.jpg)', data-img-alt='url(img/index/alt.jpg)', data-img-code='url(img/index/code.jpg)')
+            .pieces(style='background-image: url(img/index/normal.jpg); background-size: 100% auto;', data-img-alt='url(img/index/alt.jpg)', data-img-code='url(img/index/code.jpg)')
             .overlay.overlay--hidden
             .content
                 .content__inner
@@ -86,7 +86,7 @@ html.no-js(lang='es')
                             li.menu__item
                                 a.menu__link.glitch(href='https://jalofernandez.github.io/lfcabogados/', target='_blank', rel='noopener noreferrer', title='LFC Abogados y Economistas expertos en Compliance penal. Asesoramos en materia jurídico penal preventiva.', data-text='LFC; Abogados y Economistas', data-switch='') #{index.coder.lfcabogados.title}
                             li.menu__item
-                                a.menu__link.glitch(href='https://github.com/jalofernandez', target='_blank', rel='noopener noreferrer', title='@jalofernandez GitHub account', data-text='> ...take a look on Github', data-switch='') #{index.coder.others.title}
+                                a.menu__link.glitch.typermark(href='https://github.com/jalofernandez', target='_blank', rel='noopener noreferrer', title='@jalofernandez GitHub account', data-text='> ...take a look on Github', data-switch='') #{index.coder.others.title}
                     .content__bottom
                         .switch.mode.mode--design
                             a.switch__item.switch__item--current(title='') #{index.footer.designer}

@@ -6,6 +6,7 @@
   max-width: 814px;
   max-height: 501px;
   position: relative;
+  filter: blur(2px);
   /*
   top: 20%;
   left: 15%;
@@ -15,21 +16,25 @@
   -webkit-animation: on-move 50s infinite linear;
   animation: on-move 50s infinite linear;
   @-webkit-keyframes on-move {
-    0%   {left:-500px; top:-500px;}
-    100% {left:800px; top:800px;}
+    0%   { left: -500px; top: -500px; opacity: .85 }
+    20%, 60% { opacity: .5 }
+    40%  { opacity: .85 }
+    100% { left: 800px; top: 800px; opacity: .85 }
   }
   @keyframes on-move {
-    0%   {left:-500px; top:-500px;}
-    100% {left:800px; top:800px;}
+    0%   { left: -500px; top: -500px; opacity: .85 }
+    20%, 60% { opacity: .5 }
+    40%  { opacity: .85 }
+    100% { left: 800px; top: 800px; opacity: .85 }
   }
   @media (max-width: 540px) {
     @-webkit-keyframes on-move {
-      0%   {left:-500px; top:-500px;}
-      100% {left:800px; top:1500px;}
+      0%   {left: -500px; top: -500px; }
+      100% {left: 800px; top: 150px; }
     }
     @keyframes on-move {
-      0%   {left:-500px; top:-500px;}
-      100% {left:800px; top:1500px;}
+      0%   {left: -500px; top: -500px; }
+      100% {left: 800px; top: 150px; }
     }
   }
 

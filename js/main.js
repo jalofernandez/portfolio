@@ -1,18 +1,8 @@
-/**
- * main.js
- * http://www.codrops.com
- *
- * Licensed under the MIT license.
- * http://www.opensource.org/licenses/mit-license.php
- * 
- * Copyright 2017, Codrops
- * http://www.codrops.com
- */
 ;(function(window) {
 
 	// Helper vars and functions.
 	function extend( a, b ) {
-		for( var key in b ) { 
+		for( var key in b ) {
 			if( b.hasOwnProperty( key ) ) {
 				a[key] = b[key];
 			}
@@ -110,7 +100,7 @@
 		this.pieces = [];
 		for (let r = 0; r < this.options.pieces.rows; ++r) {
 			for (let c = 0; c < this.options.pieces.columns; ++c) {
-				const piece = this._createPiece(r,c);	
+				const piece = this._createPiece(r,c);
 				piece.style.backgroundPosition = -1*c*100 + '% ' + -1*100*r + '%';
 				this.pieces.push(piece);
 			}
@@ -189,7 +179,7 @@
 					const w = Math.round(self.dimensions.width/self.options.pieces.columns),
 						  h = Math.round(self.dimensions.height/self.options.pieces.rows),
 						  piece = self.pieces[i];
-					
+
 					piece.style.width = w + 'px';
 					piece.style.height = h + 'px';
 					piece.style.backgroundSize = w * self.options.pieces.columns + 'px auto';
@@ -228,7 +218,7 @@
 				{
 					value: 1,
 					delay: function(t,i) {
-						return anime.random(200,2000);	
+						return anime.random(200,2000);
 					}
 				}
 			],
@@ -265,15 +255,15 @@
 				return Math.max(0,i*6 + parseInt(t.getAttribute('data-delay')));
 			},
 			easing: dir === 'out' ? [0.2,1,0.3,1] : [0.8,1,0.3,1],
-			translateX: dir === 'out' ? function(t,i) { 
+			translateX: dir === 'out' ? function(t,i) {
 				return t.getAttribute('data-column') < self.options.pieces.columns/2 ? anime.random(50,100) : anime.random(-100,-50);
-			} : function(t,i) { 
+			} : function(t,i) {
 				return t.getAttribute('data-column') < self.options.pieces.columns/2 ? [anime.random(50,100),0] : [anime.random(-100,-50),0];
 			},
-			translateY: dir === 'out' ? function(t,i) { 
-				return [0,anime.random(-1000,-800)]; 
-			} : function(t,i) { 
-				return [anime.random(-1000,-800), 0]; 
+			translateY: dir === 'out' ? function(t,i) {
+				return [0,anime.random(-1000,-800)];
+			} : function(t,i) {
+				return [anime.random(-1000,-800), 0];
 			},
 			opacity: {
 				value: dir === 'out' ? 0 : 1,
@@ -299,10 +289,10 @@
 			delay: function(t,i,c) {
 				return dir === 'left' ? Math.max(0,i*5 + parseInt(t.getAttribute('data-delay'))) : Math.max(0,(c-1-i)*2 + parseInt(t.getAttribute('data-delay')));
 			},
-			translateX: function(t,i) { 
+			translateX: function(t,i) {
 				return dir === 'left' ? anime.random(-500,-100) : [anime.random(-500,-100), 0];
 			},
-			translateY: function(t,i) { 
+			translateY: function(t,i) {
 				return dir === 'left' ? anime.random(0,100) : [anime.random(0,100), 0];
 			},
 			opacity: {
@@ -362,7 +352,7 @@
 	GlitchFx.prototype.options = {
 		// Max and Min values for the time when to start the glitch effect.
 		glitchStart: {min: 500, max: 4000},
-		// Max and Min values of time that an element keeps each glitch state. 
+		// Max and Min values of time that an element keeps each glitch state.
 		// In this case we are alternating classes so this is the time that an element will have one class before it gets replaced.
 		glitchState: {min: 50, max: 250},
 		// Number of times the class is changed per glitch iteration.
@@ -410,7 +400,7 @@
 				if( !self.isInactive ) {
 					self._glitchState(callback);
 				}
-				
+
 			}, getRandomInt(this.options.glitchState.min, this.options.glitchState.max));
 		}
 		else {
@@ -537,7 +527,7 @@
 				if( disablePageFx || isAnimating ) return;
 				playFxFn();
 			  };
-		
+
 		DOM.contact.el.addEventListener('mouseenter', contactMouseEnterEvFn);
 		DOM.contact.el.addEventListener('mouseleave', contactMouseLeaveEvFn);
 		DOM.switchCtrls.addEventListener('mouseenter', switchMouseEnterEvFn);
@@ -551,7 +541,7 @@
 			return false;
 		}
 		isAnimating = true;
-		
+
 		// mode: design||code.
 		mode = ev.target === DOM.switchModeCtrls.code ? 'code' : 'design';
 
@@ -563,14 +553,14 @@
 			pm.stopLoopFx();
 			gfx.stopGlitch();
 		}
-		
+
 		// Change current class on the designer/coder links.
 		DOM.switchModeCtrls[mode === 'code' ? 'design' : 'code'].classList.remove('switch__item--current');
 		DOM.switchModeCtrls[mode].classList.add('switch__item--current');
-		
+
 		// Switch the page content.
 		switchContent();
-		
+
 		// Animate the pieces.
 		pm.animatePieces(mode === 'code' ? 'out' : 'in', function() {
 			isAnimating = false;
@@ -602,7 +592,7 @@
 			switchToCode();
 		}
 		else {
-			switchToDesign();	
+			switchToDesign();
 		}
 	}
 
@@ -669,7 +659,7 @@
 		// Menu links:
 		hideDesign(DOM.menu['design'].items, function() {
 			DOM.menu['design'].wrapper.style.display = 'none';
-				
+
 			animateLetters(DOM.menuCodeItemLetters, 'in', {
 				delay: function(t,i) {
 					return i*30
@@ -687,7 +677,7 @@
 
 					if( typeof target === 'string' ) {
 						let el = DOM[target].el || DOM[target]
-						
+
 						el.classList.remove('mode--code');
 						el.classList.add('mode--design');
 
@@ -715,7 +705,7 @@
 					}
 
 					animeOpts.opacity = {value: [0,1], easing: 'linear'};
-					
+
 					anime.remove(animeOpts.targets);
 					anime(animeOpts);
 			  };
@@ -753,7 +743,7 @@
 
 	function animateLetters(letters, dir, extraAnimeOpts) {
 		let animeOpts = {};
-		
+
 		animeOpts.targets = letters;
 		animeOpts.duration = 50;
 		animeOpts.delay = function(t,i,c) {
