@@ -3,6 +3,7 @@
 @import '_icons';
 @import 'index';
 @import '_zeppelin';
+@import '_modals';
 
 // comoon) to enable "fire.gif" animation
 body {
@@ -64,6 +65,12 @@ main {
   span {
     color: #cfcfcf;
   }
+}
+
+/* -- RESPONSIVE BEHAVIOUR -- */
+/* mobile, smartphones & small devices */
+@media screen and (max-width: 480px) {
+  #js-resume { display: none }
 }
 
 /* to add more "typewritting" Text (block closer)

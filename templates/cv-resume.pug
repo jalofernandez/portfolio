@@ -32,14 +32,37 @@ html.no-js(lang='es')
                         //- to add more "typewritting" Text (block closer)
                         a.typewrite(href='', data-period='2000', data-type='[ "Hi, I´m @jalofernandez...", "...a creative designer...", "...and a wonderfull coder...", "...go to my portfolio to check it!" ]')
                             span.wrap
-                    //- (bottom) navbar links
+                    //- (bottom) navbar links .js-modal-trigger.graph.all(data-modal='modal-01')
                     .content__bottom
                         .switch.switch--navbar.mode.mode--code
                             a.btn.btn--coder.menu__link.glitch(href='/', data-text='<< Home') #{link.home}
+                            a.btn.btn--designer.menu__link.glitch.js-modal-trigger#js-resume(href='', data-modal='modal-99', data-text='Resume / C.V.') #{link.resume}
                             a.btn.btn--designer.menu__link.glitch(href='portfolio.html', data-text='Portfolio >>') #{link.portfolio}
             //- to apply a typical blink effect in old CRT monitors
             .line-anim
                 .flicker
+        
+        //- (common) "Resume / C.V." modal dialog
+        #modal-99.md-modal.md-effect-16
+          .md-content
+            img(src='img/resume/jalofernandez_CV-resume_2018_lowres.jpg',
+                alt='@jalofernandez resume of skills & professional experience',
+                title='@jalofernandez resume of skills & professional experience')
+            p
+              a(href="img/resume/jalofernandez_CV-resume_2018.pdf", alt='to download @jalofernandez resume', download) Resume / C.V. (Download here!)
+            button(data-text='X Close me!').btn.menu__link.glitch.js-modal-close X Close me!
+        //- overlay (element) common in all Modals
+        .th-modal-overlay.flicker
+                
+        //- to prevent "<a href>" event by default
+        script.
+          document.getElementById("js-resume").addEventListener("click", function(event){
+            event.preventDefault()
+          });
+        //- jQuery v3.2.1
+        script(src='js/jquery.min.js')
+        //- custom javascript for Modal Dialogs behaviour
+        script(src='js/modals.min.js')
 
         //- (js) Files
           script(src='js/scripts.min.js')

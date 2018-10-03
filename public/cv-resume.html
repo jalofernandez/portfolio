@@ -80,7 +80,7 @@
             </div><a class="typewrite" href="" data-period="2000" data-type="[ &quot;Hi, I´m @jalofernandez...&quot;, &quot;...a creative designer...&quot;, &quot;...and a wonderfull coder...&quot;, &quot;...go to my portfolio to check it!&quot; ]"><span class="wrap"></span></a>
           </div>
           <div class="content__bottom">
-            <div class="switch switch--navbar mode mode--code"><a class="btn btn--coder menu__link glitch" href="/" data-text="&lt;&lt; Home">&lt;&lt; Home</a><a class="btn btn--designer menu__link glitch" href="portfolio.html" data-text="Portfolio &gt;&gt;">Portfolio &gt;&gt;</a></div>
+            <div class="switch switch--navbar mode mode--code"><a class="btn btn--coder menu__link glitch" href="/" data-text="&lt;&lt; Home">&lt;&lt; Home</a><a class="btn btn--designer menu__link glitch js-modal-trigger" id="js-resume" href="" data-modal="modal-99" data-text="Resume / C.V.">Resume / C.V.</a><a class="btn btn--designer menu__link glitch" href="portfolio.html" data-text="Portfolio &gt;&gt;">Portfolio &gt;&gt;</a></div>
           </div>
         </div>
       </div>
@@ -88,6 +88,20 @@
         <div class="flicker"></div>
       </div>
     </main>
+    <div class="md-modal md-effect-16" id="modal-99">
+      <div class="md-content"><img src="img/resume/jalofernandez_CV-resume_2018_lowres.jpg" alt="@jalofernandez resume of skills &amp; professional experience" title="@jalofernandez resume of skills &amp; professional experience">
+        <p><a href="img/resume/jalofernandez_CV-resume_2018.pdf" alt="to download @jalofernandez resume" download>Resume / C.V. (Download here!)</a></p>
+        <button class="btn menu__link glitch js-modal-close" data-text="X Close me!">X Close me!</button>
+      </div>
+    </div>
+    <div class="th-modal-overlay flicker"></div>
+    <script>
+      document.getElementById("js-resume").addEventListener("click", function(event){
+        event.preventDefault()
+      });
+    </script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/modals.min.js"></script>
     <script src="sw.js"></script>
     <script>
       if ('serviceWorker' in navigator) {
