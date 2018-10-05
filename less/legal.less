@@ -1,0 +1,269 @@
+@import '_vars';
+@import '_common';
+@import '_icons';
+@import 'index';
+@import '_zeppelin';
+
+// comoon) to enable "fire.gif" animation
+body {
+  background-color: var(--color-bg-zeppelin); /* caused by "zeppelin" img BG color */
+}
+
+.glitch {
+  &::after, &::before {
+    background-color: var(--color-bg-zeppelin);
+  }
+}
+
+.pieces {
+  background-position: bottom center;
+  margin-bottom: 0;
+}
+
+main {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.btn {
+  padding: 15px;
+  font-size: 1.5rem;
+  @media (max-width: 640px) {
+    font-size: 1.2em;
+  }
+  &.btn--coder {
+    color: var(--color-coder);
+  }
+  &.btn--designer {
+    color: var(--color-designer);
+  }
+}
+
+.content__inner {
+  padding: 2.5em 2.5em 1.5em;
+}
+
+.skills-list {
+  &.in-legal-terms {
+    max-width: 920px;
+    @media (max-width: 980px) { max-width: 680px }
+    @media (max-width: 768px) { max-width: 480px }
+    @media (max-width: 540px) { max-width: 300px }
+    margin: 2em auto 1em auto;
+    overflow: auto;
+    font-size: 16px;
+    color: var(--color-dark-grey);
+    line-height: 25px;
+    // subsection Titles
+    span {
+      margin: 10px;
+      font-size: 120%;
+      font-weight: 600;
+      letter-spacing: .03em;
+      color: var(--color-coder);
+    }
+    // remark lines
+    b, strong, em, i {
+      letter-spacing: .03rem;
+      color: #aaa;
+    }
+  }
+}
+
+.resume-skills-title {
+  font-family: var(--font-family-links);
+  font-size: 1.5rem;
+  @media (max-width: 640px) {
+    font-size: .95em;
+  }
+  font-weight: 400;
+  color: var(--color-dark-grey);
+  span {
+    color: #cfcfcf;
+  }
+}
+
+/* to add more "typewritting" Text (block closer)
+.typewrite {
+  padding-right: 5px;
+  font-family: var(--font-family-text);
+  font-size: 1.5em;
+  @media (max-width: 640px) {
+    font-size: 1em;
+  }
+}
+*/
+
+.typewriter {
+  margin-top: 1rem;
+  @media (max-width: 640px) {
+    margin-top: 0;
+  }
+
+  .mode--code {
+    font-family: var(--font-family-links);
+    color: var(--color-coder);
+    font-size: 2em;
+    @media (max-width: 640px) {
+      font-size: 1.25em;
+    }
+    text-decoration: none;
+    text-transform: capitalize;
+    -webkit-font-smoothing: antialiased;
+    outline: 0;
+    pointer-events: none;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid var(--color-coder); /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    padding-right: 5px;
+    animation:
+      typing 3.5s steps(40, end),
+      blink-caret .75s step-end infinite;
+  }
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+@-webkit-keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: var(--color-coder); }
+}
+@-webkit-keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: var(--color-coder); }
+}
+
+/* -- Table layout (like "materializecss") -- */
+
+table, th, td {
+  border: none;
+}
+
+table {
+  width: 100%;
+  display: table;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+table.striped tr {
+  border-bottom: none;
+}
+
+table.striped > tbody > tr:nth-child(odd) {
+  background-color: rgba(242, 242, 242, 0.5);
+}
+
+table.striped > tbody > tr > td {
+  border-radius: 0;
+}
+
+table.highlight > tbody > tr {
+  -webkit-transition: background-color .25s ease;
+  transition: background-color .25s ease;
+}
+
+table.highlight > tbody > tr:hover {
+  background-color: rgba(242, 242, 242, 0.5);
+}
+
+table.centered thead tr th, table.centered tbody tr td {
+  text-align: center;
+}
+
+tr {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+td, th {
+  padding: 15px 5px;
+  display: table-cell;
+  text-align: left;
+  vertical-align: middle;
+  border-radius: 2px;
+}
+
+@media only screen and (max-width: 992px) {
+  table.responsive-table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    display: block;
+    position: relative;
+    /* sort out borders */
+  }
+  table.responsive-table td:empty:before {
+    content: '\00a0';
+  }
+  table.responsive-table th,
+  table.responsive-table td {
+    margin: 0;
+    vertical-align: top;
+  }
+  table.responsive-table th {
+    text-align: left;
+  }
+  table.responsive-table thead {
+    display: block;
+    float: left;
+  }
+  table.responsive-table thead tr {
+    display: block;
+    padding: 0 10px 0 0;
+  }
+  table.responsive-table thead tr th::before {
+    content: "\00a0";
+  }
+  table.responsive-table tbody {
+    display: block;
+    width: auto;
+    position: relative;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+  table.responsive-table tbody tr {
+    display: inline-block;
+    vertical-align: top;
+  }
+  table.responsive-table th {
+    display: block;
+    text-align: right;
+  }
+  table.responsive-table td {
+    display: block;
+    min-height: 1.25em;
+    text-align: left;
+  }
+  table.responsive-table tr {
+    border-bottom: none;
+    padding: 0 10px;
+  }
+  table.responsive-table thead {
+    border: 0;
+    border-right: 1px solid rgba(0, 0, 0, 0.12);
+  }
+}
+
+// to overwrite "materializecss" Tables layout by default
+// In "Legal" view for example
+table { margin-bottom: 1rem }
+td, th {
+  vertical-align: top;
+  font-size: 85%;
+  line-height: 22px;
+}

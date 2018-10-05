@@ -1,0 +1,46 @@
+doctype html
+html.no-js(lang='es')
+    head
+        meta(http-equiv='Content-Type', content='text/html; charset=UTF-8')
+        meta(name='viewport', content='width=device-width, initial-scale=1')
+        title jalofernández aviso legal
+        meta(name='description', content='Aviso legal del portfolio personal de Javier Lorenzo Fernández (aka jalofernandez). Diseñador gráfico y desarrollador web frontend.')
+        //- meta(name='keywords', content='diseño, diseño web, dibujo, maquetación, arte, creatividad, artes finales, design, web design, creatividad, inspiración, inspiration, creative')
+        //- (common) Metatags in current view
+        include includes/metatags
+        //- custom styles for current view
+        link(rel='stylesheet', type='text/css', href='css/legal.css')
+
+    body.old-crt-effect
+        main.old-crt-effect
+            //-.pieces(style='background-image: url(img/resume/fire.gif)', data-img-alt='url(img/index/alt.jpg)', data-img-code='url(img/index/code.jpg)')
+            .overlay.overlay--hidden
+            include includes/zeppelin
+            .content
+                .content__inner
+                    //- main & common Header with website name & social media links:
+                    include includes/header
+                    .typewriter
+                        h3.mode--code !{legal.title}
+                    //- legal terms paragraphs   
+                    .skills-list.in-legal-terms
+                        //- for each loop to load all copies in "locales" json file/s
+                        each term, i in legal.terms
+                          p !{term}
+                            
+                        //- to add more "typewritting" Text (block closer)
+                          a.typewrite(href='', data-period='2000', data-type='[ "Hi, I´m @jalofernandez...", "...a creative designer...", "...and a wonderfull coder...", "...go to my portfolio to check it!" ]')
+                              span.wrap
+                              
+                    //- (bottom) navbar links .js-modal-trigger.graph.all(data-modal='modal-01')
+                    .content__bottom
+                        .switch.switch--navbar.mode.mode--code
+                            a.btn.btn--coder.menu__link.glitch(href='/', data-text='<< Home') #{link.home}
+                            //-a.btn.btn--designer.menu__link.glitch.js-modal-trigger#js-resume(href='', data-modal='modal-99', data-text='Resume / C.V.') #{link.resume}
+                            a.btn.btn--designer.menu__link.glitch(href='portfolio.html', data-text='Portfolio >>') #{link.portfolio}
+            //- to apply a typical blink effect in old CRT monitors
+            .line-anim
+                .flicker
+
+        //- To register Service Worker & validate it by console log
+        include includes/serviceworker

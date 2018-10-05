@@ -1977,209 +1977,6 @@ section {
   top: 428px;
   left: 563px;
 }
-/* ... (common) Modal dialogs ... */
-.md-modal {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  width: 50%;
-  max-width: 630px;
-  min-width: 320px;
-  height: auto;
-  z-index: 2000;
-  -webkit-backface-visibility: hidden;
-  -moz-backface-visibility: hidden;
-  backface-visibility: hidden;
-  -webkit-transform: translateX(-50%) translateY(-50%);
-  -moz-transform: translateX(-50%) translateY(-50%);
-  -ms-transform: translateX(-50%) translateY(-50%);
-  transform: translateX(-50%) translateY(-50%);
-  visibility: hidden;
-}
-.md-modal.md-show {
-  visibility: visible;
-}
-.th-modal-overlay {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  visibility: hidden;
-  top: 0;
-  left: 0;
-  z-index: 1000;
-  opacity: 0;
-  background: var(--color-bg-overlay);
-  -webkit-transition: all 0.3s;
-  -moz-transition: all 0.3s;
-  transition: all 0.3s;
-}
-.md-show ~ .th-modal-overlay {
-  opacity: 1;
-  visibility: visible;
-}
-/* Content styles */
-.md-content {
-  color: var(--color-designer);
-  background: transparent;
-  position: relative;
-  border-radius: 3px;
-  margin: 0 auto;
-  padding: 15px 30px;
-  margin: 0;
-  font-weight: 300;
-  font-size: 1.15em;
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  -webkit-box-align: center;
-  -moz-box-align: center;
-  -ms-flex-align: center;
-  -webkit-align-items: center;
-  align-items: center;
-}
-.md-content > img {
-  /*
-    width: 100%;
-    height: auto;
-    border-radius: 3px;
-    */
-}
-@media (max-width: 419px) {
-  .md-content > img {
-    max-width: 300px;
-  }
-}
-@media (min-width: 420px) and (max-width: 519px) {
-  .md-content > img {
-    max-width: 400px;
-  }
-}
-@media (min-width: 520px) and (max-width: 629px) {
-  .md-content > img {
-    max-width: 500px;
-  }
-}
-@media (min-width: 630px) and (max-width: 749px) {
-  .md-content > img {
-    max-width: 600px;
-  }
-}
-@media (min-width: 750px) and (max-width: 859px) {
-  .md-content > img {
-    max-width: 700px;
-  }
-}
-@media (min-width: 860px) and (max-width: 979px) {
-  .md-content > img {
-    max-width: 800px;
-  }
-}
-@media (min-width: 980px) and (max-width: 1049px) {
-  .md-content > img {
-    max-width: 900px;
-  }
-}
-@media (max-height: 359px) {
-  .md-content > img {
-    max-height: 200px;
-  }
-}
-@media (min-height: 360px) and (max-height: 479px) {
-  .md-content > img {
-    max-height: 250px;
-  }
-}
-@media (min-height: 480px) and (max-height: 579px) {
-  .md-content > img {
-    max-height: 350px;
-  }
-}
-@media (min-height: 580px) and (max-height: 650px) {
-  .md-content > img {
-    max-height: 450px;
-  }
-}
-@media (min-height: 651px) and (max-height: 767px) {
-  .md-content > img {
-    max-height: 500px;
-  }
-}
-@media (min-height: 768px) and (max-height: 900px) {
-  .md-content > img {
-    max-height: 600px;
-  }
-}
-@media (min-height: 901px) {
-  .md-content > img {
-    max-height: 700px;
-  }
-}
-.md-content > p {
-  padding: 0;
-  text-decoration: none;
-  font-family: var(--font-family-text);
-  font-size: 1.1rem;
-  color: var(--color-white);
-  font-weight: 400;
-  text-transform: inherit;
-  border: none;
-}
-.md-content button {
-  font-size: 1em;
-  min-width: 150px;
-}
-.md-content button:after,
-.md-content button:before {
-  background: transparent!important;
-}
-/* Effect 16:  Blur */
-.md-show.md-effect-16 ~ .th-modal-overlay {
-  background: var(--color-bg-overlay);
-}
-.md-show.md-effect-16 ~ main {
-  -webkit-filter: blur(3px);
-  -moz-filter: blur(3px);
-  filter: blur(3px);
-}
-.md-effect-16 .md-content {
-  -webkit-transform: translateY(-5%);
-  -moz-transform: translateY(-5%);
-  -ms-transform: translateY(-5%);
-  transform: translateY(-5%);
-  opacity: 0;
-}
-.md-show.md-effect-16 ~ main,
-.md-effect-16 .md-content {
-  -webkit-transition: all 0.3s;
-  -moz-transition: all 0.3s;
-  transition: all 0.3s;
-}
-.md-effect-16 .md-content {
-  -webkit-transform: scale(2);
-  -moz-transform: scale(2);
-  -ms-transform: scale(2);
-  transform: scale(2);
-  opacity: 0;
-}
-.md-show.md-effect-16 .md-content {
-  /*
-  // without Blur Effect
-	-webkit-transform: translateY(0);
-	-moz-transform: translateY(0);
-	-ms-transform: translateY(0);
-	transform: translateY(0);
-	opacity: 1;
-  */
-  -webkit-transform: scale(1);
-  -moz-transform: scale(1);
-  -ms-transform: scale(1);
-  transform: scale(1);
-  opacity: 1;
-}
 body {
   background-color: var(--color-bg-zeppelin);
   /* caused by "zeppelin" img BG color */
@@ -2217,11 +2014,44 @@ main {
   color: var(--color-designer);
 }
 .content__inner {
-  align-items: flex-start;
+  padding: 2.5em 2.5em 1.5em;
 }
-.skills-list {
-  max-width: 600px;
-  margin: 2em auto 0 auto;
+.skills-list.in-legal-terms {
+  max-width: 920px;
+  margin: 2em auto 1em auto;
+  overflow: auto;
+  font-size: 16px;
+  color: var(--color-dark-grey);
+  line-height: 25px;
+}
+@media (max-width: 980px) {
+  .skills-list.in-legal-terms {
+    max-width: 680px;
+  }
+}
+@media (max-width: 768px) {
+  .skills-list.in-legal-terms {
+    max-width: 480px;
+  }
+}
+@media (max-width: 540px) {
+  .skills-list.in-legal-terms {
+    max-width: 300px;
+  }
+}
+.skills-list.in-legal-terms span {
+  margin: 10px;
+  font-size: 120%;
+  font-weight: 600;
+  letter-spacing: .03em;
+  color: var(--color-coder);
+}
+.skills-list.in-legal-terms b,
+.skills-list.in-legal-terms strong,
+.skills-list.in-legal-terms em,
+.skills-list.in-legal-terms i {
+  letter-spacing: .03rem;
+  color: #aaa;
 }
 .resume-skills-title {
   font-family: var(--font-family-links);
@@ -2237,13 +2067,6 @@ main {
 .resume-skills-title span {
   color: #cfcfcf;
 }
-/* -- RESPONSIVE BEHAVIOUR -- */
-/* mobile, smartphones & small devices */
-@media screen and (max-width: 480px) {
-  #js-resume {
-    display: none;
-  }
-}
 /* to add more "typewritting" Text (block closer)
 .typewrite {
   padding-right: 5px;
@@ -2255,161 +2078,183 @@ main {
 }
 */
 .typewriter {
-  min-height: 340px;
-  text-align: left;
+  margin-top: 1rem;
+}
+@media (max-width: 640px) {
+  .typewriter {
+    margin-top: 0;
+  }
 }
 .typewriter .mode--code {
-  padding-right: 5px;
-  border-right: 0.15em solid var(--color-coder);
   font-family: var(--font-family-links);
   color: var(--color-coder);
-  font-size: 1.5em;
-  white-space: nowrap;
+  font-size: 2em;
+  text-decoration: none;
+  text-transform: capitalize;
+  -webkit-font-smoothing: antialiased;
+  outline: 0;
+  pointer-events: none;
   overflow: hidden;
-  opacity: 0;
+  /* Ensures the content is not revealed until the animation */
+  border-right: 0.15em solid var(--color-coder);
+  /* The typwriter cursor */
+  white-space: nowrap;
+  /* Keeps the content on a single line */
+  margin: 0 auto;
+  /* Gives that scrolling effect as the typing happens */
+  padding-right: 5px;
+  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
 }
 @media (max-width: 640px) {
   .typewriter .mode--code {
-    font-size: 1em;
+    font-size: 1.25em;
   }
 }
-.typewriter .mode--code:nth-child(1) {
-  width: 21em;
-  -webkit-animation: typewritting 2s steps(40, end);
-  animation: typewritting 2s steps(40, end);
-  -webkit-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
-  -webkit-animation-delay: .5s;
-  animation-delay: .5s;
-}
-.typewriter .mode--code:nth-child(2) {
-  width: 18em;
-  -webkit-animation: typewritting2 1.5s steps(40, end);
-  animation: typewritting2 1.5s steps(40, end);
-  -webkit-animation-delay: 2s;
-  animation-delay: 2s;
-  -webkit-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
-}
-.typewriter .mode--code:nth-child(3) {
-  width: 19em;
-  -webkit-animation: typewritting2 1.8s steps(20, end);
-  animation: typewritting2 1.8s steps(20, end);
-  -webkit-animation-delay: 4s;
-  animation-delay: 4s;
-  -webkit-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
-}
-.typewriter .mode--code:nth-child(4) {
-  width: 21em;
-  -webkit-animation: typewritting 1.5s steps(40, end);
-  animation: typewritting 1.5s steps(40, end);
-  -webkit-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
-  -webkit-animation-delay: .5s;
-  animation-delay: .5s;
-}
-.typewriter .mode--code:nth-child(5) {
-  width: 21em;
-  -webkit-animation: typewritting2 1.8s steps(40, end);
-  animation: typewritting2 1.8s steps(40, end);
-  -webkit-animation-delay: 2s;
-  animation-delay: 2s;
-  -webkit-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
-}
-.typewriter .mode--code:nth-child(6) {
-  width: 21em;
-  -webkit-animation: typewritting3 2s steps(20, end), blink 0.5s step-end infinite alternate;
-  animation: typewritting3 2s steps(20, end), blink 0.5s step-end infinite alternate;
-  -webkit-animation-delay: 4s;
-  animation-delay: 4s;
-  -webkit-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
-}
-@keyframes typewritting {
-  0% {
+/* The typing effect */
+@keyframes typing {
+  from {
     width: 0;
   }
-  99.9% {
-    border-right: 0.15em solid var(--color-coder);
-  }
-  100% {
-    opacity: 1;
-    border: none;
+  to {
+    width: 100%;
   }
 }
-@-webkit-keyframes typewritting {
-  0% {
+@-webkit-keyframes typing {
+  from {
     width: 0;
   }
-  99.9% {
-    border-right: 0.15em solid var(--color-coder);
-  }
-  100% {
-    opacity: 1;
-    border: none;
+  to {
+    width: 100%;
   }
 }
-@keyframes typewritting2 {
-  0% {
-    width: 0;
-  }
-  1% {
-    opacity: 1;
-  }
-  99.9% {
-    border-right: 0.15em solid var(--color-coder);
-  }
-  100% {
-    opacity: 1;
-    border: none;
-  }
-}
-@-webkit-keyframes typewritting2 {
-  0% {
-    width: 0;
-  }
-  1% {
-    opacity: 1;
-  }
-  99.9% {
-    border-right: 0.15em solid var(--color-coder);
-  }
-  100% {
-    opacity: 1;
-    border: none;
-  }
-}
-@keyframes typewritting3 {
-  0% {
-    width: 0;
-  }
-  1% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@-webkit-keyframes typewritting3 {
-  0% {
-    width: 0;
-  }
-  1% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@keyframes blink {
-  50% {
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from,
+  to {
     border-color: transparent;
   }
-}
-@-webkit-keyframes blink {
   50% {
+    border-color: var(--color-coder);
+  }
+}
+@-webkit-keyframes blink-caret {
+  from,
+  to {
     border-color: transparent;
   }
+  50% {
+    border-color: var(--color-coder);
+  }
+}
+/* -- Table layout (like "materializecss") -- */
+table,
+th,
+td {
+  border: none;
+}
+table {
+  width: 100%;
+  display: table;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+table.striped tr {
+  border-bottom: none;
+}
+table.striped > tbody > tr:nth-child(odd) {
+  background-color: rgba(242, 242, 242, 0.5);
+}
+table.striped > tbody > tr > td {
+  border-radius: 0;
+}
+table.highlight > tbody > tr {
+  -webkit-transition: background-color 0.25s ease;
+  transition: background-color 0.25s ease;
+}
+table.highlight > tbody > tr:hover {
+  background-color: rgba(242, 242, 242, 0.5);
+}
+table.centered thead tr th,
+table.centered tbody tr td {
+  text-align: center;
+}
+tr {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+}
+td,
+th {
+  padding: 15px 5px;
+  display: table-cell;
+  text-align: left;
+  vertical-align: middle;
+  border-radius: 2px;
+}
+@media only screen and (max-width: 992px) {
+  table.responsive-table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    display: block;
+    position: relative;
+    /* sort out borders */
+  }
+  table.responsive-table td:empty:before {
+    content: '\00a0';
+  }
+  table.responsive-table th,
+  table.responsive-table td {
+    margin: 0;
+    vertical-align: top;
+  }
+  table.responsive-table th {
+    text-align: left;
+  }
+  table.responsive-table thead {
+    display: block;
+    float: left;
+  }
+  table.responsive-table thead tr {
+    display: block;
+    padding: 0 10px 0 0;
+  }
+  table.responsive-table thead tr th::before {
+    content: "\00a0";
+  }
+  table.responsive-table tbody {
+    display: block;
+    width: auto;
+    position: relative;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+  table.responsive-table tbody tr {
+    display: inline-block;
+    vertical-align: top;
+  }
+  table.responsive-table th {
+    display: block;
+    text-align: right;
+  }
+  table.responsive-table td {
+    display: block;
+    min-height: 1.25em;
+    text-align: left;
+  }
+  table.responsive-table tr {
+    border-bottom: none;
+    padding: 0 10px;
+  }
+  table.responsive-table thead {
+    border: 0;
+    border-right: 1px solid rgba(0, 0, 0, 0.12);
+  }
+}
+table {
+  margin-bottom: 1rem;
+}
+td,
+th {
+  vertical-align: top;
+  font-size: 85%;
+  line-height: 22px;
 }
