@@ -8,7 +8,7 @@ An experimental page layout concept with a developer/designer theme and a specia
 
 ## Credits
 
-- Images by Javier Lorenzo Fernández aka [@jalofernadez](http://www.arted.es/)
+- Images by Javier Lorenzo Fernández aka [@jalofernadez](http://jalofernandez.com/)
 - Code image made with [Text-Image.com](http://www.text-image.com/)
 - [anime.js](http://anime-js.com/) by Julian Garnier
 - [Charming.js](https://github.com/yuanqing/charming) by Yuan Qing
@@ -17,6 +17,6 @@ An experimental page layout concept with a developer/designer theme and a specia
 
 This resource can be used freely if integrated or build upon in personal or commercial projects such as websites, web apps and web templates intended for sale. It is not allowed to take the resource "as-is" and sell it, redistribute, re-publish it, or sell "pluginized" versions of it. Free plugins built using this resource should have a visible mention and link to the original work. Always consider the licenses of all included libraries, scripts and images used.
 
-## Misc 
+## Misc
 
 Follow me (it would be so kind of you :) [Twitter](http://www.twitter.com/jalofernandez), [Facebook](http://www.facebook.com/jalofernandez), [GitHub](https://github.com/jalofernandez), [Instagram](https://www.instagram.com/jalofernandez/)
