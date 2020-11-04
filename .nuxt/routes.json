@@ -1,0 +1,51 @@
+[
+  {
+    "name": "404",
+    "path": "/404",
+    "component": "/Users/jalofernandez/Documents/projects/nuxtjs/jalofernandez/pages/404.vue",
+    "chunkName": "pages/404",
+    "url": "/404"
+  },
+  {
+    "name": "contacto",
+    "path": "/contacto",
+    "component": "/Users/jalofernandez/Documents/projects/nuxtjs/jalofernandez/pages/contacto.vue",
+    "chunkName": "pages/contacto",
+    "url": "/contacto"
+  },
+  {
+    "name": "cv-resume",
+    "path": "/cv-resume",
+    "component": "/Users/jalofernandez/Documents/projects/nuxtjs/jalofernandez/pages/cv-resume.vue",
+    "chunkName": "pages/cv-resume",
+    "url": "/cv-resume"
+  },
+  {
+    "name": "legal",
+    "path": "/legal",
+    "component": "/Users/jalofernandez/Documents/projects/nuxtjs/jalofernandez/pages/legal.vue",
+    "chunkName": "pages/legal",
+    "url": "/legal"
+  },
+  {
+    "name": "portfolio",
+    "path": "/portfolio",
+    "component": "/Users/jalofernandez/Documents/projects/nuxtjs/jalofernandez/pages/portfolio.vue",
+    "chunkName": "pages/portfolio",
+    "url": "/portfolio"
+  },
+  {
+    "name": "sitemap",
+    "path": "/sitemap",
+    "component": "/Users/jalofernandez/Documents/projects/nuxtjs/jalofernandez/pages/sitemap.vue",
+    "chunkName": "pages/sitemap",
+    "url": "/sitemap"
+  },
+  {
+    "name": "index",
+    "path": "/",
+    "component": "/Users/jalofernandez/Documents/projects/nuxtjs/jalofernandez/pages/index.vue",
+    "chunkName": "pages/index",
+    "url": "/"
+  }
+]

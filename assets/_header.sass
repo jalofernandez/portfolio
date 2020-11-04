@@ -1,0 +1,96 @@
+// main Header row with:
+// logo (nickname) + slogan + social media links
+.content--header
+  display: flex
+  align-items: flex-start
+  justify-content: space-between
+  flex: none
+  width: 100%
+  @media screen and (max-width: 540px)
+    flex-flow: column
+    align-items: center
+
+.logo
+  min-width: 350px
+  position: relative
+  // (jalofernandez)
+  .title
+    display: flex
+    align-items: center
+    margin: 0
+    font-weight: normal
+    line-height: 1
+    height: 45px
+  // (to switch effect between titles)
+  .title + .title
+    position: absolute
+    top: 0
+    left: 0
+  // (modifiers) Title
+  .mode--design
+    font-size: 3em
+    color: $designer-color
+    font-family: $font-family-text
+  .mode--code
+    font-size: 2.5em
+    color: $coder-color
+    font-family: $font-family-links
+  // (designer + coder)
+  .subtitle
+    flex: none
+    width: 100%
+    margin: 0
+    padding-left: 54px
+    font-family: $font-family-links
+    font-size: 1.8em
+    color: #ccc
+    text-align: left
+    bottom: 3px
+
+@media screen and (max-width: 768px)
+  .logo
+    min-width: 225px
+    .title
+      height: 32px
+    .mode--design
+      font-size: 2em
+    .mode--code
+      font-size: 1.65em
+    .subtitle
+      padding-left: 35px
+      font-size: 1.2em
+      bottom: 0
+
+@media screen and (max-width: 540px)
+  .title
+    order: 2
+  .subtitle
+    margin: 1em auto
+    text-align: center
+
+// Social Media: top icons navbar with third parties links
+.socialmedia
+  display: flex
+  justify-content: space-between
+  align-items: center
+  .icon
+    img
+      width: 35px
+      height: 35px
+      padding: 5px
+      transition: all .15s ease
+      transform: scale(1)
+      filter: blur(.5px)
+    &:active, &:focus, &:visited
+      img
+        transform: scale(1)
+        filter: blur(.5px)
+    &:hover
+      img
+        transform: scale(1.25)
+        filter: blur(0)
+
+@media screen and (max-width: 540px)
+  .socialmedia
+    margin: 1em
+    order: 1

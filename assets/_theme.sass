@@ -1,0 +1,223 @@
+// (theme) Old CRT look & feel
+.old-crt--theme
+  &::after, &::before
+    content: " "
+    display: block
+    position: absolute
+    top: 0
+    left: 0
+    bottom: 0
+    right: 0
+    z-index: 4
+    pointer-events: none
+  &::after
+    background: rgba(18, 16, 16, 0.1)
+    opacity: 0
+  &::before
+    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06))
+    background-size: 100% 2px, 3px 100%
+
+// (modifier) Old computer font style
+.paragraph--theme
+  font-size: 16px
+  color: $grey
+  line-height: 25px
+
+.bg-artwork--theme
+  position: relative
+  display: flex
+  flex-wrap: wrap  
+  margin: 0 auto
+  // transition: transform 0.2s ease-out 0s
+  // transform: perspective(1000px) translate3d(5.8872px, -0.484848px, 0px) rotate3d(1, 0, 0, -0.484848deg) rotate3d(0, 1, 0, 2.9436deg)
+  background-repeat: no-repeat
+  background-size: 100%
+  background-position: bottom center
+  width: 540px
+  height: 826px
+  @media screen and (max-aspect-ratio: 597/916)
+    width: 80vw
+    height: 122.75vw
+
+.home .bg-artwork--theme
+  background-image: url(~assets/jalofernandez.jpg)
+
+.error .bg-artwork--theme
+  background-image: url(~assets/404/fire.gif)
+  height: 100vh
+  
+// (animation) TYPEWRITING effect
+.typewriter--theme
+  min-height: 340px
+  @media (max-width: 640px)
+    min-height: 225px
+
+.typewriter--theme
+  text-align: left
+  .mode--code
+    padding-right: 5px
+    border-right: .15em solid $coder-color
+    white-space: nowrap
+    overflow: hidden
+    opacity: 0
+  
+  &.is-home
+    .mode--code
+      // (skill item) Intro text
+      &:nth-child(1)
+        width: 14em
+        animation: typewritting 1.6s steps(40, end)
+        animation-fill-mode: forwards
+      // (skill item) "Upplication"
+      &:nth-child(2)
+        width: 8em
+        animation: typewritting2 .8s steps(20, end)
+        animation-delay: .5s
+        animation-fill-mode: forwards
+      // (skill item) "Gastronomix"
+      &:nth-child(3)
+        width: 8em
+        animation: typewritting2 .8s steps(20, end)
+        animation-delay: .8s
+        animation-fill-mode: forwards
+      // (skill item) "Widitrade"
+      &:nth-child(4)
+        width: 7em
+        animation: typewritting .7s steps(20, end)
+        animation-delay: 1s
+        animation-fill-mode: forwards
+      // (skill item) "Canessa"
+      &:nth-child(5)
+        width: 6em
+        animation: typewritting2 .6s steps(20, end)
+        animation-delay: 1.3s
+        animation-fill-mode: forwards
+      // (skill item) "Ecomerzpro Club"
+      &:nth-child(6)
+        width: 11em
+        animation: typewritting 1s steps(40, end)
+        animation-delay: 1.8s
+        animation-fill-mode: forwards
+      // (skill item) "LFC; Abogados y Economistas"
+      &:nth-child(7)
+        width: 18em
+        animation: typewritting2 1.8s steps(40, end)
+        animation-delay: 2.2s
+        animation-fill-mode: forwards
+      // (skill item) "Capaball"
+      &:nth-child(8)
+        width: 6em
+        animation: typewritting 1s steps(20, end)
+        animation-delay: 2.5s
+        animation-fill-mode: forwards
+      // (skill item) "> ...take a look on Github"
+      &:nth-child(9)
+        width: 17em
+        animation: typewritting3 1.8s steps(40, end), blink .5s step-end infinite alternate
+        animation-delay: 2.8s
+        animation-fill-mode: forwards
+
+  &.is-resume
+    .mode--code
+      margin-top: 1em
+      font-family: $font-family-links
+      line-height: 1.2
+      color: $coder-color
+      font-size: 1.5em
+      @media (max-width: 640px)
+        font-size: 1em
+      // (skill row) "HTML5, pug...""
+      &:nth-child(1)
+        width: 21em
+        animation: typewritting 2s steps(40, end)
+        animation-fill-mode: forwards
+        animation-delay: .5s
+      // (skill row) "vuejs, nuxtjs...""
+      &:nth-child(2)
+        width: 21em
+        animation: typewritting2 1.5s steps(40, end)
+        animation-delay: 2s
+        animation-fill-mode: forwards
+      // (skill row) "npm, yarn, gulp...""
+      &:nth-child(3)
+        width: 21em
+        animation: typewritting2 1.8s steps(20, end)
+        animation-delay: 4s
+        animation-fill-mode: forwards
+      // (skill row) "git, gitHub...""
+      &:nth-child(4)
+        width: 21em
+        animation: typewritting 1.5s steps(40, end)
+        animation-fill-mode: forwards
+        animation-delay: .5s
+      // (skill row) "scrum, agile...""
+      &:nth-child(5)
+        width: 21em
+        animation: typewritting2 1.8s steps(40, end)
+        animation-delay: 2s
+        animation-fill-mode: forwards
+      // (skill row) "responsive design, photo...""
+      &:nth-child(6)
+        width: 21em
+        animation: typewritting3 2s steps(20, end), blink .5s step-end infinite alternate
+        animation-delay: 4s
+        animation-fill-mode: forwards
+
+  &.is-error,
+  &.is-legal
+    .mode--code
+      font-size: 2em
+      text-transform: capitalize
+      animation: typewritting3 2s steps(20, end), blink .5s step-end infinite alternate
+      animation-delay: .5s
+      animation-fill-mode: forwards
+
+  &.is-error
+    .mode--code
+      margin-top: 2em
+      width: 18em
+      @media (max-width: 768px)
+        font-size: 1.5rem
+      @media (max-width: 540px)
+        font-size: 1rem
+
+  &.is-legal
+    min-height: initial
+    .mode--code
+      margin-top: 1em
+      width: 10em
+      @media (max-width: 540px)
+        font-size: 1rem
+
+
+@keyframes typewritting
+  0%
+    width: 0
+  99.9%
+    border-right: .15em solid $coder-color
+  100%
+    opacity: 1
+    border: none
+
+@keyframes typewritting2
+  0%
+    width: 0
+  1%
+    opacity: 1
+  99.9%
+    border-right: .15em solid $coder-color
+  100%
+    opacity: 1
+    border: none
+
+@keyframes typewritting3
+  0%
+    width: 0
+  1%
+    opacity: 1
+  100%
+    opacity: 1
+
+@keyframes blink
+  50%
+    border-color: transparent

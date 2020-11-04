@@ -1,0 +1,23 @@
+// main Footer row with:
+// navigations links
+.content--footer
+  display: flex
+  align-items: center
+  width: 100%
+  position: fixed
+  bottom: 0
+  left: 0
+  right: 0
+  z-index: 3
+
+.main-navbar
+  display: flex
+  align-items: center
+  flex-direction: row
+  flex-wrap: nowrap
+  justify-content: space-between
+  width: 100%
+  @include navsPad()
+  @media (max-width: 640px)
+    .contact-link.mode--design
+      padding: .5rem 0

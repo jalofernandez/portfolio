@@ -1,0 +1,652 @@
+@import "_vars"
+@import "_header"
+@import "_footer"
+@import "_theme"
+@import "_zeppelin"
+@import "_glitch"
+@import "_animations"
+
+*,
+*:before,
+*:after
+  box-sizing: border-box
+  margin: 0
+
+::-moz-focus-inner
+  border: 0
+  padding: 0
+
+html
+  font-size: 16px
+  word-spacing: 1px
+  -ms-text-size-adjust: 100%
+  -webkit-text-size-adjust: 100%
+  -moz-osx-font-smoothing: grayscale
+  -webkit-font-smoothing: antialiased
+  box-sizing: border-box
+
+body
+  font-family: $font-family-text
+  color: #585656
+  background: $black
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+
+ul
+  list-style: none
+  padding: 0
+  margin: 0
+
+a
+  text-decoration: none
+  color: $designer-color
+  outline: none
+  cursor: pointer
+  &:focus
+    outline: none
+  &:not(.main-title):hover
+    color: #f7f7f7
+    
+.nuxt-link-exact-active
+  display: none!important
+
+.has-spaced
+  margin-bottom: 8em!important
+
+.page
+  display: flex
+  &.home,
+  &.error,
+  &.contact,
+  &.sitemap
+    overflow: hidden
+    height: 100vh
+  &.legal,
+  &.resume,
+  &.portfolio
+    .content,
+    .content--inner
+      overflow: initial // be careful with this class
+      height: auto
+    .content--body
+      width: 100%
+    .content--footer
+      background: linear-gradient(to bottom, rgba($bg-crt,0) 0%, rgba($bg-crt,0.5) 30%, rgba($bg-crt,0.75) 50%, rgba($bg-crt,1) 75%, rgba($bg-crt,1) 100%)
+
+.btn
+  min-width: 100px
+  font-size: 1rem
+  font-weight: normal
+  text-decoration: none
+  cursor: pointer
+  color: $coder-color
+  line-height: normal
+  padding: 10px
+  margin: 0
+  height: auto
+  border: none
+  vertical-align: middle
+  -webkit-appearance: none
+  background-color: rgba(0, 0, 0, 0)
+  &:hover
+    color: #f7f7f7
+    text-decoration: none
+  &:focus
+    outline: none
+    // border-color: var(--darken-2)
+    // box-shadow: 0 0 0 3px var(--darken-3)
+
+  &.is-link
+    padding: 1rem
+    font-size: 1.5rem
+    @media (max-width: 640px)
+      font-size: 1.2em
+      padding: .5rem
+  &.is-link.btn--coder
+    color: $coder-color
+  &.is-link.btn--designer
+    color: $designer-color
+
+  &.is-boxed
+    border-width: 2px
+    border-style: dashed
+  &.is-boxed.btn--coder
+    border-color: $coder-color
+  &.is-boxed.btn--designer
+    border-color: $designer-color
+
+
+.menu--link
+  display: inline-block
+  font-family: $font-family-links
+  &:hover
+    color: #f7f7f7
+
+.content,
+.content--inner
+  position: absolute
+  top: 0
+  left: 0
+  display: flex
+  align-items: center
+  width: 100%
+  height: 100%
+  overflow: hidden // be careful with this class
+
+.content--inner
+  z-index: 100
+  flex-direction: column
+  align-content: flex-start
+  padding: 2.25em 2.5em 0
+
+// .portfolio-experiment
+// 	background: #00ffa5
+// 	color: #203e86
+// 	$steps: 50
+// 	.experiment-title 
+// 		outline: none
+// 		font-size: 10vw
+// 		text-align: center
+// 		font-family: "Roboto", monospace
+// 		min-height: 10vw
+// 		max-width: 80vw
+// 		min-width: 10vw
+// 		&,*
+// 			animation: cray 6s infinite steps($steps)
+// 			display: inline-block
+
+// 	@keyframes cray
+// 		@for $i from 1 to $steps
+// 			$per: 100% / $steps * $i;
+// 			$weight: (
+// 				100,
+// 				200,
+// 				300,
+// 				400,
+// 				500,
+// 				600,
+// 				700
+// 			)
+// 			$style: (
+// 				normal,
+// 				italic,
+// 				normal,
+// 				normal
+// 			)
+// 			$decor: (
+// 				none,
+// 				none,
+// 				line-through,
+// 				underline,
+// 				none,
+// 				none,
+// 				none
+// 			)
+// 			$trans: (
+// 				none,
+// 				none,
+// 				uppercase,
+// 				lowercase,
+// 				capitalize,
+// 				none,
+// 				none,
+// 				none,
+// 				none,
+// 				none,
+// 				none
+// 			)
+
+// 			$arrayW: random(7);
+// 			$arrayS: random(4);
+// 			$arrayD: random(7);
+// 			$arrayT: random(11);
+
+// 			#{$per} 
+// 				font-weight: nth($weight, $arrayW)
+// 				font-style: nth($style, $arrayS)
+// 				text-decoration: nth($decor, $arrayD)
+// 				text-transform: nth($trans, $arrayT)
+
+
+// "Content" row (links list) in Home page
+.mode--code,
+.menu--code .menu--link
+  font-family: $font-family-links
+  // text-transform: lowercase
+  color: $coder-color
+
+.menu,
+.menu--code
+  flex: none
+  width: 100%
+  // margin: 2em 0 0 auto
+  position: relative
+  top: 2em
+.menu
+  font-size: 1.85em
+  text-align: right
+  .menu--inner
+    right: 0
+    // z-index: 1 // be carefull with new "modal menu" position
+.menu--code
+  font-size: 1.5em
+  text-align: left
+  .menu--inner
+    // z-index: 2 // be carefull with new "modal menu" position
+    left: 0
+
+.menu--inner
+  margin: 0
+  padding: 0
+  list-style: none
+  position: absolute
+  top: 0
+
+.menu:not(.menu--code) .menu--item
+  position: relative
+
+.menu--item:first-child
+  pointer-events: none
+  cursor: text
+
+.menu--item:not(:last-child)
+  margin: 0 0 0.25em 0
+
+.js .menu--code
+  display: none
+
+.switch__content
+  display: flex
+
+.switch--item
+  font-size: 1.5em
+  line-height: 1
+  position: relative
+  display: inline-block
+  margin: 0 1.5em 0 0
+  padding: 0 0 0.15em
+  color: #888
+  &:first-child::after
+    content: ''
+    position: absolute
+    top: -5%
+    left: calc(100% + 0.75em)
+    width: 2px
+    height: 110%
+    background: #464646
+  span
+    position: relative
+    display: inline-block
+    pointer-events: none
+
+.is-current
+  pointer-events: none
+  color: $black
+  background-color: $designer-color
+
+.mode--code .is-current
+  color: $black
+  background-color: $coder-color
+
+.contact-link
+  display: inline-block
+  padding: 1em 0
+  margin-right: 15px
+  font-size: 1.5rem
+  @media (max-width: 768px)
+    font-size: 1.2rem
+  @media (max-width: 450px)
+    font-size: 1rem
+    margin-right: 0
+
+/* -- (breakpoints) -- */
+// Tablets
+@media screen and (max-width: 768px)
+  .content--inner
+    padding: 1em 1em 0
+
+// Smartphones
+@media screen and (max-width: 640px)
+  .content--footer
+    font-size: 0.85em
+  
+  .menu--item:not(:last-child)
+    margin: 0 0 .75em 0
+  
+  .menu
+    font-size: 1.2em
+
+  h1 
+    padding-left: 25px
+    font-size: 1.14em
+
+// PAGES
+// (page) Resume / C.V.
+.resume
+  .content--inner
+    align-items: flex-start
+  .paragraph-block
+    max-width: 600px
+    margin: 2em auto 0 auto
+  
+.resume-skills-title
+  font-family: $font-family-links
+  font-weight: 400
+  color: $grey
+  font-size: 1.5rem
+  @media (max-width: 640px)
+    font-size: .95em
+
+.paragraph-btn,
+.navbar-resume
+  a, .btn
+    font-size: 1.2rem
+    @media (max-width: 640px)
+      font-size: .9rem
+      min-width: initial
+
+.paragraph-btn
+  text-align: center
+  margin-bottom: 10em
+
+.navbar-resume
+  position: sticky
+  top: 0
+  z-index: 2
+  background-color: $black
+  display: flex
+  align-items: center
+  justify-content: space-between
+  margin-right: -1rem
+  margin-left: -1rem
+  @media (max-width: 640px)
+    margin-right: -0.5rem
+    margin-left: -0.5rem
+
+#section-resume div[id*="resume-"]
+  margin: 2.5em 0
+  h3
+    margin: 1em 0
+    color: white
+  p
+    margin-bottom: 1em
+  b
+    color: lighten($grey, 15%)
+
+// To hide download C.V. / Resume: mobile, smartphones & small devices
+// @media screen and (max-width: 480px)
+//   #js-resume
+//     display: none
+
+// (page) Legal terms
+.paragraph-block
+  width: 100%
+  margin: 2em auto 1em auto
+  padding: 0 .5rem
+  > p 
+    margin-top: 1em
+    b
+      color: lighten($grey, 8%)
+  .section-title, .subsection-title
+    margin: 1.1em 1em 1em
+    color: $coder-color
+    font-weight: 600
+    letter-spacing: .03em
+  .section-title
+    font-family: $font-family-links
+    font-size: 1.5em
+    text-align: center
+  .subsection-title
+    font-size: 1.2em
+  .url, .name
+    color: $coder-color
+  .nickname, .laws-slang
+    color: lighten($grey, 25%)
+  .listed li
+    margin-bottom: .5em
+    &:last-child
+      margin-bottom: 0
+  .listed
+    padding: 1.5em 2em
+  @media (max-width: 540px)
+    .listed
+      padding: 1em 1.5em
+    .section-title
+      font-size: 1.2em
+    .subsection-title
+      font-size: 1.1em
+  // (modifier)
+  &:not(.is-hero)
+    max-width: 920px
+  &.is-hero
+    width: 100vw
+    height: 100vh
+    span
+      margin: 0
+      color: grey
+      font-weight: 300
+
+// (page) 404 page not found
+.error
+  background-color: $pure-back
+
+// (page) Portfolio 
+.navbar-filter-btns
+  z-index: 2
+  position: fixed
+  top: 0
+  background: linear-gradient(to top, rgba($bg-crt,0) 0%, rgba($bg-crt,0.5) 10%, rgba($bg-crt,0.75) 20%, rgba($bg-crt,1) 50%, rgba($bg-crt,1) 100%)
+  // background: rgba(35, 35, 35, .98)
+  width: 100%
+  min-height: 50px
+  display: flex
+  flex-direction: row
+  flex-wrap: wrap
+  justify-content: space-around
+  align-items: center
+  align-content: space-around
+  @include navsPad()
+  .btn
+    min-width: initial
+    padding: .25rem .5rem
+    color: $designer-color
+    font-size: 1.2rem
+    @media screen and (max-width: 768px)
+      font-size: 1rem
+
+#portfolio
+  z-index: 1
+  margin: 3.5rem auto
+  padding: 0 1rem
+  column-count: 3
+  column-gap: 1rem
+  column-width: 33.3333%
+  animation: turn-on 4s linear
+  animation-fill-mode: forwards
+  /* -- (breakpoints) -- */
+  // 4k
+  @media screen and (max-width: 3840px)
+    column-count: 8
+  // 2k
+  @media screen and (max-width: 2560px)
+    column-count: 7
+  // fullHD
+  @media screen and (max-width: 1920px)
+    column-count: 6
+  // fullHD
+  @media screen and (max-width: 1200px)
+    column-count: 5
+  // HD
+  @media screen and (max-width: 980px)
+    column-count: 4
+  // tablet
+  @media screen and (max-width: 768px)
+    column-count: 3
+  // smartphone
+  @media screen and (max-width: 640px)
+    column-count: 2
+    margin-top: 5em
+  // small mobile
+  @media screen and (max-width: 320px)
+    column-count: 1
+
+.loader
+  width: 100%
+  height: 100vh
+  background-color: red
+
+.item-portfolio
+  transform: scale(1)
+  transition: all 350ms ease
+  position: relative
+  img
+    max-width: 100%
+    width: 100%
+    height: auto
+    margin-bottom: 1rem
+    cursor: pointer
+  .img-overlay,
+  .item-tags-list
+    opacity: 1
+    position: absolute
+    bottom: 1.2rem // because parent has magin bottom
+    top: initial
+    transition: .5s ease
+  .item-tags-list
+    padding: .5em .33em
+  .img-overlay
+    width: 100%
+    height: 60px
+    padding: 10px
+    background: rgba($pure-back,.5) // Black see-through
+    color: $white
+    font-size: 1rem
+    text-align: center
+    pointer-events: auto
+    cursor: pointer
+    opacity: 0
+  // to show Text overlay & hide Tags
+  &:hover
+    .img-overlay
+      opacity: 1
+    .item-tags-list
+      opacity: 0
+
+.item-tag
+  background: rgba($pure-back,.5) // Black see-through
+  border-radius: 12px
+  padding: .15rem .33rem
+  margin: .15rem
+  font-size: .75rem
+  color: $white
+  font-weight: 600
+  text-transform: capitalize
+  &.all
+    display: none
+
+// Table styles
+table, th, td
+  border: none
+
+table
+  width: 100%
+  display: table
+  border-collapse: collapse
+  border-spacing: 0
+
+table.striped tr
+  border-bottom: none
+
+table.striped > tbody > tr:nth-child(odd)
+  background-color: rgba(242, 242, 242, 0.5)
+
+table.striped > tbody > tr > td
+  border-radius: 0
+
+table.highlight > tbody > tr
+  transition: background-color .25s ease
+
+table.highlight > tbody > tr:hover
+  background-color: rgba(242, 242, 242, 0.5)
+
+table.centered thead tr th, table.centered tbody tr td
+  text-align: center
+
+tr
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12)
+
+td, th
+  padding: 15px 5px
+  display: table-cell
+  text-align: left
+  vertical-align: middle
+  border-radius: 2px
+
+@media only screen and (max-width: 992px)
+  table.responsive-table
+    width: 100%
+    border-collapse: collapse
+    border-spacing: 0
+    display: block
+    position: relative
+
+  table.responsive-table td:empty:before
+    content: '\00a0'
+
+  table.responsive-table th,
+  table.responsive-table td
+    margin: 0
+    vertical-align: top
+
+  table.responsive-table th
+    text-align: left
+
+  table.responsive-table thead
+    display: block
+    float: left
+
+  table.responsive-table thead tr
+    display: block
+    padding: 0 10px 0 0
+
+  table.responsive-table thead tr th::before
+    content: "\00a0"
+
+  table.responsive-table tbody
+    display: block
+    width: auto
+    position: relative
+    overflow-x: auto
+    white-space: nowrap
+
+  table.responsive-table tbody tr
+    display: inline-block
+    vertical-align: top
+
+  table.responsive-table th
+    display: block
+    text-align: right
+
+  table.responsive-table td
+    display: block
+    min-height: 1.25em
+    text-align: left
+
+  table.responsive-table tr
+    border-bottom: none
+    padding: 0 10px
+
+  table.responsive-table thead 
+    border: 0
+    border-right: 1px solid rgba(0, 0, 0, 0.12)
+
+// to overwrite "materializecss" Tables layout by default
+// In "Legal" view for example
+table
+  margin-bottom: 1rem
+td, th
+  vertical-align: top
+  font-size: 85%
+  line-height: 22px
+
+@import "_modals"
