@@ -105,15 +105,15 @@
           </p>
           <ul class="listed">
             <li>
-              1. Asegurar una gestión óptima de los <b>servicios y productos</b> aquí ofertados y/o solicitados por el
+              1. Asegurar una gestión óptima de la <b>información, servicios y productos</b> aquí ofertados y/o solicitados por el
               <em class="laws-slang">Usuario</em>.
             </li>
             <li>
-              2. Comunicación y resolución de <b>consultas</b>.
+              2. Comunicación y resolución de <b>consultas, dudas</b>...
             </li>
             <li>
               3. Envío de <b>publicidad</b> e información comercial por medios electrónicos, acerca de los productos y 
-              servicios de <em>haztunegociodigital.com</em> y/o <em>jalofernandez.com</em> así como documentación relativa a ambos.
+              servicios de <span class="url">{{ owner.url }}</span> y/o información relativa a ambos.
             </li>
             <li>
               4. Mejorar la <b>experiencia de Usuario</b> analizándo cómo navegas por este sitio web y así mediante herramientas como 
@@ -140,62 +140,65 @@
             mismos, de acuerdo con lo establecido en el <em>Real Decreto 1720/2007, de 21 de diciembre</em>.
           </p> -->
           <p>
-            Como <em class="laws-slang">Prestador</em> nos comprometemos a <b>proteger la información confidencial</b>
-            facilitada por el <em class="laws-slang">Usuario</em> haciendo el uso extrictamente necesario de ellos según lo expuesto en el párrafo anterior.
-            Los datos de carácter personal que nos facilites nunca serán utilizados para prestar servicios a terceros que NO estén especificados en este <em>Aviso Legal</em>.
+            Como <em class="laws-slang">Prestador</em> me comprometo a <b>proteger la información confidencial</b>
+            facilitada por el <em class="laws-slang">Usuario</em> limitando su uso a lo expuesto en el párrafo anterior.
+            Los datos de carácter personal que me facilites nunca serán utilizados para prestar servicios a terceros
+            que NO estén especificados en este <em>Aviso Legal</em>.
           </p>
           <p>
-            Como <em class="laws-slang">Usuario</em> certificas que eres <b>mayor de 14 años</b>
-            y que por lo tanto posees la capacidad legal necesaria para la prestación del consentimiento al tratamiento de tus datos de carácter personal y todo ello,
-            de conformidad con lo establecido en la presente <em>Política de Privacidad</em>. De no ser así contacta con tu tutor o un
-            adulto mayor de edad para que te valide o cierra esta pestaña del navegador y abre Netflix...
+            Como <em class="laws-slang">Usuario</em> certificas que eres <b>mayor de 14 años</b> poseyendo
+            la capacidad legal necesaria para la prestación del consentimiento al tratamiento de tus datos de carácter personal
+            y todo ello, de conformidad con lo establecido en la presente <em>Política de Privacidad</em>.
+            De no ser así contacta con tu tutor o un adulto mayor de edad para que te valide o cierra esta pestaña del navegador
+            y abre Twitch...
           </p>
           <p>
             Como <em class="laws-slang">Usuario</em> puedes ejercitar los <b>derechos de acceso</b>,
-            <b>rectificación</b>, <b>cancelación</b> y 
-            <b>oposición</b> sobre <b>tus datos personales</b> así como el de
-            <b>revocación del consentimiento</b> para cualquier de las finalidades anteriormente descritas, enviando un
-            correo electrónico a
+            <b>rectificación</b>, <b>cancelación</b> y  <b>oposición</b> sobre <b>tus datos personales</b> así como el de
+            <b>revocación del consentimiento</b> enviando un correo electrónico a
             <a
-              href="mailto:legal@haztunegociodigital.com?subject=Sobre%20el%20tratamiento%20de%20mis%20datos"
-              title="Tratamiento de datos personales en #HazTuNegocioDigital"
+              :href="`mailto:${owner.email}?subject=Sobre%20el%20tratamiento%20de%20mis%20datos`"
+              :title="`Contactar vía correo electrónico con ${owner.email} sobre el tratamiento de datos personales`"
             >
-              <span>legal@haztunegociodigital.com</span>
+              {{ owner.email }}
             </a>
-            indentificándote e indicando el derecho que deseas ejercitar.
+            indicando claramente el derecho que deseas ejercitar e indentificándose apropiadamente.
           </p>
+          <!-- INFO: Para cuando envíe publicidad o newsletters vía correo electrónico -->
+          <!--
           <p>
-            Como <em class="laws-slang">Prestador</em> cumplimos la
+            Como <em class="laws-slang">Prestador</em> cumplo la
             <em>Ley 34/2002 de 11 de julio, de Servicios de la Sociedad de la Información y el Comercio Electrónico</em>
-            así que en caso de querer remitirte infomación comercial vía correo electrónico solicitaremos previamente tu aprobación
-            para el tratamiento de tu correo electrónico con fines comerciales. Siempre podrás <em>"darte de baja"</em> de manera automática en los distintos
-            correos electrónicos que recibas como suscriptor de nuestra lista de correo o enviándonos un email a:
+            así que en caso de querer remitirte infomación comercial vía correo electrónico te pediré anticipadamente tu aprobación
+            para el uso de tu correo electrónico con fines comerciales. Siempre podrás <em>"darte de baja"</em>
+            de manera automática en los distintos correos electrónicos que recibas como suscriptor de nuestra lista de correo o
+            enviándonos un email a:
             <a
-              href="mailto:legal@haztunegociodigital.com?subject=Solicitud%20de%20baja%20en%20listade%20%20correo"
-              title="Solicitud de baja de correos publicitarios de #HazTuNegocioDigital"
+              :href="`mailto:${owner.email}?subject=Solicitud%20de%20baja%20en%20listade%20%20correo`"
+              :title="`Contactar vía correo electrónico con ${owner.email} para darse de baja de emais publicitarios`"
             >
-              <span>legal@haztunegociodigital.com</span>
+              {{ owner.email }}
             </a>
           </p>
+          -->
           <p>
-            Como <em class="laws-slang">Usuario</em> <b>responderás de la veracidad de los datos que nos facilites</b> y nosotros, como responsables
-            de <em>haztunegociodigital.com</em>, nos reservamos el derecho a excluir de los
-            servicios prestados en este sitio web a todo <em class="laws-slang">Usuario</em> que haya facilitado datos falsos o suplantaciones indebidas.
+            Como <em class="laws-slang">Usuario</em> <b>responderás de la autenticidad de los datos que facilites</b> y yo, como responsable
+            de <span class="url">{{ owner.url }}</span>, me reservo el derecho a excluir de los servicios prestados en este sitio web a todo
+            <em class="laws-slang">Usuario</em> que haya falsificado datos o realizado suplantaciones indebidas.
           </p>
 
           <h4 class="subsection-title">
             Finalidades, tratamiento y conservación
           </h4>
           <p>
-            El presente sitio web, <em>haztunegociodigital.com</em>, no recaba datos de caracter personal a parte de los
-            proporcionados por el propio <em class="laws-slang">Usuario</em>. Los datos de carácter personal proporcionados por el
-            <em class="laws-slang">Usuario</em> a través de Whatsapp, teléfono, correo electrónico o redes sociales
-            serán tratados por el <em class="laws-slang">Prestador</em>, que ostentamos la condición de Responsables del tratamiento, para las
-            finalidades que se indican a continuación.
+            El presente sitio web, <span class="url">{{ owner.url }}</span>, no recolecta datos de caracter personal a parte de los
+            que pudiese proporcionar voluntariamente por el propio <em class="laws-slang">Usuario</em>. Cualquier dato
+            proporcionado por el <em class="laws-slang">Usuario</em> a través de Whatsapp, teléfono, correo electrónico o redes sociales
+            serán tratados por el <em class="laws-slang">Prestador</em>, que es el responsable del tratamiento de ellos, para las
+            <b>finalidades que se indican a continuación</b>.
           </p>
           <p>
-            En esta tabla desglosamos el motivo por el que tratamos tus datos y durante cuánto tiempo los
-            conservaremos :
+            En esta tabla desgloso el motivo por el que trato tus datos y durante cuánto tiempo lo conservo:
           </p>
           <div class="table-container">
             <table class="table is-bordered is-narrow is-fullwidth is-size-6 is-size-7-mobile">
@@ -209,8 +212,8 @@
               <tbody>
                 <tr>
                   <td>
-                    Comprobar la identidad y garantizar la seguridad de los Usuarios así como facilitar la gestión de
-                    nuestro servicio.
+                    Comprobar la identidad y garantizar la seguridad de los <em class="laws-slang">Usuarios</em> así como facilitar
+                    la gestión del servicio.
                   </td>
                   <td>Interés legítimo del responsable del tratamiento.</td>
                   <td>
@@ -248,8 +251,9 @@
             Transferencias internacionales
           </h4>
           <p>
-            Te informamos que, por tu seguridad, tus datos son tratados en España y las aplicaciones son realizadas por
-            proveedores de desarrollo de software certificados y con seguridad garantizada.
+            Pr tu seguridad, tus datos son tratados en España y EEUU. Las aplicaciones son realizadas por proveedores de
+            desarrollo de software certificados y con seguridad garantizada como son <em>Google LLC (Alphabet Inc)</em>,
+            <em>Microsoft Corporation</em>...
           </p>
 
           <h4 class="subsection-title">
@@ -262,16 +266,15 @@
               <span>página de contacto</span> </nuxt-link>
             o bien a la dirección de correo electrónico:
             <a
-              href="mailto:legal@haztunegociodigital.com?subject=Solicitud%20de%20baja%20en%20listade%20%20correo"
-              title="Solicitud de baja de correos publicitarios de #HazTuNegocioDigital"
-              :title="`Solicitud de baja de correos publicitarios de ${owner.url}`"
+              :href="`mailto:${owner.email}?subject=Ejercitar%20derechos%20de%20en%20usuario`"
+              :title="`Enviar email para ejercitar derechos de usuario en ${owner.url}`"
             >
-              <span>{{ owner.email }}</span>
+              {{ owner.email }}
             </a>
             a la atención de {{owner.author}}. La solicitud deberá contener copia de tu DNI u otro documento identificativo
             legalmente equivalente, así como el contenido mínimo previsto en la normativa aplicable. Si la solicitud no reúne los
-            requisitos especificados, <em>#HazTuNegocioDigital</em> podrá requerir su subsanación. No se exigirá
-            contraprestación alguna por el ejercicio de los derechos.
+            requisitos especificados, <span class="url">{{ owner.url }}</span> podrá requerir su subsanación. Obviamente no se exigiré ninguna
+            contraprestación o compensación de ningún tipo por el ejercicio de tus derechos.
           </p>
           <div class="table-container">
             <table class="table is-bordered is-narrow is-fullwidth is-size-6 is-size-7-mobile">
@@ -314,8 +317,8 @@
           </div>
           <p>
             En caso de no quedar conforme en el ejercicio de sus derechos, podrá presentar una reclamación ante la
-            autoridad de control en materia de protección de datos,
-            <i>la Agencia Española de Protección de Datos</i>, cuya página web es:
+            autoridad de control en materia de protección de datos, <em>la Agencia Española de Protección de Datos</em>,
+            cuya página web es:
             <a
               href="https://www.aepd.es/es"
               target="_blank"
@@ -331,51 +334,45 @@
             Condiciones de uso
           </h3>
           <p>
-            La utilización de este sitio web,
-            <em>haztunegociodigital.com</em>, te otorga la condición de
-            <em class="laws-slang">Usuario</em>
-            implicando la
-            <span class="has-text-weight-medium has-text-success">aceptación completa de todas las cláusulas y condiciones de uso</span> incluidas en la presente página
-            de <em>aviso legal</em> así como las condiciones particulares que pudieran establecerse entre las dos partes, <em class="laws-slang">Prestador</em> (<em>nosotros</em>) y Usuario (<em>tú</em>), en relación con la prestación de los
-            servicios previamente acordados.
+            Usar, navegar y consultar este sitio web, <span class="url">{{ owner.url }}</span>, te otorga la condición de
+            <em class="laws-slang">Usuario</em> e implica <b>aceptación completa de todas las cláusulas y condiciones de uso</b>
+            incluidas en esta página de <em>aviso legal</em> así como las condiciones particulares que pudieran establecerse
+            entre las dos partes, <em class="laws-slang">Prestador</em> (<em>yo</em>) y <em class="laws-slang">Usuario</em> (<em>tú</em>),
+            en relación con la prestación de servicios y/o productios previamente acordados.
           </p>
           <p>
-            Si no estuvieras de acuerdo con todas y cada una de estas cláusulas y condiciones abstente de utilizar este
-            sitio web.
+            Si no estuvieras de acuerdo con todas y cada una de estas cláusulas y condiciones deja de utilizar, navegar y consultar este sitio web.
           </p>
           <p>
-            El acceso y navegación por este sitio web es libre y gratuito y no supone, en modo alguno, el inicio de una relación comercial con el
-            <em class="laws-slang">Prestador</em>.
+            El acceso, consulta y navegación por este sitio web es libre y gratuito y por supuesto no supone el inicio de una relación comercial
+            conmigo, el <em class="laws-slang">Prestador</em>.
           </p>
           <p>
-            Como <em class="laws-slang">Usuario</em>, estás obligado y comprometido a NO utilizar cualquiera de los contenidos del
-            sitio web con fines o efectos ilícitos, prohibidos en este
-            <em>aviso legal</em> o por la legislación vigente, lesivos de los derechos e intereses de terceros, o que de
-            cualquier forma puedan dañar, inutilizar, sobrecargar, deteriorar o impedir la normal utilización de los
-            contenidos, los equipos informáticos o los documentos, archivos y toda clase de contenidos almacenados en
-            cualquier equipo informático propios o contratados por el <em class="laws-slang">Prestador</em>, de otros usuarios o de cualquier <em class="laws-slang">Usuario</em>
-            de Internet.
+            Como <em class="laws-slang">Usuario</em>, estás obligado a NO utilizar cualquiera de los contenidos del
+            sitio web con fines o efectos ilegales, prohibidos en este <em>aviso legal</em> o por la legislación vigente, lesivos
+            de los derechos e intereses de terceros, o que de cualquier forma puedan dañar, inutilizar, sobrecargar, deteriorar o
+            impedir la normal utilización de los contenidos, los equipos informáticos o los documentos, archivos y toda clase de
+            contenidos almacenados en cualquier equipo informático propios o contratados por el <em class="laws-slang">Prestador</em>,
+            de otros usuarios o de cualquier <em class="laws-slang">Usuario</em> de Internet.
           </p>
 
           <h4 class="subsection-title">
             Responsabilidad
           </h4>
           <p>
-            El <em class="laws-slang">Prestador</em> no será responsable de las opiniones vertidas por los <span class="has-text-weight-medium">Usuarios</span> o terceras personas ajenas
-            <em>#HazTuNegocioDigital</em> a través de redes sociales, blog u otras herramientas de participación, conforme a lo previsto en la normativa de
-            aplicación.
+            El <em class="laws-slang">Prestador</em> no es ni será responsable de las opiniones vertidas por los <em class="laws-slang">Usuarios</em>
+            o terceras personas ajenas a <span class="url">{{ owner.url }}</span> a través de redes sociales, blog u otras herramientas de participación.
           </p>
           <p>
-            El <em class="laws-slang">Prestador</em> se reserva el derecho de retirar todos aquellos comentarios o contenido fraudulento y/o
-            manipulado que vulneren la legislación vigente, lesivos de los derechos o intereses de terceros, o que, a su
-            juicio, no resulten adecuados para su publicación. En caso de que, como <em class="laws-slang">Usuario</em>, consideres que existe en el
-            sitio web algún contenido que pudiera ser susceptible de esta clasificación, rogamos nos lo notifiques
-            inmediatamente escribiéndonos un correo electrónico a la siguiente dirección de email:
+            El <em class="laws-slang">Prestador</em>, osea yo, me reserva el derecho de retirar todos aquellos comentarios o contenido fraudulento y/o
+            manipulado que vulneren la legislación vigente, lesivos de los derechos o intereses de terceros o que resulten adecuados para su publicación.
+            En caso de que, como <em class="laws-slang">Usuario</em>, consideres que existe en el sitio web algún contenido que pudiera ser susceptible
+            de esta clasificación, pido encarecidamente que me lo notifiques escribiéndo un correo electrónico a la siguiente dirección de email:
             <a
-              href="mailto:legal@haztunegociodigital.com?subject=Denuncia%20de%20contenido"
-              title="Denunciar contenido inapropiado en la web de #HazTuNegocioDigital"
+              :href="`mailto:${owner.email}?subject=Denuncia%20de%20contenido`"
+              :title="`Denunciar contenido inapropiado en la web de ${owner.url}`"
             >
-              <span>legal@haztunegociodigital.com</span>
+              {{ owner.email }}
             </a>
           </p>
           <p>
@@ -383,10 +380,10 @@
             los links y vínculos o la información obtenida a través del sitio web, sin necesidad de previo aviso.
           </p>
           <p>
-            Este sitio web, <em>haztunegociodigital.com</em>, ha sido desarrollado, revisado y testeado para que <span class="has-text-weight-medium">funcione correctamente</span>.
-            En principio, puede garantizarse el correcto funcionamiento los 365 días del año, 24 horas al día. No obstante, el
-            <em class="laws-slang">Prestador</em> no descarta la posibilidad de que acontezcan causas de fuerza mayor como: catástrofes naturales, huelgas,
-            pandemias o circunstancias ajenas a nuestra organización que imposibiliten el acceso a este sitio web.
+            Este sitio web, <span class="url">{{ owner.url }}</span>, ha sido desarrollado, revisado y testeado para que <b>funcione correctamente</b>.
+            A priori, puede garantizarse el correcto funcionamiento los 365 días del año, 24 horas al día. No obstante, nunca puede descartarse
+            la posibilidad de que acontezcan causas de fuerza mayor como: catástrofes naturales, huelgas, pandemias o circunstancias ajenas a
+            mi persona que imposibiliten el acceso o el correcto funcionamiento de este sitio web.
           </p>
 
           <h4 class="subsection-title">
@@ -395,91 +392,76 @@
           <p>
             Cualquier dato personal que facilites al <em class="laws-slang">Prestador</em> puede ser almacenado en bases de datos, cuya titularidad
             corresponde en exclusiva al <em class="laws-slang">Prestador</em> pero que se prestan a través de un tercero, simpre un proveedor de servicios
-            de intenet reputado y homologado, que asume todas las medidas de índole técnica, organizativa y de
-            seguridad que garantizan la confidencialidad, integridad y calidad de la información contenida en las
-            mismas de acuerdo con lo establecido en la normativa vigente en protección de datos.
+            de intenet reputado y homologado, que asume todas las medidas de índole técnica, organizativa y de seguridad que garantizan la confidencialidad,
+            integridad y calidad de la información contenida en las mismas de acuerdo con lo establecido en la normativa vigente en protección de datos.
           </p>
           <p>
-            Matizaremos que las medidas de seguridad de los sistemas informáticos en Internet
-            aunque son extremadamente fiables no son infalibles y que el <em class="laws-slang">Prestador</em> no puede garantizar al 100%
-            la inexistencia de virus u otros elementos que puedan producir alteraciones en los sistemas informáticos 
-            (<em>software y hardware</em>) del <em class="laws-slang">Usuario</em> o en tus documentos electrónicos y ficheros contenidos en los
-            mismos. Dicho esto, el <em class="laws-slang">Prestador</em> pone todos los medios necesarios y toma las medidas de seguridad oportunas para
-            evitar la presencia de estos elementos dañinos.
+            Hay que decir que las medidas de seguridad de los sistemas informáticos en Internet son extremadamente fiables pero no infalibles y que el
+            <em class="laws-slang">Prestador</em> no puede garantizar al 100% la inexistencia de virus u otros elementos que puedan producir alteraciones
+            en los sistemas informáticos (<em>software y hardware</em>) del <em class="laws-slang">Usuario</em> o en tus documentos electrónicos y ficheros
+            contenidos en los mismos. Dicho esto, el <em class="laws-slang">Prestador</em> pone todos los medios necesarios y toma las medidas de seguridad
+            oportunas para evitar la presencia de estos elementos dañinos.
           </p>
 
           <h4 class="subsection-title">
             Enlaces de interés a otros sitios Web
           </h4>
           <p>
-            El <em class="laws-slang">Prestador</em> puede proporcionarle acceso a sitios web de terceros mediante enlaces con la finalidad de
-            informar sobre la existencia de otras fuentes de información en Internet en las que podrá ampliar los datos o servicios ofrecidos en el sitio web.
+            Como <em class="laws-slang">Prestador</em> puedo proporcionarte acceso a sitios web de terceros mediante enlaces con la finalidad de
+            informar sobre la existencia de otras fuentes de información en Internet en las que podrá ampliar la información relativa a servicios ofrecidos
+            en el sitio web.
           </p>
           <p>
-            Estos enlaces a otros sitios web no suponen en ningún caso una sugerencia o recomendación para que visites las
-            páginas web de destino. Estas están fuera del control del <em class="laws-slang">Prestador</em>, por lo que
+            Estos enlaces a otros sitios web no suponen una sugerencia o recomendación ni mucho menos una obligación para que visites las páginas web de destino.
+            Aunque siempre serán sugerencias de interés, veraces y legales, estas están fuera del control del <em class="laws-slang">Prestador</em>, por lo que
             <em class="laws-slang">Prestador</em> no es responsable del contenido de los sitios web vinculados, ni de los links o enlaces ubicados en él,
             ni del resultado que obtenga al seguir los enlaces.
           </p>
           <p>
-            La existencia de enlaces no implica la existencia de relaciones entre <em class="laws-slang">Prestador</em> y el
-            propietario/s del sitio en el que se establezca el enlace/s, ni la aceptación o aprobación por parte del <em class="laws-slang">Prestador</em>
-            de sus contenidos o servicios.
+            La existencia de estos enlaces no implica necesariamente la existencia de relaciones entre <em class="laws-slang">Prestador</em> y el/los propietario/s
+            del sitio en el que se establezca el/los enlace/s, ni la aprobación por parte del <em class="laws-slang">Prestador</em> de sus contenidos o servicios
+            ya que estos pueden cambiar si previo aviso.
           </p>
           <p>
-            Si accedes a un sitio web externo desde un enlace que encuentres en <em>haztunegociodigital.com</em> deberás leer la propia
-            <em>política de privacidad</em> propia del otro sitio web que visite pudiendo ser esta muy diferente a la de este sitio web.
+            Si accedes a un sitio web externo desde un enlace que encuentres en <span class="url">{{ owner.url }}</span> deberás leer la <em>política de privacidad</em>
+            propia del otro sitio web que visite. Cada web tiene sus condiciones.
           </p>
 
           <h4 class="subsection-title">
             Contratación de terceros
           </h4>
           <p>
-            El <em class="laws-slang">Prestador</em> podrá
-            <b>contratar y/o subcontratar con terceras entidades</b> todo lo que estime oportuno en relación con la
-            realización de cualesquiera o todas las actividades necesarias para la gestión, mantenimiento, actualización
-            y/o mejora de los Servicios. Dichas entidades podrían tener la facultad de desactivar los servicios y, en
-            consecuencia, interrumpir el acceso al mismo para realizar las tareas contratadas.
+            El <em class="laws-slang">Prestador</em> podrá <b>contratar y/o subcontratar con terceras entidades</b> todo lo que estime oportuno en relación con la
+            realización de las actividades necesarias para la gestión, mantenimiento, actualización y/o mejora de la información, productos y servicios aquí ofertados.
+            Dichas entidades podrían tener la facultad de desactivar los servicios interrumpiéndo el acceso al mismo para realizar las tareas contratadas.
           </p>
 
           <h4 class="subsection-title">
             Propiedad intelectual
           </h4>
           <p>
-            Este sitio web, <em>haztunegociodigital.com</em>, incluyendo a título enunciativo pero no limitativo su codificación, edición,
+            Este sitio web, <span class="url">{{ owner.url }}</span>, incluyendo a título enunciativo pero no limitativo su codificación, edición,
             compilación y demás elementos necesarios para su funcionamiento, así como los diseños, logotipos, imagen corporativa, texto y gráfismos
-            son propiedad de 
-            <a
-              class="has-text-link"
-              href="https://jalofernandez.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              title="Página personal y portfolio de: @jalofernandez designer + coder"
-            >
-              jalofernandez.com
-            </a>
-            . A él corresponde el ejercicio exclusivo de los derechos de explotación de los mismos en cualquier forma
+            son propiedad de {{ owner.name }}. A él corresponde el ejercicio exclusivo de los derechos de explotación de los mismos en cualquier forma
             y, en especial, los derechos de reproducción, distribución, comunicación pública y transformación, de acuerdo
             con la legislación española y de la Unión Europea aplicable.
           </p>
           <p>
             NO está permitida la reproducción total o parcial, uso, explotación y distribución con fines comerciales de cualquiera de los recursos materiales, 
-            artículos o programación incluida en el presente sitio web, <em>haztunegociodigital.com</em>.
+            recursos creativos, artículos o programación incluida en el presente sitio web: <span class="url">{{ owner.url }}</span>
           </p>
           <p>
-            El <em class="laws-slang">Prestador</em> como titular de
-            <em>#HazTuNegocioDigital</em> autoriza expresamente a que terceros puedan redirigir directamente a los contenidos
-            concretos de sitio web: <em>haztunegociodigital.com</em>.
+            Yo, osea el <em class="laws-slang">Prestador</em> como titular de <span class="url">{{ owner.url }}</span>, autorizo expresamente a que <b>terceros
+            puedan redirigir</b> directamente a los contenidos concretos de sitio web: <span class="url">{{ owner.url }}</span>
           </p>
           <p>
-            Para realizar cualquier tipo de observación como posibles incumplimientos de los derechos de propiedad
-            intelectual o industrial, así como sobre cualquiera de los contenidos del sitio web, puedes hacerlo a través
-            de nuestra dirección de correo electrónico:
+            Vuelvo a recordar la dirección de correo electrónico para poder realizar cualquier tipo de observación como posibles incumplimientos de los derechos
+            de propiedad intelectual o industrial, o sobre cualquiera de los contenidos del sitio web:
             <a
-              href="mailto:legal@haztunegociodigital.com?subject=Denuncia%20incumplimiento%20derechos%20de%20propiedad%20intelectual"
-              title="Escríbenos para denunciar incumplimientos de los derechos de propiedad intelectual en la web de #HazTuNegocioDigital"
+              :href="`mailto:${owner.email}?subject=Denuncia%20incumplimiento%20derechos%20de%20propiedad%20intelectual`"
+              :title="`Denunciar contenido inapropiado en la web de ${owner.url}`"
             >
-              <span>legal@haztunegociodigital.com</span>
+              {{ owner.email }}
             </a>
           </p>
 
@@ -487,34 +469,35 @@
             Derecho de exclusión
           </h4>
           <p>
-            El <em class="laws-slang">Prestador</em> se reserva el derecho a denegar o retirar el acceso a <em>haztunegociodigital.com</em> 
-            y los servicios ofrecidos sin necesidad de preaviso, a instancia propia o de un tercero, a aquellos <em class="has-text-weight-medium">Usuarios</em> 
-            que incumplan cualquiera de las condiciones de este <em>aviso legal</em>.
+            El <em class="laws-slang">Prestador</em>, yo, me reservo el derecho a denegar o retirar el acceso a <span class="url">{{ owner.url }}</span> 
+            y la información y los servicios/porductos ofrecidos sin necesidad de preaviso, a instancia propia o de un tercero, a aquellos <em class="laws-slang">Usuarios</em> 
+            que incumplan cualquiera de las condiciones expuestas a lo largo de este <em>aviso legal</em>.
           </p>
 
           <h4 class="subsection-title">
             Jurisdicción
           </h4>
           <p>
-            Este <em>aviso legal</em> se rige íntegramente por la <span class="has-text-weight-medium">legislación española</span>.
+            Este <em>aviso legal</em> se rige íntegramente por la <b>legislación española</b>.
           </p>
           <p>
-            Siempre que no haya una norma que obligue a otra cosa, para cuantas cuestiones se susciten sobre la
-            interpretación, aplicación y cumplimiento de este
-            <em>aviso legal</em>, así como de las reclamaciones que puedan derivarse de su uso, las partes acuerdan
-            someterse a los <span class="has-text-weight-medium">jueces</span> y <span class="has-text-weight-medium">tribunales</span> de la <span class="has-text-weight-medium">Comunidad Autónoma de Madrid</span>, con renuncia
-            expresa de cualquier otra jurisdicción que pudiera corresponderles.
+            Para cualquier duda sobre la interpretación, aplicación y cumplimiento de este <em>aviso legal</em>, así como de las reclamaciones que puedan derivarse de su uso,
+            las partes acuerdan someterse a los <b>jueces</b> y <b>tribunales</b> de la <b>CAM</b> (<em>Comunidad Autónoma de Madrid</em>), con renuncia expresa de cualquier
+            otra jurisdicción que pudiera corresponderles siempre y cuando no haya una ley explícita que obligue a otra cosa,
           </p>
 
-          <!-- INFO: incorporar cuando haya productos o servicios por los que cobrar €!!
+          <!-- INFO: incorporar cuando haya productos o servicios por los que cobrar €!! -->
+          <!--
           <h4 class="subsection-title">
             Condiciones de Venta
           </h4>
           <p>
             En este apartado detallarás los pasos que debe realizar el <em class="laws-slang">Usuario</em> para completar una compra y las condiciones a las que ha de someterse.
-          </p>-->
+          </p>
+          -->
 
-          <!-- INFO: incorporar cuando haya programas de afiliación, y/o anuncios patrocinados €!!
+          <!-- INFO: incorporar cuando haya programas de afiliación, y/o anuncios patrocinados €!! -->
+          <!--
           <h4 class="subsection-title">
             Enlaces de Afiliados y anuncios patrocinados
           </h4>
@@ -523,18 +506,19 @@
           </p>
           <p>
             La información que aparece en estos enlaces de afiliados o los anuncios insertados, son facilitados por los propios anunciantes, por lo que <em class="laws-slang">Prestador</em> no se hace responsable de posibles inexactitudes o errores que pudieran contener los anuncios, ni garantiza en modo alguno la experiencia, integridad o responsabilidad de los anunciantes o la calidad de sus productos y/o servicios.
-          </p>-->
+          </p>
+          -->
 
           <h4 class="subsection-title">
             Contacto
           </h4>
           <p>
-            En caso de que tengas cualquier duda o desees realizar cualquier comentario o consulta sobre sobre este sitio web, puedes enviar un mensaje de correo electrónico a la dirección:
+            Para cualquier <b>duda o consulta</b> sobre sobre este sitio web, puedes enviar un mensaje de correo electrónico a la siguiente dirección de email:
             <a
-              href="mailto:legal@haztunegociodigital.com"
-              title="Escríbenos un email al departamento legal de #HazTuNegocioDigital"
+              :href="`mailto:${owner.email}?subject=Duda%20o%20consulta`"
+              :title="`Duda o consulta sobre la web de ${owner.url}`"
             >
-              <span>legal@haztunegociodigital.com</span>
+              {{ owner.email }}
             </a>
           </p>
 
@@ -555,50 +539,43 @@
             >
               <em>Ley de la sociedad de la información y del comercio electrónico</em>
             </a>,
-            obliga los porpietarios de sitios web, blogs o cualquier aplicación que descargue en tu navegador
-            cookies de terceros a informar al <em class="laws-slang">Usuario</em> sobre <span class="has-text-weight-medium">el tipo de cookies, la duración y la
-            finalidad</span> de cada una de ellas.
+            obliga los porpietarios de sitios web, blogs o cualquier aplicación que descargue en tu navegador cookies de terceros a informar al
+            <em class="laws-slang">Usuario</em> sobre <b>el tipo de cookies, la duración y la finalidad</b> de cada una de ellas.
           </p>
 
           <h4 class="subsection-title">
-            ¿Y las cookies qué son?
+            ¿Y entonces las cookies qué son?
           </h4>
           <p>
-            Una cookie es un pequeño fichero que permite que el sitio web por el que está navegando recuerde información sobre su visita. Estas cookies son instaladas en su
-            navegador por cada web con la única finalidad de facilitar su próxima visita y hacer que el sitio web resulte más útil.
+            Una cookie es un pequeño fichero que <b>permite que el sitio web por el que está navegando recuerde información sobre su visita</b>.
+            Estas cookies son instaladas en su navegador por cada web con la única finalidad de facilitar su próxima visita y hacer que el
+            sitio web resulte más útil.
           </p>
           <p>
-            Las cookies <span class="has-text-weight-medium">NO almacenan información sensible sobre ti</span> como tarjetas de crédito o datos bancarios,
-            fotografías o información personal. Los datos que guardan son de carácter técnico, estadísticos,
-            personalización de contenidos, etc. La información recogida por las cookies es anónima.
+            Las cookies <b>NO almacenan información sensible sobre ti</b> como tarjetas de crédito o datos bancarios, fotografías o información personal.
+            Los datos que guardan son de carácter técnico, estadísticos, personalización de contenidos, etc. La <b>información recogida por las cookies es anónima</b>.
           </p>
           <p>
-            Las cookies <span class="has-text-weight-medium">NO son virus</span>, ni troyanos, ni spam, ni spyware, ni abren molestas ventanas emergentes
-            (pop-ups)... Sólo contribuyen a tener una mejor experiencia de navegación para el <em class="laws-slang">Usuario</em>.
+            Las cookies <b>NO son virus</b>, ni troyanos, ni spam, ni spyware, ni abren molestas ventanas emergentes (pop-ups)... Sólo contribuyen
+            a tener una mejor experiencia de navegación para el <em class="laws-slang">Usuario</em>.
           </p>
           <p>
-            La mayoría de los navegadores aceptan como estándar a las cookies y, con independencia de las mismas, permiten
-            o impiden en los ajustes de seguridad las cookies temporales o memorizadas. Más adelante explicaremos cómo
-            gestionarlas.
+            La mayoría de los navegadores aceptan como estándar a las cookies y, con independencia de las mismas, permiten o impiden en los ajustes
+            de seguridad las cookies temporales o memorizadas. Más adelante explicaré cómo gestionarlas.
           </p>
           <p>
-            Informarte que si continuas navegando y/o pulsas el botón "aceptar" del banner de aviso de Cookies,
-            <span class="has-text-weight-medium">estarás consintiendo el empleo de estas cookies</span> (
-            <small>
-              <em
-                >artículo 22.2 de la Ley 34/2002 de Servicios de la Sociedad de la Información y Comercio Electrónico</em
-              > </small
-            >).
+            Si continuas navegando por la rpesente web y/o pulsas el botón "aceptar" del banner de aviso de Cookies, <b>estarás consintiendo el empleo de estas cookies</b>
+            (<small><em>artículo 22.2 de la Ley 34/2002 de Servicios de la Sociedad de la Información y Comercio Electrónico</em></small>).
           </p>
 
           <h4 class="subsection-title">
             ¿Cuántos y qué tipos de cookies existen?
           </h4>
           <p>
-            Hay <span class="has-text-weight-medium">3 clasificaciones</span> por tipo de cookies:
+            Hay <span class="has-text-weight-medium">3 clasificaciones</span> por tipo de cookies según...
           </p>
           <p>
-            1. Según <b>quién las gestione</b>:
+            ...<b>Quién las gestione</b>:
           </p>
           <ul class="listed">
             <p>
@@ -610,7 +587,7 @@
             </p>
           </ul>
           <p>
-            2. Según <b>el tiempo que permanezcan almacenadas</b>:
+            ...<b>El tiempo que permanezcan almacenadas</b>:
           </p>
           <ul class="listed">
             <p>
@@ -624,49 +601,44 @@
             </p>
           </ul>
           <p>
-            3. Según <b>la finalidad de los datos obtenidos</b>:
+            ...<b>La finalidad de los datos obtenidos</b>:
           </p>
           <ul class="listed">
             <p>
-              Cookies
-              <b>técnicas</b> o aquéllas que permiten al <em class="laws-slang">Usuario</em> la utilización de las diferentes opciones o servicios que
-              existan en la web como: identificar la sesión, acceder a partes de acceso restringido, recordar los
-              elementos que integran un pedido, realizar el proceso de compra de un pedido...
+              Cookies <b>técnicas</b> o aquéllas que permiten al <em class="laws-slang">Usuario</em> la utilización de
+              las diferentes opciones o servicios que existan en la web como: identificar la sesión, acceder a partes de acceso restringido,
+              recordar los elementos que integran un pedido, realizar el proceso de compra de un pedido...
             </p>
             <p>
-              Cookies de
-              <b>personalización</b> o aquéllas que permiten recordar las preferencias del <em class="laws-slang">Usuario</em> como: el idioma, el
-              tipo de navegador a través del cual accede al servicio, etc.
+              Cookies de <b>personalización</b> o aquéllas que permiten recordar las preferencias del <em class="laws-slang">Usuario</em> como:
+              el idioma, el tipo de navegador a través del cual accede al servicio, etc.
             </p>
             <p>
-              Cookies de
-              <b>análisis</b> o aquéllas que permiten la medición y análisis estadístico de la utilización que hacen los
+              Cookies de <b>análisis</b> o aquéllas que permiten la medición y análisis estadístico de la utilización que hacen los
               usuarios del servicio con el fin de mejorar la oferta de productos o servicios que se le ofrecen.
             </p>
             <p>
-              Cookies
-              <b>publicitarias</b> o aquéllas que permiten gestionar de forma eficaz la oferta de los espacios
-              publicitarios para así encajar el contenido del anuncio al contenido de la página web.
+              Cookies <b>publicitarias</b> o aquéllas que permiten gestionar de forma eficaz la oferta de los espacios publicitarios para así
+              encajar el contenido del anuncio al contenido de la página web.
             </p>
             <p>
-              Cookies de
-              <b>publicidad comportamental</b> o aquéllas que muestran publicidad en función de tus hábitos de navegación,
+              Cookies de <b>publicidad comportamental</b> o aquéllas que muestran publicidad en función de tus hábitos de navegación,
               tu país de procedencia, idioma, etc.
             </p>
           </ul>
 
           <h4 class="subsection-title">
-            ¿Qué cookies utilizamos aquí?
+            ¿Qué cookies utilizo aquí?
           </h4>
           <p>
-            Aquí sólo usamos cookies para analizar el tráfico y establecer estadísticas de uso. Además, compartimos información sobre el uso que haga del
-            sitio web con nuestros partners de redes sociales y análisis web, todos ellos de más que conocidos (Google,
-            LinkedIn...) quienes pueden combinarla con otra información que ellos hayan recopilado a partir del uso que tú
+            Aquí sólo uso cookies para <b>analizar el tráfico y establecer estadísticas de uso</b>. Además, comparto información sobre
+            el uso que haga del sitio web con partners de redes sociales y análisis web, todos ellos de más que conocidos (<em>Google,
+            LinkedIn...</em>) quienes pueden combinarla con otra información que ellos hayan recopilado a partir del uso que tú
             hayas hecho de sus servicios (con tu cuenta personal de LinkedIn, por ejemplo).
           </p>
           <p>Eso sí, en ningún caso se van a utilizar cookies que comprometan tu privacidad.</p>
           <p>
-            Esta es la <span class="has-text-weight-medium">relación de cookies</span> que usa <span>#HazTuNegocioDigital</span>:
+            Esta es la <b>relación de cookies</b> que usa <span class="url">{{ owner.url }}</span>:
           </p>
           <div class="table-container">
             <table class="table is-bordered is-narrow is-fullwidth is-size-7">
@@ -756,7 +728,7 @@
                   <td>Análisis de terceros</td>
                   <td>2 años</td>
                   <td>Google Analytics</td>
-                  <td>Se usa para distinguir <em class="has-text-weight-medium">Usuarios</em>.</td>
+                  <td>Se usa para distinguir <em class="laws-slang">Usuarios</em>.</td>
                   <td>google.com</td>
                 </tr>
                 <tr>
@@ -764,7 +736,7 @@
                   <td>Análisis de terceros</td>
                   <td>24 horas</td>
                   <td>Google Analytics</td>
-                  <td>Se usa para distinguir <em class="has-text-weight-medium">Usuarios</em>.</td>
+                  <td>Se usa para distinguir <em class="laws-slang">Usuarios</em>.</td>
                   <td>google.com</td>
                 </tr>
                 <tr>
@@ -779,34 +751,34 @@
                   <td>i18n_redirected</td>
                   <td>Técnica propia</td>
                   <td>Persistente</td>
-                  <td>@jalofernandez</td>
-                  <td>Mantener idioma elegido por el ususario.</td>
-                  <td>haztunegociodigital.com</td>
+                  <td>{{ owner.nickname }}</td>
+                  <td>Mantener idioma elegido por el <em class="laws-slang">Usuario</em>.</td>
+                  <td>{{ owner.url }}</td>
                 </tr> -->
                 <!-- <tr>
                   <td>cookiesConsent</td>
                   <td>Técnica propia</td>
                   <td>Persistente</td>
-                  <td>@jalofernandez</td>
+                  <td>{{ owner.nickname }}</td>
                   <td>
                     Guardar el consentimiento y aceptación de la política de cookies por parte del <em class="laws-slang">Usuario</em> y no volver a
                     mostrar el banner de alerta sobre las cookies.
                   </td>
-                  <td>haztunegociodigital.com</td>
+                  <td>{{ owner.url }}</td>
                 </tr> -->
                 <!-- <tr>
                   <td>auth.*</td>
                   <td>Técnicas propias</td>
                   <td>Sesión</td>
-                  <td>@jalofernandez</td>
+                  <td>{{ owner.nickname }}</td>
                   <td>Para identificar de manera unitaria al <em class="laws-slang">Usuario</em> respecto a otros.</td>
-                  <td>haztunegociodigital.com</td>
+                  <td>{{ owner.url }}</td>
                 </tr> -->
               </tbody>
             </table>
           </div>
           <p>
-            Aquí está la relación completa de <span class="has-text-weight-medium">cookies de terceros</span>:
+            Aquí está la relación completa de <b>cookies de terceros</b>:
           </p>
           <nav class="navigation-links">
             <a
@@ -814,48 +786,36 @@
               target="_blank"
               rel="noopener noreferrer"
               title="Qué cookies usa Google Analytics en el navegador del visitante"
-              class="level-item analytics"
+              class="nav-link-item analytics"
             >
-              <div>
-                <!-- <i class="mdi mdi-google-analytics"></i> -->
-                <p>Google <b>Tag Manager</b></p>
-              </div>
+              Google <b>Tag Manager</b>
             </a>
             <!-- <a
               href="https://www.facebook.com/policies/cookies/"
               target="_blank"
               rel="noopener noreferrer"
               title="Qué cookies usa Facebook en el navegador del visitante"
-              class="level-item facebook"
+              class="nav-link-item facebook"
             >
-              <div>
-                <i class="mdi mdi-microsoft-internet-facebook"></i>
-                <p><b>Facebook</b></p>
-              </div>
+              <b>Facebook</b>
             </a> -->
             <!-- <a
               href="https://help.fullstory.com/hc/en-us/articles/360020829513-Why-FullStory-uses-First-Party-Cookies"
               target="_blank"
               rel="noopener noreferrer"
               title="Qué cookies usa Fullstory en el navegador del visitante"
-              class="level-item fullstory"
+              class="nav-link-item fullstory"
             >
-              <div>
-                <i class="mdi mdi-mdi-open-in-new"></i>
-                <p><b>Fullstory</b></p>
-              </div>
+              <b>Fullstory</b>
             </a> -->
             <!-- <a
               href="https://knowledge.hubspot.com/es/reports/what-cookies-does-hubspot-set-in-a-visitor-s-browser"
               target="_blank"
               rel="noopener noreferrer"
               title="Qué cookies usa Hubspot en el navegador del visitante"
-              class="level-item hubspot"
+              class="nav-link-item hubspot"
             >
-              <div>
-                <i class="mdi mdi-mdi-hubspot"></i>
-                <p><b>Hubspot</b></p>
-              </div>
+              <b>Hubspot</b>
             </a> -->
           </nav>
 
@@ -863,9 +823,9 @@
             ¿Cómo se gestionan las cookies?
           </h4>
           <p>
-            Puedes gestionar la configuración del navegador de modo que este te notifique antes de que se descargue cookie
-            en tu equipo o también puedes adaptar la configuración de forma que el navegador rechace todas las cookies o
-            sólo las cookies de terceros. Además puedes eliminar cualquiera de las cookies que ya se encuentren en tu
+            Puedes <b>gestionar</b> la configuración del navegador de modo que este te notifique antes de que se descargue cookie
+            en tu equipo o también puedes <b>adaptar la configuración</b> de forma que el navegador rechace todas las cookies o
+            sólo las cookies de terceros. Además puedes <b>eliminar cualquiera de las cookies</b> que ya se encuentren en tu
             equipo.
           </p>
           <p>
@@ -876,121 +836,98 @@
           <nav class="navigation-links">
             <a
               href="https://support.google.com/chrome/answer/95647?hl=es&hlrm=en"
-              class="level-item chrome"
+              class="nav-link-item chrome"
               title="Como bloquear o eliminar las cookies instaladas por #HazTuNegocioDigital en tu navegador Chrome"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <div>
-                <!-- <i class="mdi mdi-google-chrome"></i> -->
-                <p>Google <b>Chrome</b></p>
-              </div>
+              Google <b>Chrome</b>
             </a>
             <a
               href="https://support.microsoft.com/es-es/help/17442/windows-internet-explorer-delete-manage-cookies#ie=ie-10"
-              class="level-item explorer"
+              class="nav-link-item explorer"
               title="Como bloquear o eliminar las cookies instaladas por #HazTuNegocioDigital en tu navegador Explorer"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <div>
-                <!-- <i class="mdi mdi-microsoft-internet-explorer"></i> -->
-                <p>Internet <b>Explorer</b></p>
-              </div>
+              Internet <b>Explorer</b>
             </a>
             <a
               href="https://support.mozilla.org/es/kb/cookies-informacion-que-los-sitios-web-guardan-en-?redirectlocale=en-US&redirectslug=Cookies"
-              class="level-item firefox"
+              class="nav-link-item firefox"
               title="Como bloquear o eliminar las cookies instaladas por #HazTuNegocioDigital en tu navegador Firefox"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <div>
-                <!-- <i class="mdi mdi-firefox"></i> -->
-                <p>Mozilla <b>Firefox</b></p>
-              </div>
+              Mozilla <b>Firefox</b>
             </a>
             <a
               href="https://support.apple.com/es-es/guide/safari/sfri11471/mac"
-              class="level-item safari"
+              class="nav-link-item safari"
               title="Como bloquear o eliminar las cookies instaladas por #HazTuNegocioDigital en tu navegador Safari"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <div>
-                <!-- <i class="mdi mdi-apple-safari"></i> -->
-                <p>Apple <b>Safari</b></p>
-              </div>
+              Apple <b>Safari</b>
             </a>
             <a
               href="https://help.opera.com/en/latest/web-preferences/#cookies"
-              class="level-item opera"
+              class="nav-link-item opera"
               title="Como bloquear o eliminar las cookies instaladas por #HazTuNegocioDigital en tu navegador Opera"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <div>
-                <!-- <i class="mdi mdi-opera"></i> -->
-                <p><b>Opera</b></p>
-              </div>
+              <b>Opera</b>
             </a>
           </nav>
           <p>
-            Ten en cuenta que si eliges bloquear las cookies esto puede afectar al correcto funcionamiento de este sitio web.
+            Ojo que <b>bloquear las cookies puede afectar al correcto funcionamiento de este sitio web</b>.
           </p>
 
           <h4 class="subsection-title">
             Cookies en los dispositivos móviles
           </h4>
           <p>
-            En <em>#HazTuNegocioDigital</em> también usamos cookies en dispositivos móviles. En este caso los navegadores de
+            En <span class="url">{{ owner.url }}</span> también <b>usamos cookies en dispositivos móviles</b>. En este caso los navegadores de
             los dispositivos móviles permiten configurar las opciones o ajustes de privacidad para desactivar o eliminar las cookies.
             Aquí te dejamos una relación de enlaces a la documentación de gestión de cookies de los navegadores móviles más utilizados:
           </p>
           <nav class="navigation-links">
             <a
               href="https://support.google.com/chrome/answer/114662?hl=es&visit_id=637387185293136031-776021146&rd=1"
-              class="level-item chrome"
+              class="nav-link-item chrome"
               title="Como cambiar los permisos y el almacenamiento de datos en todos los sitios web que has visitado en Chrome Mobile"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <div>
-                <p><b>Chrome</b> Mobile</p>
-              </div>
+              <b>Chrome</b> Mobile
             </a>
             <a
               href="https://support.apple.com/es-es/HT201265"
-              class="level-item ios"
+              class="nav-link-item ios"
               title="Como cambiar los permisos y el almacenamiento de datos en todos los sitios web que has visitado en Apple iOS"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <div>
-                <p>iPhone <b>iOS</b></p>
-              </div>
+              iPhone <b>iOS</b>
             </a>
             <a
               href="https://support.microsoft.com/es-es/help/4036480/windows-phone-8-1-end-of-support-faq"
-              class="level-item windows"
+              class="nav-link-item windows"
               title="Como cambiar los permisos y el almacenamiento de datos en todos los sitios web que has visitado en Windows Phone"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <div>
-                <p><b>Windows</b> Phone</p>
-              </div>
+              <b>Windows</b> Phone
             </a>
             <a
               href="https://help.opera.com/en/latest/web-preferences/"
-              class="level-item opera"
+              class="nav-link-item opera"
               title="Como cambiar los permisos y el almacenamiento de datos en todos los sitios web que has visitado en Opera Mobile"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <div>
-                <p><b>Opera</b> Mobile</p>
-              </div>
+              <b>Opera</b> Mobile
             </a>
           </nav>
 
@@ -998,12 +935,14 @@
             Aceptación de la política de cookies
           </h4>
           <p>
-            El <em class="laws-slang">Usuario</em> <b class="has-text-success">acepta expresamente</b>,
-            por la utilización de este sitio web, el tratamiento de la información
-            recabada en la forma y con los fines mencionados a lo largo de esta <em>”política de cookies”</em>. Reconoce
-            conocer la posibilidad de rechazar el tratamiento de tales datos o información rechazando el uso de cookies
-            mediante la selección de la configuración apropiada a tal fin en su navegador. Si bien esta opción de bloqueo
-            de cookies en su navegador puede no permitirle el uso pleno de todas las funcionalidades del sitio web.
+            El <em class="laws-slang">Usuario</em> <b>acepta expresamente</b>, por la utilización de este sitio web, el tratamiento de la información
+            recabada en la forma y con los fines mencionados a lo largo de esta <em>”política de cookies”</em>. Reconoce conocer la posibilidad de 
+            echazar el tratamiento de tales datos o información rechazando el uso de cookies mediante la selección de la configuración apropiada a
+            tal fin en su navegador. Si bien esta opción de bloqueo de cookies en su navegador puede no permitirle el uso pleno de todas las funcionalidades
+            del presente sitio web: <span class="url">{{ owner.url }}</span>
+          </p>
+          <p>
+            C'est fini ;-)
           </p>
         </div>
 

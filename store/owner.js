@@ -1,6 +1,6 @@
 const author = 'jalofernandez'
 const nickname = '@'+author
-const url = 'https://'+author+'.com'
+const url = author+'.com'
 const email = 'jalofernandez@gmail.com'
 
 export const state = () => ({
@@ -13,8 +13,8 @@ export const state = () => ({
     '@context': 'http://schema.org',
     '@type': 'LocalBusiness',
     'additionalType': nickname+' graphic design webmaster frontend UX UI diseño gráfico',
-    '@id': url,
-    'url': url,
+    '@id': 'https://'+url,
+    'url': 'https://'+url,
     'sameAs': [
       'https://www.instagram.com/'+nickname+'/?ref=badge',
       'https://twitter.com/'+nickname+'',
