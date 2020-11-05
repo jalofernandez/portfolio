@@ -70,7 +70,7 @@
       </transition-group>
     </div>
     <div style="clear:both;"></div>
-    <TheFooter :name="'Portfolio'" :page="'portfolio'" />
+    <TheFooter :name="'_check my Profile'" :page="'cv-resume'" />
   </main>
 </template>
 
