@@ -39,8 +39,7 @@
     </div>
     <div style="clear:both;"></div>
     <!-- (gallery) @jalofernandez works -->
-    <div class="loader" v-show="loader"></div>
-    <div id="portfolio" v-show="!loader">
+    <div id="portfolio">
       <transition-group name="fade" class="list-complete" tag="section">
         <div
           v-for="item in filteredItems"
@@ -95,8 +94,7 @@ export default {
         { name: 'Motion', tag: 'videos' },
       ],
       portfolio: portfolio,
-      currentTag: 'all',
-      loader: false
+      currentTag: 'all'
     }
   },
   head() {
