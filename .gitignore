@@ -65,12 +65,14 @@ $RECYCLE.BIN/
 # GUI
 /target
 /.idea
+.vscode
 .history/*
 
-# specifics for this project
+# dependencies
 sources
 node_modules
 **/node_modules/
+package-lock.json
 do_not_publish
 .tmp
 no_ftp
@@ -78,3 +80,28 @@ no_ftp
 #weird ones!
 _gitignore
 _htaccess
+
+# logs
+npm-debug.log
+yarn-error.log
+
+# other
+.nuxt
+dist
+newrelic_agent.log
+.eslintrc
+
+# docs
+/docs
+
+# @nuxtjs/pwa
+sw.*
+
+.env
+
+# Optional eslint cache
+.eslintcache
+
+cypress/integration/examples
+cypress/videos
+cypress/screenshots
