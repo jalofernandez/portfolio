@@ -48,11 +48,6 @@
   
 // (animation) TYPEWRITING effect
 .typewriter--theme
-  min-height: 340px
-  @media (max-width: 640px)
-    min-height: 225px
-
-.typewriter--theme
   text-align: left
   .mode--code
     padding-right: 5px
@@ -194,7 +189,8 @@
         animation-fill-mode: forwards
 
   &.is-error,
-  &.is-legal
+  &.is-legal,
+  &.is-sitemap
     .mode--code
       font-size: 2em
       text-transform: capitalize
@@ -202,14 +198,25 @@
       animation-delay: .5s
       animation-fill-mode: forwards
 
-  &.is-error
+  &.is-error,
+  &.is-sitemap
     .mode--code
-      margin-top: 2em
-      width: 18em
       @media (max-width: 768px)
         font-size: 1.5rem
       @media (max-width: 540px)
         font-size: 1rem
+
+  &.is-error
+    margin-top: 2em
+    .mode--code
+      width: 17.5em
+
+  &.is-sitemap
+    margin-top: 1em
+    .mode--code
+      width: 18.5em
+    .mode--design
+      animation: flicker 1.5s
 
   &.is-legal
     min-height: initial
@@ -218,6 +225,11 @@
       width: 10em
       @media (max-width: 540px)
         font-size: 1rem
+
+  &.is-resume
+    min-height: 340px
+    @media (max-width: 640px)
+      min-height: 225px
 
 
 @keyframes typewritting

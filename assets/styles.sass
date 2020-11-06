@@ -46,9 +46,6 @@ a
     outline: none
   &:not(.main-title):hover
     color: #f7f7f7
-    
-.nuxt-link-exact-active
-  display: none!important
 
 .has-spaced
   margin-bottom: 8em!important
@@ -72,6 +69,9 @@ a
       min-height: 105% // to fit "old-crt-effect" in all height when scroll is enabled
     .content--body
       width: 100%
+  &:not(.sitemap)
+    .nuxt-link-exact-active
+      display: none!important
 
 .btn
   min-width: 100px

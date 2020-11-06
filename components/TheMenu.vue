@@ -14,7 +14,7 @@
       <div id="modal-00" class="md-modal md-menu">
         <div class="md-content">
           <ul class="md-menu-list">
-            <li class="md-menu-item" v-for="(link, index) in links" :key="index">
+            <li class="md-menu-item" v-for="(link, index) in pages.links" :key="index">
               <nuxt-link
                 :to="{ name: link.page }"
                 class="btn is-link btn--designer menu--link glitch"
@@ -47,17 +47,10 @@
 export default {
   data() {
     return {
-      owner: this.$store.state.owner,
-      currentYear: new Date().getFullYear(),
       isMenuShown: false,
-      links: [
-        { name: "Home", page: "index" },
-        { name: "Portfolio", page: "portfolio" },
-        { name: "_check my Profile", page: "cv-resume" },
-        { name: "Find Me_", page: "contacto" },
-        { name: "Sitemap", page: "sitemap" },
-        { name: "Legal", page: "legal" },
-      ]
+      owner: this.$store.state.owner,
+      pages: this.$store.state.pages,
+      currentYear: new Date().getFullYear(),
     }
   },
   methods: {

@@ -5,11 +5,25 @@
       <div class="content--inner old-crt--theme">
         <TheHeader />
         <!-- typewritin´Title -->
-        <div class="typewriter--theme is-error">
+        <div class="typewriter--theme is-sitemap">
           <h3 class="mode--code">
             Página del sitio web [<b>sitemap</b>]
           </h3>
         </div>
+        <section>
+          <ul class="typewriter--theme is-sitemap">
+            <li class="mode--design" v-for="(link, index) in pages.links" :key="index">
+              <nuxt-link
+                :to="{ name: link.page }"
+                class="btn is-link btn--designer menu--link glitch"
+                :title="`Ir a la página ${link.name} de ${owner.nickname}`"
+                :data-text="`${link.name}`"
+              >
+                {{ link.name }} <small>-&gt;</small>
+              </nuxt-link>
+            </li>
+          </ul>
+        </section>
         <TheFooter :name="'Portfolio'" :page="'portfolio'" />
       </div>
     </div>
@@ -27,7 +41,9 @@ export default {
   components: { TheHeader, TheFooter, AnimLine, Zeppelin },
   data() {
     return {
+      randomAnim: true,
       owner: this.$store.state.owner,
+      pages: this.$store.state.pages,
     }
   },
   head() {

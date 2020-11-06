@@ -12,7 +12,7 @@
         </div>
 
         <!-- all Legal Terms -->
-        <div class="paragraph-block paragraph--theme has-spaced">
+        <section class="paragraph-block paragraph--theme has-spaced">
           <!-- <p v-for="(term, index) in terms" :key="index" v-html="term.row"></p> -->
           <!-- (legal) OWNERSHIP -->
           <p>
@@ -944,7 +944,7 @@
           <p>
             C'est fini ;-)
           </p>
-        </div>
+        </section>
 
         <TheFooter :name="'Portfolio'" :page="'portfolio'" />
       </div>
