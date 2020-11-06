@@ -55,12 +55,13 @@ a
 
 .page
   display: flex
-  &.home,
+  &.home:not(.is-mode-code),
   &.error,
   &.contact,
   &.sitemap
     overflow: hidden
     height: 100vh
+  &.home.is-mode-code,
   &.legal,
   &.resume,
   &.portfolio
@@ -68,6 +69,7 @@ a
     .content--inner
       overflow: initial // be careful with this class
       height: auto
+      min-height: 105% // to fit "old-crt-effect" in all height when scroll is enabled
     .content--body
       width: 100%
 
@@ -307,16 +309,18 @@ a
 @media screen and (max-width: 640px)
   .content--footer
     font-size: 0.85em
-  
-  .menu--item:not(:last-child)
-    margin: 0 0 .75em 0
-  
-  .menu
-    font-size: 1.2em
-
   h1 
     padding-left: 25px
     font-size: 1.14em
+  .menu
+    font-size: 1.2em
+  .menu--code
+    top: 0
+  .menu--item
+    &:not(:last-child)
+      margin: 0 0 .75em 0
+    &.mode--code
+      font-size: 1rem
 
 // PAGES
 // (page) Resume / C.V.

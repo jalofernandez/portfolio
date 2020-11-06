@@ -42,6 +42,12 @@ export default {
     ],
     link: [
       // { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'dns-prefetch', href: '//twitter.com/jalofernandez' },
+      { rel: 'dns-prefetch', href: '//www.instagram.com/jalofernandez/?ref=badge' },
+      { rel: 'dns-prefetch', href: '//www.linkedin.com/in/javierlorenzofernandez/' },
+      { rel: 'dns-prefetch', href: '//www.youtube.com/channel/UCtwY5GMTiS7VQ7kYzGomUsw' },
+      { rel: 'dns-prefetch', href: '//www.facebook.com/jalofernandez?ref=tn_tnmn' },
+      { rel: 'dns-prefetch', href: '//github.com/jalofernandez' },
     ]
   },
   loading: { color: '#ccc' },

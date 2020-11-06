@@ -1,5 +1,5 @@
 <template>
-  <main class="page home">
+  <main :class="['page', 'home', { 'is-mode-code' : isModeCode }]">
     <div class="bg-artwork--theme"></div>
     <div class="content">
       <div class="content--inner old-crt--theme">
@@ -29,7 +29,7 @@
                   <small>__as graphic designer:</small>
                 </a>
               </li>
-              <li :class="`menu--item ${design.filter}`" v-for="(design, index) in links.designer" :key="index">
+              <li :class="`menu--item ${design.tag}`" v-for="(design, index) in links.designer" :key="index">
                 <nuxt-link
                   :to="{ name: 'portfolio' }"
                   class="menu--link glitch"
@@ -51,7 +51,7 @@
             <ul class="menu--inner typewriter--theme is-home">
               <li class="menu--item mode--code">
                 <a class="menu--link" href="javascript:" title="Título menu desarrollador">
-                  <small>__as UX/UI &amp; web developer:</small>
+                  <small>__as UX+UI &amp;&amp; Frontend dev:</small>
                 </a>
               </li>
               <li class="menu--item mode--code" v-for="(code, index) in links.coder" :key="index">
@@ -132,27 +132,27 @@ export default {
       links: {
         designer: [
           {
-            filter: 'layout',
+            tag: 'layout',
             copy: 'layout',
           },
           {
-            filter: 'photo',
+            tag: 'photo',
             copy: 'photography',
           },
           {
-            filter: 'web',
+            tag: 'web',
             copy: 'UX + UI Web design',
           },
           {
-            filter: 'pack',
+            tag: 'pack',
             copy: 'packaging',
           },
           {
-            filter: 'graph',
+            tag: 'graph',
             copy: 'graphisms; draws',
           },
           {
-            filter: 'videos',
+            tag: 'videos',
             copy: 'videos ? motion',
           },
         ],
@@ -170,9 +170,29 @@ export default {
               'Gastronomix es un proyecto social gratuito de cocina, gastronomía creativa y reciclaje personal. Organizado por J.P. Morgan, Basque Culinary Center, La Casa y el Mundo y Fundación Tomillo',
           },
           {
-            url: 'https://widitrade.com/',
-            copy: 'Widitrade',
-            title: 'Widitrade to Increase Your Online Sales Now!',
+            url: 'https://quecarta.com/',
+            copy: 'QuéCarta',
+            title: 'Crea tu carta digital gratis con código QR, la alternativa más segura a la carta física.',
+          },
+          {
+            url: 'https://theseedsquad.com/',
+            copy: 'The Seed Squad',
+            title: 'El equipo que estás buscando: tecnología accesible, diseño honesto y marketing responsable.',
+          },
+          {
+            url: 'https://haztunegociodigital.com/',
+            copy: '#HazTuNegocioDigital',
+            title: 'Únete a la transformación digital: aumenta tus ventas con tu negocio también en internet.',
+          },
+          {
+            url: 'https://comerciovecino.com/',
+            copy: 'Comercio Vecino',
+            title: 'Amplía tu negocio vendiendo también online ya que mayor mercado implica obtener más clientes, más ingresos, más empleo...',
+          },
+          {
+            url: 'https://echounamano.org/',
+            copy: '#EchoUnaMano',
+            title: 'Iniciativa sin ánimo de lucro de voluntarios contra el Covid-19 en período de confinamiento domiciliario.',
           },
           {
             url: 'https://peluqueriacanessa.com/',
@@ -183,7 +203,12 @@ export default {
           {
             url: 'https://ecomerzpro.net/',
             copy: 'Ecomerzpro Club',
-            title: 'Ecomerzpro Club for ecommerce offers and discounts',
+            title: 'Ecomerzpro Club for ecommerce offers and discounts.',
+          },
+          {
+            url: 'https://widitrade.com/',
+            copy: 'Widitrade',
+            title: 'Widitrade to Increase Your Online Sales Now!',
           },
           {
             url: 'https://jalofernandez.github.io/lfcabogados/',
@@ -232,19 +257,18 @@ export default {
         // Canonical url
         { rel: 'canonical', hid: 'canonical', href: canonical },
         // Pre-fetch and return recipe data server-side
-        { rel: 'dns-prefetch', href: '//twitter.com/jalofernandez' },
-        { rel: 'dns-prefetch', href: '//www.instagram.com/jalofernandez/?ref=badge' },
-        { rel: 'dns-prefetch', href: '//www.linkedin.com/in/javierlorenzofernandez/' },
-        { rel: 'dns-prefetch', href: '//www.youtube.com/channel/UCtwY5GMTiS7VQ7kYzGomUsw' },
-        { rel: 'dns-prefetch', href: '//www.facebook.com/jalofernandez?ref=tn_tnmn' },
-        { rel: 'dns-prefetch', href: '//github.com/jalofernandez' },
         { rel: 'dns-prefetch', href: '//www.upplication.com/en/' },
         { rel: 'dns-prefetch', href: '//proyectogastronomix.org/' },
-        { rel: 'dns-prefetch', href: '//widitrade.com/' },
+        { rel: 'dns-prefetch', href: '//quecarta.com/' },
+        { rel: 'dns-prefetch', href: '//theseedsquad.com/' },
+        { rel: 'dns-prefetch', href: '//haztunegociodigital.com/' },
+        { rel: 'dns-prefetch', href: '//comerciovecino.com/' },
+        { rel: 'dns-prefetch', href: '//echounamano.org/' },
         { rel: 'dns-prefetch', href: '//peluqueriacanessa.com/' },
         { rel: 'dns-prefetch', href: '//ecomerzpro.net/' },
-        { rel: 'dns-prefetch', href: '//capaball.com/app/#/login/' },
+        { rel: 'dns-prefetch', href: '//widitrade.com/' },
         { rel: 'dns-prefetch', href: '//jalofernandez.github.io/lfcabogados/' },
+        { rel: 'dns-prefetch', href: '//capaball.com/app/#/login/' },
       ],
     }
   },
