@@ -7,7 +7,7 @@
         <div class="content--header">
           <div class="logo">
             <transition name="fade" :duration="{ enter: 500, leave: 500 }">
-              <h2 class="title mode mode--design is-glitch glitch--2" v-if="isModeDesign">
+              <h2 class="title mode mode--design is-glitch glitch--2" v-if="!isModeCode">
                 {{owner.nickname}}
               </h2>
             </transition>
@@ -22,7 +22,7 @@
         </div>
         <!-- (menu) DESIGNER -->
         <transition name="slide-fade">
-          <div class="menu" v-show="isModeDesign">
+          <div class="menu" v-show="!isModeCode">
             <ul class="menu--inner">
               <li class="menu--item">
                 <a class="menu--link" href="javascript:" title="Título menu diseñador">
@@ -47,7 +47,7 @@
         </transition>
         <!-- (menu) CODER -->
         <transition name="fade">
-          <div class="menu menu--code" v-show="!isModeDesign">
+          <div class="menu menu--code" v-show="isModeCode">
             <ul class="menu--inner typewriter--theme is-home">
               <li class="menu--item mode--code">
                 <a class="menu--link" href="javascript:" title="Título menu desarrollador">
@@ -74,10 +74,10 @@
         </transition>
         <!-- (main) Footer -->
         <div class="content--footer">
-          <div :class="['main-navbar', 'mode', { 'mode--design': isModeDesign, 'mode--code': isModeCode }]">
+          <div :class="['main-navbar', 'mode', isModeCode ? 'mode--design' : 'mode--code']">
             <div class="wrap">
               <a
-                :class="['switch--item', { 'is-current': isModeDesign }]"
+                :class="['switch--item', { 'is-current': !isModeCode }]"
                 href="javascript:"
                 title="Ver menu diseñador"
                 @click="changeMode()"
@@ -87,7 +87,7 @@
                 </span>
               </a>
               <a
-                :class="['switch--item', { 'is-current': !isModeDesign }]"
+                :class="['switch--item', { 'is-current': isModeCode }]"
                 href="javascript:"
                 title="Ver menu desarrollador"
                 @click="changeMode()"
@@ -126,7 +126,6 @@ export default {
   data() {
     return {
       randomAnim: true,
-      isModeDesign: true,
       isModeCode: false,
       owner: this.$store.state.owner,
       links: {
@@ -290,7 +289,7 @@ export default {
   // },
   methods: {
     changeMode() {
-      ;(this.isModeDesign = !this.isModeDesign), (this.isModeCode = !this.isModeCode)
+      this.isModeCode = !this.isModeCode
     },
   },
   // computed: {
