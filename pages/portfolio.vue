@@ -555,7 +555,7 @@ export default {
     }
   },
   head() {
-    const title = 'Portfolio | @jalofernandez'
+    const title = 'Portfolio'
     const description =
       'Galería de trabajos del portfolio y CV personal de Javier Lorenzo Fernández (aka @jalofernandez). Diseñador gráfico y desarrollador web frontend de los que ya quedan pocos.'
     const canonical = 'https://jalofernandez.com' + this.$route.path

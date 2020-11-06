@@ -230,7 +230,7 @@ export default {
     }
   },
   head() {
-    const title = 'jalofernandez: designer + coder'
+    const title = 'Home'
     const description =
       '@jalofernandez: designer + coder (Javier Lorenzo Fdez) es un diseñador gráfico y desarrollador web frontend + UX + UI en Madrid'
     const canonical = 'https://jalofernandez.com'

@@ -1098,7 +1098,7 @@ export default {
     }
   },
   head() {
-    const title = 'Aviso legal | @jalofernandez'
+    const title = 'Aviso legal'
     const description =
       'Aviso legal y política de cookies del portfolio de projectos y Curriculum Vitae personal de @jalofernandez en jalofernandez.com'
     const canonical = 'https://jalofernandez.com' + this.$route.path

@@ -31,7 +31,7 @@ export default {
     }
   },
   head() {
-    const title = 'Contacto | @jalofernandez'
+    const title = 'Contacto'
     const description =
       'Datos de contacto de Javier Lorenzo Fdez aka @jalofernandez: diseñador gráfico y desarrollador web frontend + UX + UI'
     const canonical = 'https://jalofernandez.com' + this.$route.path

@@ -195,7 +195,7 @@ export default {
     }
   },
   head() {
-    const title = 'C.V. Resume | @jalofernandez'
+    const title = 'Resume'
     const description =
       'Sobre mi y CV personal de Javier Lorenzo Fernández (aka @jalofernandez). Diseñador gráfico y desarrollador web frontend + UX + UI un poco friki como podéis comprobar...'
     const canonical = 'https://jalofernandez.com' + this.$route.path

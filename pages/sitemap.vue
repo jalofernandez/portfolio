@@ -47,7 +47,7 @@ export default {
     }
   },
   head() {
-    const title = 'Sitemap | @jalofernandez'
+    const title = 'Sitemap'
     const description =
       'Mapa del sitio web (sitemap) de @jalofernandez: diseñador gráfico y desarrollador web frontend + UX + UI'
     const canonical = 'https://jalofernandez.com' + this.$route.path

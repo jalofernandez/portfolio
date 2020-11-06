@@ -28,7 +28,7 @@ export default {
     }
   },
   head() {
-    const title = 'Page not found | @jalofernandez'
+    const title = 'Page Not Found'
     const description =
       'Página de error 404 de Javier Lorenzo Fdez aka @jalofernandez el diseñador gráfico y desarrollador web frontend madrileño más salao'
     const canonical = 'https://jalofernandez.com' + this.$route.path

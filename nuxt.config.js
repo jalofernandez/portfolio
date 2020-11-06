@@ -8,6 +8,7 @@ export default {
       lang: 'es',
     },
     title: process.env.npm_package_name || '',
+    titleTemplate: "%s | @"+author+": designer + coder",
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
