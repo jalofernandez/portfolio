@@ -7,6 +7,9 @@ export default {
     htmlAttrs: {
       lang: 'es',
     },
+    bodyAttrs: {
+      class: [author],
+    },
     title: process.env.npm_package_name || '',
     titleTemplate: "%s | @"+author+": designer + coder",
     meta: [
