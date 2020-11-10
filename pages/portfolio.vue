@@ -3,7 +3,7 @@
     <!-- (modal dialogs) each Gallery item -->
     <div class="modals-list">
       <div v-for="item in portfolio" :key="item.id" :class="['modal-wrapper', { 'md-show': item.show }]">
-        <div :id="`modal-${item.id}`" class="md-modal">
+        <div :id="`modal-${item.id}`" class="md-modal" @click="item.show = false">
           <div class="md-content">
             <img
               :src="require(`~/assets/portfolio/${item.img}`)"
