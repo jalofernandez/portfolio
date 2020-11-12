@@ -5,16 +5,22 @@
     backface-visibility: hidden
     visibility: hidden
     position: fixed
-    display: flex
-    align-items: center
-    justify-content: center
-    flex-direction: column
-    flex-wrap: nowrap
-    height: 100%
-    width: 100%
+    // (modifier) portfolio
+    &:not(.md-menu)
+      display: flex
+      align-items: center
+      justify-content: center
+      flex-direction: column
+      flex-wrap: nowrap
+      height: 100%
+      width: 100%
+    // (modifier) main Menu
     &.md-menu
-      width: 100vh
-      height: 100vh
+      top: 50%
+      left: 50%
+      width: 50%
+      height: auto
+      transform: translateX(-50%) translateY(-50%)
 
   .modal-overlay
     position: fixed
