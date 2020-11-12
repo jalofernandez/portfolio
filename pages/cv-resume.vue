@@ -67,7 +67,7 @@
                 href="#"
                 class="btn is-link btn--coder menu--link glitch"
                 :title="`Ir a la biografía del Curriculum Vitae de ${owner.nickname}`"
-                data-text="_as Coder"
+                data-text="_as great Coder"
                 v-scroll-to="{ el: '#resume-coder', offset: -60 }"
               >
                 _as <span v-if="$mq !== 'mobile'">great</span> Coder
@@ -76,7 +76,7 @@
                 href="#"
                 class="btn is-link btn--designer menu--link glitch"
                 :title="`Ir a la biografía del Curriculum Vitae de ${owner.nickname}`"
-                data-text="_as Designer"
+                data-text="_as cool Designer"
                 v-scroll-to="{ el: '#resume-designer', offset: -60 }"
               >
                 _as <span v-if="$mq !== 'mobile'">cool</span> Designer
