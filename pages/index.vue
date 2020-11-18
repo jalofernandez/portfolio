@@ -160,13 +160,13 @@ export default {
             url: 'https://www.upplication.com/en/',
             copy: 'Upplication',
             title:
-              'Upplication® App builder. Create the app for your business, no coding required, fast and simple. Android and iOS app',
+              'Upplication® App builder. Create the app for your business, no coding required, fast and simple. Android and iOS app.',
           },
           {
             url: 'http://proyectogastronomix.org/',
             copy: 'Gastronomix',
             title:
-              'Gastronomix es un proyecto social gratuito de cocina, gastronomía creativa y reciclaje personal. Organizado por J.P. Morgan, Basque Culinary Center, La Casa y el Mundo y Fundación Tomillo',
+              'Gastronomix es un proyecto social gratuito de cocina, gastronomía creativa y reciclaje personal. Organizado por J.P. Morgan, Basque Culinary Center, La Casa y el Mundo y Fundación Tomillo.',
           },
           {
             url: 'https://quecarta.com/',
