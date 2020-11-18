@@ -448,10 +448,52 @@
     "tags": ["all", "layout"]
   },
   {
-    "id": 41,
+    "id": 68,
     "show": false,
     "img": "rusty_parka-snow-labels-sideB_by-jalofernandez.jpg",
     "title": "Rusty labels to winter jackets",
-    "tags": ["all", "layout"]
+    "tags": ["all", "layout", "graph"]
+  },
+  {
+    "id": 69,
+    "show": false,
+    "img": "capaball_white-rabbit_logo-2018_by-jalofernandez.jpg",
+    "title": "White Rabbit project logo to Capaball",
+    "tags": ["all", "graph"]
+  },
+  {
+    "id": 70,
+    "show": false,
+    "img": "capaball-webapp-promo-metrics-mobile_by-jalofernandez.jpg",
+    "title": "Capaball´s dashboard in Home page (mobile)",
+    "tags": ["all", "layout", "web"]
+  },
+  {
+    "id": 67,
+    "show": false,
+    "img": "capaball-webapp-metrics-desk-overview_by-jalofernandez.jpg",
+    "title": "Capaball´s dashboard in Home page (desktop)",
+    "tags": ["all", "layout", "web"]
+  },
+  {
+    "id": 71,
+    "show": false,
+    "img": "capaball-cms-desktop_add-resource_by-jalofernandez.jpg",
+    "title": "Capaball´s CMS to add resources in customers webapp (desktop)",
+    "tags": ["all", "layout", "web"]
+  },
+  {
+    "id": 72,
+    "show": false,
+    "img": "capaball-cms-desktop_edit-resource_by-jalofernandez.jpg",
+    "title": "Capaball´s CMS to edit an existing resource (desktop)",
+    "tags": ["all", "layout", "web"]
+  },
+  {
+    "id": 73,
+    "show": false,
+    "img": "capaball-webapp-survey-overview-mobile_by-jalofernandez.jpg",
+    "title": "Capaball´s webapp survey in mobile devices",
+    "tags": ["all", "layout", "web"]
   }
 ]

@@ -124,7 +124,7 @@ export default {
     filteredItems() {
       var filter = this.currentTag;
       return this.portfolio.filter(function(item) {
-          return item.tags.indexOf(filter) !== -1;
+        return item.tags.indexOf(filter) !== -1;
       });
     }
   },
