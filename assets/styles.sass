@@ -369,11 +369,60 @@ a
   margin: 2.5em 0
   h3
     margin: 1em 0
+    font-size: 1.25rem
     color: white
   p
-    margin-bottom: 1em
-  b
+    margin-bottom: 2em
+  b, em
     color: lighten($grey, 15%)
+  ul
+    padding: 0 1em 0 2em
+    li
+      position: relative
+      margin: .75em 0
+      &:last-child
+        margin-bottom: 0
+      &:before
+        content: "--"
+        display: inline
+        position: absolute
+        left: -1em
+  // (modifiers) each Block
+  &#resume-coder h3
+    color: $coder-color
+  &#resume-designer h3
+    color: $designer-color
+
+.bio-data
+  margin-bottom: 1rem
+  display: flex
+  align-items: center
+  justify-content: center
+  @media screen and (max-width: 480px)
+    flex-direction: column
+
+.bio-info
+  max-width: 320px
+  display: flex
+  @media screen and (max-width: 480px)
+    margin-top: 2rem
+  @media screen and (min-width: 481px)
+    margin-left: 2rem
+
+.bio-info-title, .bio-info-desc
+  display: flex
+  flex-direction: column
+  p
+    margin-bottom: .75em!important
+
+.bio-info-title
+  margin-right: 1rem
+  align-items: flex-end
+  span
+    color: lighten($grey, 15%)
+
+.bio-info-desc
+  align-items: flex-start
 
 // To hide download C.V. / Resume: mobile, smartphones & small devices
 // @media screen and (max-width: 480px)

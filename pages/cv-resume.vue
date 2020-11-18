@@ -93,74 +93,137 @@
               </a>
             </nav>
             <div id="resume-bio">
+              <div class="bio-data">
+                <img
+                  class="bio-img"
+                  src="~/static/jalofernandez-glitch-profile.gif"
+                  :title="`Fotografía de ${owner.name}: ${owner.nickname}`"
+                  :alt="`Fotografía de ${owner.name}: ${owner.nickname}`"
+                  width="150"
+                  height="150"
+                />
+                <div class="bio-info">
+                  <div class="bio-info-title">
+                    <p>{ <span>Who</span> }</p>
+                    <p>{ <span>When</span> }</p>
+                    <p>{ <span>Where</span> }</p>
+                    <p>{ <span>Drive</span> }</p>
+                    <p>{ <span>How</span> }</p>
+                  </div>
+                  <div class="bio-info-desc">
+                    <p>{{ owner.name }}</p>
+                    <p>30 / 07 / 1979</p>
+                    <p>Madrid, Spain</p>
+                    <p>Carné B1</p>
+                    <p><nuxt-link to="contacto">Ir a página de contacto</nuxt-link></p>
+                  </div>
+                </div>
+              </div>
               <h3>Un poco sobre mi</h3>
-              <p>
-                Me reconozco como una persona culturalmente inquieta, defensora de sus ideas con fervor
+              <p class="bio-summary">
+                Me reconozco como una persona culturalmente inquieta, defensora de sus ideas con fervor casi
                 obstinado pero con gran sentido del humor y moderada autocrítica. Creo en la ciencia,
                 el progreso, la autogestión y en la gente con capacidad para cambiar el mundo.
                 Soy admirador del buen gusto, el orden y la pulcritud. Como entusiasta del arte y ávido
-                consumidor de contenido friki en cualquiera de sus formatos (cine, comics, libros...)
-                no me ha quedado más opción que dedicarme al diseño gráfico. Profesión en la que he evolucionado
-                del “offset al online”, especializándome en usabilidad, interfaces de usuario y frontend en general
+                consumidor de contenido friki en cualquiera de sus formatos (<em>cine, comics, libros...</em>)
+                no me ha quedado más opción que dedicarme al <b>diseño gráfico</b>. Profesión en la que he evolucionado
+                del <em>“offset al online”</em>, especializándome en <b>usabilidad</b>, <b>interfaces de usuario</b> y <b>frontend</b> en general
                 debido a mi profundo amor por internet y todo lo que engloba.
               </p>
             </div>
             <!-- as a Coder -->
             <div id="resume-coder">
-              <h3>{ Coder } experi3nce</h3>
+              <h3><b>{</b> Coder <b>}</b> experi3nce</h3>
               <p>
-                <b>Desarrollador Frontend, UX + UI y diseñador gráfico</b> para <em>"#EchoUnaMano"</em> (voluntarios contra
-                el covid-19). Landing page, motion y grafismos (2020).
+                ( 2020 ) Desarrollador <b>frontend</b>, <b>UX + UI</b>, <b>diseñador gráfico</b> y comunicación (redes sociales y marketing)
+                para <em>"The Seed Squad S.L."</em>; un equipo de outsorcing, consultoría informática, desarrollo de MVPs y creación de
+                productos propios como:
+                <ul>
+                  <li>
+                    <em>"Comercio Vecino"</em>: Digitalizamos todo tipo de negocios, desde comercios locales a pymes de cualquier ámbito, para que tengan visibilidad en internet.
+                  </li>
+                  <li>
+                    <em>"QuéCarta"</em>: Creador de carta digitales gratuitas con código QR, la alternativa más segura a la carta física para el sector horeca.
+                  </li>
+                  <li>
+                    <em>"#EchoUnaMano"</em>: Iniciativa sin ánimo de lucro de voluntarios contra el Covid-19 en período de confinamiento domiciliario.
+                  </li>
+                </ul>
               </p>
               <p>
-                <b>Desarrollador Frontend y especialista en UX + UI</b> para <em>"Capaball capabilities S.L."</em>, una plataforma
+                ( 2018 - 2020 ) Desarrollador <b>frontend</b> y especialista en <b>UX + UI</b> para <em>"Capaball capabilities S.L."</em>, una plataforma
                 saas de educación online de aprendizaje continuo impulsado por inteligencia artificial y
-                deep learning: landing pges, manager, CRMs, adwords... (2018 - 2020).
+                deep learning. Además de la webapp también me ocupada de las landing pages, managers, CRMs, adwords, creatividades y vídeos
+                para social media...
               </p>
               <p>
-                <b>Diseñador gráfico y desarrollador web</b> para <em>"Gastronomix"</em>, un proyecto social sin ánimo de lucro
-                de cocina creativa para gente joven en riesgo de exclusión impulsado por la asociación
-                "La Casa y el mundo" y JP Morgan: proyectogastronomix.org (2015).
-              </p>
-              <p>
-                <b>Desarrollo Frontend</b>, usabidildad, experiencia de usuario, presentación de datos y maquetación
-                en <em>"Widitrade"</em> de eComm Adgency y todos suis proyectos relacionados (landing pages, dashboards,
+                ( 2018 ) Desarrollo <b>frontend</b>, usabilidad, <b>experiencia de usuario</b>, presentación de datos y maquetación
+                en <em>"Widitrade"</em> de <em>"eComm Adgency, S.L."</em> y todos sus proyectos relacionados (landing pages, dashboards,
                 managers y templates...).
-                Widitrade es una plataforma online (saas) de ecommerce / mcommerce orientada tanto a publishers
-                como a advertisers (2018).
+                <br/>
+                <em>"Widitrade"</em> es una plataforma online (saas) de ecommerce / mcommerce orientada tanto a publishers
+                como a advertisers.
               </p>
               <p>
-                Desarrollo de la plataforma online de creación de apps, <em>"Upplication software technologies"</em>, como
-                Frontend especialmente orientado a la usabilidad, experiencia de usuario, presentación de datos
+                ( 2015 - 2018 ) Desarrollo de la plataforma online de creación de apps, <em>"Upplication software technologies, S.L."</em>,
+                como <b>frontend</b> especialmente orientado a la usabilidad, experiencia de usuario, presentación de datos
                 y maquetación en general de la plataforma y todos sus proyectos relacionados (landing pages, dashboards,
                 apps personalizadas...).
-                Desarrollador y responsable de la imagen corporativa de la empresa en todos sus ámbitos y formatos
-                tanto físicos como digitales (2015 - 2018).
+                <br/>
+                Además era el <b>responsable de la imagen corporativa</b> de la empresa en todos sus ámbitos y formatos
+                tanto físicos como digitales.
               </p>
               <p>
-                <b>Desarrollador Frontend</b> de aplicaciones web para Wairbut cuyo principal cliente fue: <em>"Knowers, worldwide
-                knoledge marketplace, LTD."</em> - UK (2015).
+                ( 2015 ) Desarrollador <b>frontend</b> de aplicaciones web para <em>"Wairbut S.A."</em>, consultora de ingeniería y
+                desarrollo e integración de aplicaciones informáticas, cuyo principal cliente fue: <em>"Knowers, worldwide
+                knoledge marketplace, LTD."</em> (UK).
+              </p>
+              <p>
+                ( 2015 ) <b>Diseñador gráfico</b> y <b>desarrollador web</b> para <em>"Gastronomix"</em>, un proyecto social
+                sin ánimo de lucro de cocina creativa para gente joven en riesgo de exclusión impulsado por la fundación
+                <em>"La Casa y el mundo"</em> y el banco <em>"JP Morgan"</em>.
               </p>
             </div>   
             <!-- as a Designer -->
             <div id="resume-designer">
-              <h3>( Designer ) Xperience</h3>
+              <h3><b>(</b> Designer <b>)</b> Xperience</h3>
               <p>
-                Diseñador textil, publicitario y merchandising de la firma textil internacional urban / streetwear
-                "British Knights" (BK) para su división europea (2008 - 2011).
+                ( 2008 - 2011 ) <b>Diseñador textil</b>, publicitario y merchandising de la firma textil internacional urban / streetwear
+                <em>"British Knights" (BK)</em> para su división europea licitada a través de <em>"Style Xtreme sports, S.L."</em>.
               </p>
               <p>
-                Diseñador textil, publicitario y merchandising de la firma textil deportiva / streetwear
-                "RTY" (Rusty). Para su división ibérica (2005 - 2008). Maquetador y artefinalista de las marcas
-                deportivas "Spalding" (USA) y "Gilbert" (UK) para su división española (2005 - 2008).
+                ( 2008 - 2011 ) Freelance en <b>diseño gráfico</b> y </b>maquetación</b> de catálogos y merchandising para marcas como:
+                <ul>
+                  <li>
+                    <em>"Medion"</em>: tecnología alemana: medion.com
+                  </li>
+                  <li>
+                    <em>"Drop Shot</em>: firma deportiva de padel principalmente: dropshot.es
+                  </li>
+                  <li>
+                    <em>"Urban Point</em>: textiles urban / casual: urbanpoint.com
+                  </li>
+                </ul>
               </p>
               <p>
-                Diseño y maquetación de catálogos y merchandising para marcas como:
-                - Medion (tecnología alemana: medion.com)
-                - Drop Shot (firma deportiva: dropshot.es)
-                - Urban Point (textiles: urbanpoint.com)
-                - Maquetación y artefinalista de la revista "La Talanquera" (2003 - 2005).
-                - Ilustrador en la revista "Punto y Coma;" (2006 - 2011).
+                ( 2005 - 2008 ) <b>Diseñador gráfico</b> polivalente para la sociedad <em>"Eje Deportes, S.L."</em> que licenciaba productos
+                internacionales para su venta y distribución en el sur de Europa. Mis funciones eran las siguientes:
+                <ul>
+                  <li>
+                    <b>Diseñador gráfico</b> y <b>textil</b> (publicidad, packaging, merchandising...) para de la firma textil deportiva y
+                    streetwear <em>"RTY" (Rusty)</em> para su división ibérica.
+                  </li>
+                  <li>
+                    <b>Maquetador</b> y <b>artefinalista</b> de las marcas deportivas <em>"Spalding" (USA)</em> y <em>"Gilbert" (UK)</em>
+                    para su división española.
+                  </li>
+                </ul>
+              </p>
+              <p>
+                ( 2006 - 2011 ) <b>Ilustrador</b> en la revista bimestral de tirada nacional <em>"Punto y Coma;"</em>.
+              </p>
+              <p>
+                (2003 - 2005) <b>Maquetador</b> y <b>artefinalista</b> de la revista mensual de tirada nacional <em>"La Talanquera"</em>.
               </p>
             </div>
           </section>
