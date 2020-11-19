@@ -424,5 +424,107 @@
     "img": "capaball-webapp-survey-overview-mobile_by-jalofernandez.jpg",
     "title": "Capaball´s webapp survey in mobile devices",
     "tags": ["all", "layout", "web"]
+  },
+  {
+    "id": 74,
+    "img": "comerciovecino-landing-pasos-tablet_by-jalofernandez.jpg",
+    "title": "Comercio Vecino steps to register section in landing page (tablet)",
+    "tags": ["all", "layout", "web", "graph"]
+  },
+  {
+    "id": 75,
+    "img": "comerciovecino-logo-designs_by-jalofernandez.jpg",
+    "title": "Comercio Vecino logotype designs overview",
+    "tags": ["all", "graph"]
+  },
+  {
+    "id": 76,
+    "img": "comerciovecino-socialmedia-cover_by-jalofernandez.jpg",
+    "title": "Comercio Vecino social media cover",
+    "tags": ["all", "graph", "photo"]
+  },
+  {
+    "id": 77,
+    "img": "echounamano-imagotipo-motion_by-jalofernandez.gif",
+    "title": "#EchoUnaMano NGO imagotype in motion",
+    "tags": ["all", "graph", "motion"]
+  },
+  {
+    "id": 78,
+    "img": "echounamano-logo-designs_by-jalofernandez.jpg",
+    "title": "#EchoUnaMano NGO logotype designs overview",
+    "tags": ["all", "layout", "web", "graph", "pack", "photo", "motion"]
+  },
+  {
+    "id": 79,
+    "img": "echounamano-post-socialmedia_by-jalofernandez.jpg",
+    "title": "#EchoUnaMano NGO post cover to social media",
+    "tags": ["all", "layout", "photo"]
+  },
+  {
+    "id": 80,
+    "img": "echounamano-promo-poster-pic_by-jalofernandez.jpg",
+    "title": "#EchoUnaMano NGO promotional poster",
+    "tags": ["all", "layout", "graph", "photo"]
+  },
+  {
+    "id": 81,
+    "img": "echounamano-promo-infography_by-jalofernandez.jpg",
+    "title": "#EchoUnaMano NGO promotional infography to social media",
+    "tags": ["all", "layout", "web", "graph"]
+  },
+  {
+    "id": 82,
+    "img": "haztunegociodigital-landing-intro-mobile_by-jalofernandez.jpg",
+    "title": "#HazTuNegocioDigital landing page intro (mobile)",
+    "tags": ["all", "layout", "web", "graph"]
+  },
+  {
+    "id": 83,
+    "img": "haztunegociodigital-webapp-restaurante-mobile_by-jalofernandez.jpg",
+    "title": "#HazTuNegocioDigital restaurant menu loaded by QR code scan (mobile)",
+    "tags": ["all", "layout", "web", "graph"]
+  },
+  {
+    "id": 84,
+    "img": "murmar-beershop-rollup-saint-patricks-day_by-jalofernandez.jpg",
+    "title": "Murmar Beershop Saint Patricks day rollup",
+    "tags": ["all", "layout", "photo"]
+  },
+  {
+    "id": 85,
+    "img": "quecarta-artwork-socialmedia-ads_by-jalofernandez.jpg",
+    "title": "QuéCarta artwork to socialmedia ads",
+    "tags": ["all", "graph"]
+  },
+  {
+    "id": 86,
+    "img": "quecarta-logo-designs_by-jalofernandez.jpg",
+    "title": "QuéCarta logotype designs overview",
+    "tags": ["all", "graph"]
+  },
+  {
+    "id": 87,
+    "img": "quecarta-post-cover-gaypride2020_by-jalofernandez.jpg",
+    "title": "QuéCarta Gaypride 2020 post cover",
+    "tags": ["all", "graph"]
+  },
+  {
+    "id": 88,
+    "img": "quecarta-promo-infography_by-jalofernandez.jpg",
+    "title": "QuéCarta promotional infography",
+    "tags": ["all", "layout", "graph"]
+  },
+  {
+    "id": 89,
+    "img": "quecarta-promo-socialmedia-ads_by-jalofernandez.jpg",
+    "title": "QuéCarta artwork to socialmedia ads",
+    "tags": ["all", "layout", "web", "graph", "photo"]
+  },
+  {
+    "id": 90,
+    "img": "theseedsquad-landing-manifest-desktop_by-jalofernandez.jpg",
+    "title": "The Seed Squad manifesto section in landing page",
+    "tags": ["all", "layout", "web", "graph"]
   }
 ]
