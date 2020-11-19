@@ -13,13 +13,13 @@
   },
   {
     "id": 2,
-    "img": "bcard_upplication_01.jpg",
-    "title": "Upplication business card side A",
+    "img": "upplication-business-card-cover_by-jalofernandez.jpg",
+    "title": "Upplication business card cover",
     "tags": ["all", "layout"]
   },
   {
     "id": 3,
-    "img": "bcard_upplication_02.jpg",
+    "img": "upplication-deves-business-card_by-jalofernandez.jpg",
     "title": "Upplication Developers business card",
     "tags": ["all", "layout"]
   },
@@ -37,7 +37,7 @@
   },
   {
     "id": 5,
-    "img": "app_sample-pic_restaurant-module.png",
+    "img": "upplication-app-restaurant-module_by-jalofernandez.png",
     "title": "Upplication App (Restaurant module)",
     "tags": ["all", "web"]
   },
@@ -259,7 +259,7 @@
   },
   {
     "id": 64,
-    "img": "widitrade-manager_offer-marketplace_desktop.jpg",
+    "img": "widitrade-manager-offer-marketplace-desktop_by-jalofernandez.jpg",
     "title": "Widitrade manager marketplace view",
     "tags": ["all", "layout", "web"]
   },
@@ -343,14 +343,14 @@
   },
   {
     "id": 14,
-    "img": "app_sample-pic_mcommerce-module.png",
+    "img": "upplication-app-mcommerce-module_by-jalofernandez.png",
     "title": "Upplication mCommerce module for Apps",
     "tags": ["all", "layout", "web"]
   },
   {
     "id": 15,
-    "img": "upp_dashboard_shipping-charges-view_by-jalofernandez.jpg",
-    "title": "Upplication dashboard shipping charges feature",
+    "img": "upplication-dashboard-shipping-charges_by-jalofernandez.jpg",
+    "title": "Upplication dashboard shipping charges feature (desktop)",
     "tags": ["all", "layout", "web"]
   },
   {
