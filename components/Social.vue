@@ -13,6 +13,8 @@
         :src="`icons/${social.icon}-brands.svg`"
         :title="`Ver perfil de ${social.icon} de ${owner.nickname}`"
         :alt="`Ver perfil de ${social.icon} de ${owner.nickname}`"
+        width="35"
+        height="35"
       />
     </a>
   </nav>
