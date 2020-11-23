@@ -1,3 +1,5 @@
+import { log } from './gtm.utils'
+
 const _layer = 'dataLayer'
 const _id = ''
 
@@ -9,12 +11,14 @@ function gtmClient(ctx, initialized) {
       }
       window._gtm_inject(id)
       initialized[id] = true
+      log('init', id)
     },
     push(obj) {
       if (!window[_layer]) {
         window[_layer] = []
       }
       window[_layer].push(obj)
+      log('push', obj)
     }
   }
 }
@@ -49,9 +53,11 @@ function gtmServer(ctx, initialized) {
       }
       inits.push(id)
       initialized[id] = true
+      log('init', id)
     },
     push(obj) {
       events.push(obj)
+      log('push', JSON.stringify(obj))
     }
   }
 }
@@ -71,8 +77,16 @@ function startPageTracking(ctx) {
 }
 
 export default function (ctx, inject) {
-  const initialized = {}
-  ctx.$gtm = process.client ? gtmClient(ctx, initialized) : gtmServer(ctx, initialized)
+  const runtimeConfig = (ctx.$config && ctx.$config.gtm) || {}
+  const autoInit = true
+  const id = ''
+  const runtimeId = runtimeConfig.id
+  const initialized = autoInit && id ? {[id]: true} : {}
+  const $gtm = process.client ? gtmClient(ctx, initialized) : gtmServer(ctx, initialized)
+  if (autoInit && runtimeId && runtimeId !== id) {
+    $gtm.init(runtimeId)
+  }
+  ctx.$gtm = $gtm
   inject('gtm', ctx.$gtm)
   if (process.client) { startPageTracking(ctx); }
 }

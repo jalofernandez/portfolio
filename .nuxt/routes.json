@@ -4,55 +4,48 @@
     "path": "/404",
     "component": "/Users/jalofernandez/Documents/projects/nuxtjs/jalofernandez/pages/404.vue",
     "chunkName": "pages/404",
-    "url": "/404",
-    "_name": "_726bf9e0"
+    "url": "/404"
   },
   {
     "name": "contacto",
     "path": "/contacto",
     "component": "/Users/jalofernandez/Documents/projects/nuxtjs/jalofernandez/pages/contacto.vue",
     "chunkName": "pages/contacto",
-    "url": "/contacto",
-    "_name": "_16a10fb2"
+    "url": "/contacto"
   },
   {
     "name": "cv-resume",
     "path": "/cv-resume",
     "component": "/Users/jalofernandez/Documents/projects/nuxtjs/jalofernandez/pages/cv-resume.vue",
     "chunkName": "pages/cv-resume",
-    "url": "/cv-resume",
-    "_name": "_23fe391f"
+    "url": "/cv-resume"
   },
   {
     "name": "legal",
     "path": "/legal",
     "component": "/Users/jalofernandez/Documents/projects/nuxtjs/jalofernandez/pages/legal.vue",
     "chunkName": "pages/legal",
-    "url": "/legal",
-    "_name": "_0d242411"
+    "url": "/legal"
   },
   {
     "name": "portfolio",
     "path": "/portfolio",
     "component": "/Users/jalofernandez/Documents/projects/nuxtjs/jalofernandez/pages/portfolio.vue",
     "chunkName": "pages/portfolio",
-    "url": "/portfolio",
-    "_name": "_27624720"
+    "url": "/portfolio"
   },
   {
     "name": "sitemap",
     "path": "/sitemap",
     "component": "/Users/jalofernandez/Documents/projects/nuxtjs/jalofernandez/pages/sitemap.vue",
     "chunkName": "pages/sitemap",
-    "url": "/sitemap",
-    "_name": "_2aed7fe6"
+    "url": "/sitemap"
   },
   {
     "name": "index",
     "path": "/",
     "component": "/Users/jalofernandez/Documents/projects/nuxtjs/jalofernandez/pages/index.vue",
     "chunkName": "pages/index",
-    "url": "/",
-    "_name": "_600b35aa"
+    "url": "/"
   }
 ]
