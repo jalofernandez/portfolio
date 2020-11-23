@@ -1,17 +1,16 @@
-# Developer/Designer Page Layout Concept
+# Developer + Designer static website concept
 
-An experimental page layout concept with a developer/designer theme and a special effect based on a Codrops original project ([Article on Codrops](https://tympanus.net/codrops/?p=30725)) but with a los of improvements like:
+An experimental page layout concept with a developer/designer theme and a special effect based on a Codrops original project ([Article on Codrops](https://tympanus.net/codrops/?p=30725)) but with many improvements like:
 
-- Error 404, Catalog Gallery and Legal Terms added pages.
-- A lot of "old fashion" computing effects (pure css) added.
-- Blade Runner zeppelin animation included in error 404 page.
+- Error 404, Catalog Gallery, Personal Resume, Contact, Sitemap and Legal Terms pages.
+- A lot of "old fashion" computer effects (pure css) added.
+- Blade Runner zeppelin animation included in some pages.
 
 ## Credits
 
-- Images by Javier Lorenzo Fernández aka [@jalofernadez](http://jalofernandez.com/)
-- Code image made with [Text-Image.com](http://www.text-image.com/)
-- [anime.js](http://anime-js.com/) by Julian Garnier
-- [Charming.js](https://github.com/yuanqing/charming) by Yuan Qing
+- **Images** and **Design** by Javier Lorenzo Fernández aka [@jalofernadez](http://jalofernandez.com/).
+- [Vue.js](https://vuejs.org/), the progressive JavaScript framework by Evan You.
+- [Nuxt.js](https://nuxtjs.org), the intuitive Vue framework by [Nuxtjs Team](https://nuxtjs.org/team).
 
 ## License
 
@@ -34,8 +33,8 @@ $ yarn start
 $ yarn generate
 ```
 
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+For detailed explanation on how things work, check out [Nuxt.js docs](https://vuejs.org/v2/guide/).
 
 ## Misc
 
-Follow me (it would be so kind of you :) [Twitter](http://www.twitter.com/jalofernandez), [Facebook](http://www.facebook.com/jalofernandez), [GitHub](https://github.com/jalofernandez), [Instagram](https://www.instagram.com/jalofernandez/)
+Follow me (it would be so kind of you :) [LinkedIn](https://www.linkedin.com/in/javierlorenzofernandez/), [Twitter](http://www.twitter.com/jalofernandez), [GitHub](https://github.com/jalofernandez), [Instagram](https://www.instagram.com/jalofernandez/)
