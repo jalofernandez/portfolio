@@ -52,7 +52,7 @@
             :title="`${item.title} by ${owner.name} (${owner.nickname})`"
             :alt="`${item.title} by ${owner.name} (${owner.nickname})`"
           />
-          <div class="item-tags-list">
+          <!-- <div class="item-tags-list">
             <small
               v-for="(tag, index) in item.tags"
               :key="index"
@@ -60,7 +60,7 @@
             >
               {{ tag }}
             </small>
-          </div>
+          </div> -->
           <div class="img-overlay">
             {{ overlay }}
           </div>
@@ -68,7 +68,7 @@
       </transition-group>
     </div>
     <div style="clear:both;"></div>
-    <TheFooter :name="'_check my Profile'" :page="'cv-resume'" />
+    <TheFooter :name="'my Profile'" :page="'cv-resume'" />
   </main>
 </template>
 
