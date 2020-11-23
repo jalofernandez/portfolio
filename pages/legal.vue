@@ -200,7 +200,7 @@
             En esta tabla desgloso el motivo por el que trato tus datos y durante cuánto tiempo lo conservo:
           </p>
           <div class="table-container">
-            <table class="table is-bordered is-narrow is-fullwidth is-size-6 is-size-7-mobile">
+            <table class="table responsive-table">
               <thead>
                 <tr>
                   <th>Finalidad</th>
@@ -276,7 +276,7 @@
             contraprestación o compensación de ningún tipo por el ejercicio de tus derechos.
           </p>
           <div class="table-container">
-            <table class="table is-bordered is-narrow is-fullwidth is-size-6 is-size-7-mobile">
+            <table class="table responsive-table">
               <thead>
                 <tr>
                   <th>Derecho</th>
@@ -640,7 +640,7 @@
             Esta es la <b>relación de cookies</b> que usa <span class="url">{{ owner.url }}</span>:
           </p>
           <div class="table-container">
-            <table class="table is-bordered is-narrow is-fullwidth is-size-7">
+            <table class="table responsive-table">
               <thead>
                 <tr>
                   <th>Nombre</th>
