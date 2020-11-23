@@ -25,7 +25,6 @@
       </div>
       <div class="modal-overlay flicker" @click="closeModal()"></div>
     </div>
-    <Zeppelin />
     <div class="content">
       <div class="content--inner old-crt--theme">
         <TheHeader />
@@ -239,10 +238,9 @@
 import TheHeader from '~/components/TheHeader.vue'
 import TheFooter from '~/components/TheFooter.vue'
 import AnimLine from '~/components/AnimLine.vue'
-import Zeppelin from '~/components/Zeppelin'
 
 export default {
-  components: { TheHeader, TheFooter, AnimLine, Zeppelin },
+  components: { TheHeader, TheFooter, AnimLine },
   data() {
     return {
       modalShow: false,
