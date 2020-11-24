@@ -7,7 +7,7 @@
         <!-- typewritin´Title -->
         <div class="typewriter--theme is-error">
           <h3 class="mode--code">
-            Página de contacto [<b>Find me!</b>]
+            Contacto <span>[</span> Find me! <span>]</span>
           </h3>
         </div>
         <TheFooter :name="'Portfolio'" :page="'portfolio'" />

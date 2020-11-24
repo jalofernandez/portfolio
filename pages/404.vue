@@ -6,7 +6,7 @@
         <TheHeader />
         <!-- typewritin´Title -->
         <div class="typewriter--theme is-error">
-          <h3 class="mode--code"> <span>[</span> Error 404 <span>]</span> Page Not Found </h3>
+          <h3 class="mode--code"> <span>[</span> 404 <span>]</span> Page Not Found </h3>
         </div>
         <TheFooter :name="'Portfolio'" :page="'portfolio'" />
       </div>

@@ -7,7 +7,7 @@
         <!-- typewritin´Title -->
         <div class="typewriter--theme is-sitemap">
           <h3 class="mode--code">
-            Página del sitio web [<b>sitemap</b>]
+            Sitio web [ <b>sitemap</b> ]
           </h3>
         </div>
         <section>
