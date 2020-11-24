@@ -129,84 +129,17 @@ a
   left: 0
   display: flex
   align-items: center
-  width: 100%
-  height: 100%
-  overflow: hidden // be careful with this class
+  // width: 100%
+  // height: 100%
+  // overflow: hidden // be careful with this class
+  min-width: 100%
+  min-height: 100%
 
 .content--inner
   z-index: 100
   flex-direction: column
   align-content: flex-start
   padding: 2.25em 2.5em 0
-
-// .portfolio-experiment
-// 	background: #00ffa5
-// 	color: #203e86
-// 	$steps: 50
-// 	.experiment-title 
-// 		outline: none
-// 		font-size: 10vw
-// 		text-align: center
-// 		font-family: "Roboto", monospace
-// 		min-height: 10vw
-// 		max-width: 80vw
-// 		min-width: 10vw
-// 		&,*
-// 			animation: cray 6s infinite steps($steps)
-// 			display: inline-block
-
-// 	@keyframes cray
-// 		@for $i from 1 to $steps
-// 			$per: 100% / $steps * $i;
-// 			$weight: (
-// 				100,
-// 				200,
-// 				300,
-// 				400,
-// 				500,
-// 				600,
-// 				700
-// 			)
-// 			$style: (
-// 				normal,
-// 				italic,
-// 				normal,
-// 				normal
-// 			)
-// 			$decor: (
-// 				none,
-// 				none,
-// 				line-through,
-// 				underline,
-// 				none,
-// 				none,
-// 				none
-// 			)
-// 			$trans: (
-// 				none,
-// 				none,
-// 				uppercase,
-// 				lowercase,
-// 				capitalize,
-// 				none,
-// 				none,
-// 				none,
-// 				none,
-// 				none,
-// 				none
-// 			)
-
-// 			$arrayW: random(7);
-// 			$arrayS: random(4);
-// 			$arrayD: random(7);
-// 			$arrayT: random(11);
-
-// 			#{$per} 
-// 				font-weight: nth($weight, $arrayW)
-// 				font-style: nth($style, $arrayS)
-// 				text-decoration: nth($decor, $arrayD)
-// 				text-transform: nth($trans, $arrayT)
-
 
 // "Content" row (links list) in Home page
 .mode--code,
