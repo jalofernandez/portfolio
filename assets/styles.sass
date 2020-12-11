@@ -69,9 +69,12 @@ a
       min-height: 105% // to fit "old-crt-effect" in all height when scroll is enabled
     .content--body
       width: 100%
-  &:not(.sitemap)
-    .nuxt-link-exact-active
-      display: none!important
+      
+  .nuxt-link-exact-active
+    opacity: .5
+    cursor: not-allowed
+    text-decoration: line-through
+    pointer-events: none
 
 .btn
   min-width: 100px
@@ -209,6 +212,8 @@ a
     position: relative
     display: inline-block
     pointer-events: none
+  @media (max-width: 640px)
+    font-size: 1.2em
 
 .is-current
   pointer-events: none
@@ -238,8 +243,6 @@ a
 
 // Smartphones
 @media screen and (max-width: 640px)
-  .content--footer
-    font-size: 0.85em
   h1 
     padding-left: 25px
     font-size: 1.14em

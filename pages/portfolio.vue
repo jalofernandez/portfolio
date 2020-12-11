@@ -68,7 +68,7 @@
       </transition-group>
     </div>
     <div style="clear:both;"></div>
-    <TheFooter :name="'my Profile'" :page="'cv-resume'" />
+    <TheFooter :name="'Profile'" :page="'cv-resume'" />
   </main>
 </template>
 

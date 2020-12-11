@@ -8,7 +8,7 @@
       @click="toggleShow()"
       v-if="!isMenuShown"
     >
-      ../ menu
+      <span v-if="$mq !== 'mobile'">../</span> <b>Menu</b>
     </button>
     <div :class="['modal-wrapper', { 'md-show': isMenuShown }]">
       <div id="modal-00" class="md-modal md-menu">
