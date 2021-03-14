@@ -94,7 +94,7 @@ export default {
   robots: {
     UserAgent: "*",
     Allow: "/",
-    Sitemap: `https://jalofernandez/sitemap.xml`,
+    Sitemap: `https://jalofernandez.com/sitemap.xml`,
   },
   optimizedImages: {
     optimizeImages: true
