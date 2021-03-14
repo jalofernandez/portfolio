@@ -129,7 +129,7 @@ export default {
     },
   },
   gtm: {
-    id: '',
+    id: 'GTM-T5NGQ9L',
     enabled: true,
     scriptDefer: true,
     pageTracking: true,
