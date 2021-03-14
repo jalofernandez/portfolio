@@ -7,16 +7,16 @@
         :title="`Volver a la página de incio de ${owner.nickname}`"
         data-text="<< Home"
       >
-        &lt;&lt; Home
+        <small>&lt;&lt;</small> Home
       </nuxt-link>
       <TheMenu />
       <nuxt-link
         :to="{ name: page }"
-        class="btn is-link btn--designer menu--link glitch"
+        class="btn is-link btn--coder menu--link glitch"
         :title="`Ir a la página de ${name} de ${owner.nickname}`"
         :data-text="`${name} >>`"
       >
-        {{ name }} &gt;&gt;
+        {{ name }} <small>&gt;&gt;</small>
       </nuxt-link>
     </div>
   </div>

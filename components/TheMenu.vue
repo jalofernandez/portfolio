@@ -3,12 +3,12 @@
     <button
       type="button"
       class="btn is-link btn--coder menu--link glitch"
-      data-text="../ menu"
+      data-text="..Menu.."
       data-modal="modal-00"
       @click="toggleShow()"
       v-if="!isMenuShown"
     >
-      <span v-if="$mq !== 'mobile'">../</span> <b>Menu</b>
+      <span>..</span><b>Menu</b><span>..</span>
     </button>
     <div :class="['modal-wrapper', { 'md-show': isMenuShown }]">
       <div id="modal-00" class="md-modal md-menu">
@@ -21,7 +21,7 @@
                 :title="`Ir a la página ${link.name} de ${owner.nickname}`"
                 :data-text="`${link.name}`"
               >
-                {{ link.name }} <small>-&gt;</small>
+                <small v-if="link.name === 'Home'">&lt;&lt;</small> {{ link.name }} <small v-if="link.name !== 'Home'">&gt;&gt;</small>
               </nuxt-link>
             </li>
             <li class="md-menu-item is-copyright">
