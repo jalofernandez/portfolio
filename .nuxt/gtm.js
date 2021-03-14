@@ -1,7 +1,7 @@
 import { log } from './gtm.utils'
 
 const _layer = 'dataLayer'
-const _id = ''
+const _id = 'GTM-T5NGQ9L'
 
 function gtmClient(ctx, initialized) {
   return {
@@ -79,7 +79,7 @@ function startPageTracking(ctx) {
 export default function (ctx, inject) {
   const runtimeConfig = (ctx.$config && ctx.$config.gtm) || {}
   const autoInit = true
-  const id = ''
+  const id = 'GTM-T5NGQ9L'
   const runtimeId = runtimeConfig.id
   const initialized = autoInit && id ? {[id]: true} : {}
   const $gtm = process.client ? gtmClient(ctx, initialized) : gtmServer(ctx, initialized)

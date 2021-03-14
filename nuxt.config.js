@@ -36,6 +36,8 @@ export default {
       //- (microdata) TWITTER
       // { hid: 'twitter:image', name: 'twitter:image', content: 'https://peluqueriacanessa.com/img/microdata/peluqueria-canina-canessa-valdemoro-index.jpg', },
       // { hid: 'twitter:image:alt', name: 'twitter:image:alt', content: 'Jalofernández design, webmaster, frontend y diseño gráfico en Madrid' },
+      // ------------- TODO ----------
+      // IMP! -> check if the following code is necessary cause "nuxt-social-meta" plugin
       { hid: 'twitter:card', name: 'twitter:card', content: 'summary_large_image' },
       { hid: 'twitter:site', name: 'twitter:site', content: author },
       { hid: 'twitter:creator', name: 'twitter:creator', content: author },
@@ -43,6 +45,7 @@ export default {
       { name: 'og:type', content: 'website' },
       { name: 'og:locale', content: 'es_ES' },
       { name: 'og:site_name', content: description },
+      // ------------- TODO ----------
     ],
     link: [
       { rel: 'author', type: 'text/plain', href: 'https://jalofernandez.com/humans.txt' },
