@@ -87,6 +87,7 @@ yarn-error.log
 
 # other
 .nuxt
+.nuxt/*
 dist
 newrelic_agent.log
 .eslintrc
