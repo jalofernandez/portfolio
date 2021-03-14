@@ -3,4 +3,11 @@
 /* TEAM */
     Designer & Developer: Javier Lorenzo Fernández
     Twitter: @jalofernandez
-    From: Madrid, Madrid, Spain
+    Instagram: jalofernandez
+    Site: https://jalofernandez.com
+    Location: Madrid, Comunidad Autónoma de Madrid, Spain
+
+/* SITE */
+    Standards: HTML5, CSS3, JS
+    Components: Nuxtjs, Sass
+    Software: Nodejs + Vuejs (javascript)

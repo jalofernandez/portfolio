@@ -45,6 +45,7 @@ export default {
       { name: 'og:site_name', content: description },
     ],
     link: [
+      { rel: 'author', type: 'text/plain', href: 'https://jalofernandez.com/humans.txt' },
       // { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
       { rel: 'dns-prefetch', href: '//twitter.com/jalofernandez' },
       { rel: 'dns-prefetch', href: '//www.instagram.com/jalofernandez/?ref=badge' },
