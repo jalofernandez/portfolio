@@ -1,7 +1,7 @@
 <template>
   <div>
     <nuxt :class="{ 'is-scrolling': scrolling }"/>
-    <transition name="fade">
+    <!-- <transition name="fade">
       <img
         class="icon-scrolling"
         src="~/static/icon.png"
@@ -11,7 +11,7 @@
         height="45"
         v-if="scrolling && $mq !== 'mobile'"
       />
-    </transition>
+    </transition> -->
   </div>
 </template>
 
