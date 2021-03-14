@@ -1,16 +1,26 @@
-# Developer + Designer static website concept
+# Developer/Designer Page Layout Concept
 
-An experimental page layout concept with a developer/designer theme and a special effect based on a Codrops original project ([Article on Codrops](https://tympanus.net/codrops/?p=30725)) but with many improvements like:
+An experimental page layout concept with a developer/designer theme and a special effect based on a Codrops original project ([Article on Codrops](https://tympanus.net/codrops/?p=30725)) but with a los of improvements like:
 
-- Error 404, Catalog Gallery, Personal Resume, Contact, Sitemap and Legal Terms pages.
-- A lot of "old fashion" computer effects (pure css) added.
-- Blade Runner zeppelin animation included in some pages.
+- A lot of "old fashion" computing effects (pure css) added.
+- "Blade Runner" zeppelin artwork included as a background animation in some pages.
+- Pages included:
+    - Error 404 & 500
+    - Catalog Gallery (*Portfolio*)
+    - Legal Terms
+    - Contact
+    - Resume (*About Me*)
+    - Sitemap
 
-## Credits
+## Credits and Dependencies
 
-- **Images** and **Design** by Javier Lorenzo Fernández aka [@jalofernadez](http://jalofernandez.com/).
-- [Vue.js](https://vuejs.org/), the progressive JavaScript framework by Evan You.
-- [Nuxt.js](https://nuxtjs.org), the intuitive Vue framework by [Nuxtjs Team](https://nuxtjs.org/team).
+- Images by Javier Lorenzo Fernández aka [@jalofernadez](https://jalofernandez.com) and [Freepik](https://www.freepik.es).
+- [Nuxt.js](https://nuxtjs.org), open source JS framework based on:
+  - [Vue.js](https://vuejs.org) by Evan You.
+  - [Node.js](https://nodejs.org) by OpenJS Foundation.
+  - [Webpack](https://webpack.js.org) by Tobias Koppers, Sean Larkin, Johannes Ewald, Juho Vepsäläinen, Kees Kluskens, and Webpack contributors.
+  - [Babel.js](https://babeljs.io) by a lot of contributors.
+- [Bulma](https://bulma.io), open source CSS framework by Jeremy Thomas.
 
 ## License
 
@@ -30,7 +40,10 @@ $ yarn build
 $ yarn start
 
 # generate static project
-$ yarn generate
+$ npm run generate
+
+# deploy static project into Firebase
+$ firebase deploy --project alias_or_project_id --message if_you_want_a_msg
 ```
 
 For detailed explanation on how things work, check out [Nuxt.js docs](https://vuejs.org/v2/guide/).
