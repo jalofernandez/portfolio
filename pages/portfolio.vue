@@ -79,6 +79,13 @@ import portfolio from '~/data/portfolio'
 
 export default {
   components: { TheFooter },
+  asyncData() {
+    return new Promise((resolve) => {
+      setTimeout(function () {
+        resolve({ portfolio: portfolio })
+      }, 1000)
+    })
+  },
   data() {
     return {
       overlay: 'Click me to make me bigger',
@@ -92,7 +99,7 @@ export default {
         { name: 'Graphs/Draws', tag: 'graph' },
         { name: 'Motion', tag: 'videos' },
       ],
-      portfolio: portfolio,
+      // portfolio: portfolio,
       currentTag: 'all',
       currentModal: 0,
     }
