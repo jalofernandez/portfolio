@@ -174,14 +174,20 @@ export default {
             title: 'Crea tu carta digital gratis con código QR, la alternativa más segura a la carta física.',
           },
           {
-            url: 'https://theseedsquad.com/',
-            copy: 'The Seed Squad',
-            title: 'El equipo que estás buscando: tecnología accesible, diseño honesto y marketing responsable.',
+            url: 'https://peluqueriacanessa.com/',
+            copy: 'Canessa',
+            title:
+              'Canessa ofrece servicios de peluquería y belleza canina y felina con cortes de pelo comerciales y de exposición. Servicio de autolavado y de un completo SPA canino.',
           },
           {
             url: 'https://haztunegociodigital.com/',
             copy: '#HazTuNegocioDigital',
             title: 'Únete a la transformación digital: aumenta tus ventas con tu negocio también en internet.',
+          },
+          {
+            url: 'https://theseedsquad.com/',
+            copy: 'The Seed Squad',
+            title: 'El equipo que estás buscando: tecnología accesible, diseño honesto y marketing responsable.',
           },
           {
             url: 'https://comerciovecino.com/',
@@ -194,20 +200,9 @@ export default {
             title: 'Iniciativa sin ánimo de lucro de voluntarios contra el Covid-19 en período de confinamiento domiciliario.',
           },
           {
-            url: 'https://peluqueriacanessa.com/',
-            copy: 'Canessa',
-            title:
-              'Canessa ofrece servicios de peluquería y belleza canina y felina con cortes de pelo comerciales y de exposición. Servicio de autolavado y de un completo SPA canino.',
-          },
-          {
             url: 'https://ecomerzpro.net/',
             copy: 'Ecomerzpro Club',
             title: 'Ecomerzpro Club for ecommerce offers and discounts.',
-          },
-          {
-            url: 'https://widitrade.com/',
-            copy: 'Widitrade',
-            title: 'Widitrade to Increase Your Online Sales Now!',
           },
           {
             url: 'https://jalofernandez.github.io/lfcabogados/',
@@ -265,7 +260,6 @@ export default {
         { rel: 'dns-prefetch', href: '//echounamano.org/' },
         { rel: 'dns-prefetch', href: '//peluqueriacanessa.com/' },
         { rel: 'dns-prefetch', href: '//ecomerzpro.net/' },
-        { rel: 'dns-prefetch', href: '//widitrade.com/' },
         { rel: 'dns-prefetch', href: '//jalofernandez.github.io/lfcabogados/' },
         { rel: 'dns-prefetch', href: '//capaball.com/app/#/login/' },
       ],
