@@ -1,7 +1,7 @@
 const author = 'jalofernandez'
 const nickname = '@'+author
 const url = author+'.com'
-const email = 'jalofernandez@gmail.com'
+const email = author+'@gmail.com'
 
 export const state = () => ({
   name: 'Javier lorenzo Fdez',
