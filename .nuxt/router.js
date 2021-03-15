@@ -3,7 +3,6 @@ import Router from 'vue-router'
 import { interopDefault } from './utils'
 import scrollBehavior from './router.scrollBehavior.js'
 
-const _726bf9e0 = () => interopDefault(import('../pages/404.vue' /* webpackChunkName: "pages/404" */))
 const _16a10fb2 = () => interopDefault(import('../pages/contacto.vue' /* webpackChunkName: "pages/contacto" */))
 const _23fe391f = () => interopDefault(import('../pages/cv-resume.vue' /* webpackChunkName: "pages/cv-resume" */))
 const _0d242411 = () => interopDefault(import('../pages/legal.vue' /* webpackChunkName: "pages/legal" */))
@@ -28,10 +27,6 @@ export const routerOptions = {
   scrollBehavior,
 
   routes: [{
-    path: "/404",
-    component: _726bf9e0,
-    name: "404"
-  }, {
     path: "/contacto",
     component: _16a10fb2,
     name: "contacto"
