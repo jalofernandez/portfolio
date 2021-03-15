@@ -58,13 +58,18 @@ export default {
       { rel: 'dns-prefetch', href: '//github.com/jalofernandez' },
     ]
   },
+
   loading: { color: '#ccc' },
+
   css: ['@/assets/styles.sass'],
+
   plugins: [],
+
   buildModules: [
     '@nuxtjs/pwa',
     '@aceforth/nuxt-optimized-images',
   ],
+
   modules: [
     'vue-scrollto/nuxt',
     'nuxt-webfontloader',
@@ -87,14 +92,17 @@ export default {
     '@nuxtjs/gtm',
     '@nuxtjs/sitemap', // always declare the sitemap module at end of array
   ],
+
   webfontloader: {
     google: {
       families: ['Roboto+Mono:wght@300;400;600', 'Roboto:ital,wght@0,300;0,400;0,700;1,400&display=swap'],
     },
   },
+
   purgeCSS: {
     // Overrides the default settings here
   },
+
   robots: {
     UserAgent: "*",
     Allow: "/",
@@ -103,6 +111,7 @@ export default {
   optimizedImages: {
     optimizeImages: true
   },
+
   mq: {
     defaultBreakpoint: "desktop",
     breakpoints: {
@@ -114,6 +123,7 @@ export default {
       desktopUltraWide: Infinity
     }
   },
+
   pwa: {
     manifest: {
       name: 'jalofernandez: designer + coder',
@@ -132,12 +142,14 @@ export default {
       // enabled: true, // check it asap!
     },
   },
+
   gtm: {
     id: 'GTM-T5NGQ9L',
     enabled: true,
     scriptDefer: true,
     pageTracking: true,
   },
+
   sitemap: {
     hostname: `https://jalofernandez.com`,
     gzip: true,
