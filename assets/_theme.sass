@@ -196,14 +196,18 @@
   &.is-error,
   &.is-sitemap
     .mode--code
-      width: 15em
+      width: 18em
       @media (max-width: 768px)
         font-size: 1.5rem
       @media (max-width: 540px)
         font-size: 1rem
 
   &.is-error
-    margin-top: 2em
+    margin: 2em 0
+    + .is-error-desc
+      max-width: 900px
+      @media (max-width: 540px)
+        max-width: 320px
 
   &.is-sitemap
     margin-top: 1em
