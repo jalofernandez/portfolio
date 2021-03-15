@@ -149,6 +149,13 @@ export default {
       lastmodrealtime: true,
     },
   },
+
+  generate: {
+    subFolders: false,
+    fallback: '404.html'
+    // dir: 'public' // to deploy in Google Firebase ('dist' by default)
+  },
+
   build: {
     // You can extend webpack config here
     extend (config, ctx) {
