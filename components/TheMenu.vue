@@ -25,7 +25,7 @@
               </nuxt-link>
             </li>
             <li class="md-menu-item is-copyright">
-              ©{{ owner.copyright }} | <small><b>{{ currentYear }}</b></small>
+              ©{{ owner.copyright }}, <small><b>{{ currentYear }}</b></small> | <small>v<b>{{ owner.version }}</b></small>
             </li>
           </ul>
           <button
