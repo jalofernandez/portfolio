@@ -7,8 +7,8 @@
 @import "_animations"
 
 *,
-*:before,
-*:after
+*::before,
+*::after
   box-sizing: border-box
   margin: 0
 
@@ -316,7 +316,7 @@ a
       margin: .75em 0
       &:last-child
         margin-bottom: 0
-      &:before
+      &::before
         content: "--"
         display: inline
         position: absolute
@@ -572,7 +572,7 @@ td, th
     display: block
     position: relative
 
-  table.responsive-table td:empty:before
+  table.responsive-table td:empty::before
     content: '\00a0'
 
   table.responsive-table th,
