@@ -1,11 +1,12 @@
 const author = 'jalofernandez'
 const description = '@'+author+', designer + coder, personal portfolio and professional resume'
+const lang = 'es-ES'
 
 export default {
   mode: 'universal',
   head: {
     htmlAttrs: {
-      lang: 'es',
+      lang: lang,
     },
     bodyAttrs: {
       class: [author],
@@ -21,7 +22,7 @@ export default {
       { hid: 'robots', name: 'robots', content: 'index, follow, archive' },
       { hid: 'generator', name: 'generator', content: 'HTML5, CSS3, Vuejs, Nuxtjs, JavaScript, SASS, PWA, SEO' },
       { hid: 'google', name: 'google', content: 'nositelinkssearchbox' },
-      { hid: 'lang', name: 'lang', content: 'es-ES' },
+      { hid: 'lang', name: 'lang', content: lang },
       { hid: 'rating', name: 'rating', content: 'General' },
       { hid: 'coverage', name: 'coverage', content: 'Worldwide' },
       //- (metas) to customize (all browsers) top navbar
@@ -82,7 +83,7 @@ export default {
           "Javier Lorenzo Fdez personal resume and professional portfolio as a graphic designer and front-end + UX developer",
         url: "https://www.jalofernandez.com",
         // img: "/link_to_image_in_static_folder.jpg",
-        locale: "es-ES",
+        locale: lang,
         twitter: "@jalofernandez",
         themeColor: "#232323"
       }
@@ -134,7 +135,7 @@ export default {
       // display: 'standalone', // value by default
       background_color: '#fbf8ff',
       theme_color: '#363636',
-      lang: 'es-ES',
+      lang: lang,
       // dir: 'ltr', // value by default
       useWebmanifestExtension: false,
     },
