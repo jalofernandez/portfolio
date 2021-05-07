@@ -43,7 +43,7 @@ $ yarn start
 $ npm run generate
 
 # deploy static project into Firebase
-$ firebase deploy --project alias_or_project_id --message if_you_want_a_msg
+$ firebase deploy --project <alias_or_project_id> --message <if-you-want-a-msg>
 ```
 
 For detailed explanation on how things work, check out [Nuxt.js docs](https://vuejs.org/v2/guide/).
