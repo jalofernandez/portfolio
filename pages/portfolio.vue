@@ -1,7 +1,7 @@
 <template>
   <main class="page portfolio">
     <!-- (modal dialogs) each Gallery item -->
-    <div :class="['modals-list', { 'md-show': currentModal != 0 }]">
+    <!-- <div :class="['modals-list', { 'md-show': currentModal != 0 }]">
       <div v-for="item in portfolio" :key="item.id" :class="['modal-wrapper', { 'md-show': showModal(item.id) }]">
         <div :id="`modal-${item.id}`" class="md-modal" @click="toggleModal(item.id)">
           <div class="md-content">
@@ -20,6 +20,26 @@
         </div>
         <div class="modal-overlay flicker"></div>
       </div>
+    </div> -->
+
+    <!-- (modal dialogs) each Gallery item -->
+    <div v-for="item in modalItems" :key="item.id" :class="['modal-wrapper', { 'md-show': showModal(item.id) }]">
+      <div :id="`modal-${item.id}`" class="md-modal" @click="closeModal()">
+        <div class="md-content">
+          <img
+            :src="require(`~/assets/portfolio/${item.img}`)"
+            :title="`${item.title} by ${owner.name} (${owner.nickname})`"
+            :alt="`${item.title} by ${owner.name} (${owner.nickname})`"
+          />
+          <p>
+            {{ item.title }}
+          </p>
+          <button class="btn menu--link glitch" data-text="X close Me!">
+            <b>&times;</b> close Me!
+          </button>
+        </div>
+      </div>
+      <div class="modal-overlay flicker"></div>
     </div>
     <!-- top Navbar to filter Gallery below -->
     <div class="navbar-filter-btns">
@@ -44,7 +64,7 @@
           v-for="item in filteredItems"
           :key="item.id"
           class="item-portfolio"
-          @click.stop="toggleModal(item.id)"
+          @click.stop="openCurrentItemModal(item.id)"
         >
           <img
             :src="require(`~/assets/portfolio/${item.img}`)"
@@ -129,9 +149,15 @@ export default {
   computed: {
     filteredItems() {
       var filter = this.currentTag
-      return this.portfolio.filter(function(item) {
-        return item.tags.indexOf(filter) !== -1
-      })
+      return this.portfolio.filter(
+        item => item.tags.indexOf(filter) !== -1
+      )
+    },
+    modalItems() {
+      var modal = this.currentModal
+      return this.portfolio.filter(
+        item => item.id === modal
+      )
     }
   },
   methods: {
@@ -143,13 +169,12 @@ export default {
     showModal(id) {
       return this.currentModal === id
     },
-    toggleModal(id) {
-      if(this.currentModal !== 0) {
-        this.currentModal = 0
-        return false
-      }
+    openCurrentItemModal(id) {
       this.currentModal = id
-    }
+    },
+    closeModal() {
+      this.currentModal = 0
+    },
   },
 }
 </script>
