@@ -52,6 +52,7 @@
             :title="`${item.title} by ${owner.name} (${owner.nickname})`"
             :alt="`${item.title} by ${owner.name} (${owner.nickname})`"
           />
+          <!-- to show tag label in each portfolio item -->
           <!-- <div class="item-tags-list">
             <small
               v-for="(tag, index) in item.tags"
@@ -129,21 +130,20 @@ export default {
   },
   computed: {
     filteredItems() {
-      var filter = this.currentTag;
+      var filter = this.currentTag
       return this.portfolio.filter(function(item) {
-        return item.tags.indexOf(filter) !== -1;
-      });
+        return item.tags.indexOf(filter) !== -1
+      })
     }
   },
   methods: {
     filterItems(tag) {
       setTimeout(() => {
-        this.currentTag = tag;
-      }, 300);
-      // this.currentTag = tag;
+        this.currentTag = tag
+      }, 300)
     },
     showModal(id) {
-      return this.currentModal === id 
+      return this.currentModal === id
     },
     toggleModal(id) {
       if(this.currentModal !== 0) {

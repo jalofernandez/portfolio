@@ -20,10 +20,10 @@ export default {
   computed: {
     errorPage() {
       if (this.error.statusCode === 404) {
-        return error404;
+        return error404
       }
       // catch everything else
-      return error500;
+      return error500
     },
   },
   mounted() {
