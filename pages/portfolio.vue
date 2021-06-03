@@ -37,7 +37,6 @@
         {{ link.name }}
       </button>
     </div>
-    <div style="clear:both;"></div>
     <!-- (gallery) @jalofernandez works -->
     <div id="portfolio">
       <transition-group name="fade" class="list-complete" tag="section">
@@ -68,7 +67,6 @@
         </div>
       </transition-group>
     </div>
-    <div style="clear:both;"></div>
     <TheFooter :name="'Profile'" :page="'cv-resume'" />
   </main>
 </template>
