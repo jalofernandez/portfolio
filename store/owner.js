@@ -9,6 +9,7 @@ export const state = () => ({
   url: url,
   email: email,
   copyright: author,
+  phone: 696682791,
   version: '2.0.6',
   schema: {
     '@context': 'http://schema.org',

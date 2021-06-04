@@ -222,7 +222,7 @@
                 ( 2006 - 2011 ) <b>Ilustrador</b> en la revista bimestral de tirada nacional <em>"Punto y Coma;"</em>.
               </p>
               <p>
-                (2003 - 2005) <b>Maquetador</b> y <b>artefinalista</b> de la revista mensual de tirada nacional <em>"La Talanquera"</em>.
+                ( 2003 - 2005 ) <b>Maquetador</b> y <b>artefinalista</b> de la revista mensual de tirada nacional <em>"La Talanquera"</em>.
               </p>
             </div>
           </section>
@@ -246,9 +246,9 @@ export default {
       modalShow: false,
       owner: this.$store.state.owner,
       skills: [
-        { row: 'HTML5, pug, twig, CSS3, sass, tailwindcss,' },
-        { row: 'nodejs, jQuery, JS ES6, vuejs, nuxtjs,' },
-        { row: 'npm, yarn, gulp, PWA, AMP, SEO,' },
+        { row: 'HTML5, pug, CSS3, sass, tailwindcss,' },
+        { row: 'jQuery, JS ES6, vuejs, nuxtjs,' },
+        { row: 'nodejs, npm, yarn, gulp, PWA, SEO,' },
         { row: 'git, github, bitbucket, firebase,' },
         { row: 'scrum, agile, trello, jira, slack,' },
         { row: 'responsive design, photo, video...' },

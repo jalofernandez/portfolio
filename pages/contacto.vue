@@ -5,11 +5,39 @@
       <div class="content--inner old-crt--theme">
         <TheHeader />
         <!-- typewritin´Title -->
-        <div class="typewriter--theme is-error">
+        <div class="typewriter--theme is-sitemap">
           <h3 class="mode--code">
             Contacto <span>[</span> Find me! <span>]</span>
           </h3>
         </div>
+        <section class="paragraph-block has-btns">
+          <a
+            :href="`tel:${owner.phone}`"
+            class="btn is-link is-boxed btn--designer menu--link glitch"
+            :title="`Llamar a ${owner.name}`"
+            data-text="_llámane al móvil"
+          >
+            >_<small>llámane al</small> móvil
+          </a>
+          <a
+            :href="`https://wa.me/34${owner.phone}`"
+            class="btn is-link is-boxed btn--coder menu--link glitch"
+            :title="`Wasapea con ${owner.name}`"
+            target="_blank"
+            rel="noopener noreferrer"
+            data-text="escríbeme a Whatsapp"
+          >
+            >_<small>Escríbeme a</small> Whatsapp
+          </a>
+          <a
+            :href="`mailto:${owner.email}`"
+            class="btn is-link is-boxed btn--designer menu--link glitch"
+            :title="`Escribir un email a ${owner.email}`"
+            data-text="escríbeme un email"
+          >
+            >_<small>Escríbeme un</small> email
+          </a>
+        </section>
         <TheFooter :name="'Portfolio'" :page="'portfolio'" />
       </div>
     </div>
