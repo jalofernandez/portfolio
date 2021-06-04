@@ -1,28 +1,6 @@
 <template>
   <main class="page portfolio">
     <!-- (modal dialogs) each Gallery item -->
-    <!-- <div :class="['modals-list', { 'md-show': currentModal != 0 }]">
-      <div v-for="item in portfolio" :key="item.id" :class="['modal-wrapper', { 'md-show': showModal(item.id) }]">
-        <div :id="`modal-${item.id}`" class="md-modal" @click="toggleModal(item.id)">
-          <div class="md-content">
-            <img
-              :src="require(`~/assets/portfolio/${item.img}`)"
-              :title="`${item.title} by ${owner.name} (${owner.nickname})`"
-              :alt="`${item.title} by ${owner.name} (${owner.nickname})`"
-            />
-            <p>
-              {{ item.title }}
-            </p>
-            <button class="btn menu--link glitch" data-text="X close Me!">
-              <b>&times;</b> close Me!
-            </button>
-          </div>
-        </div>
-        <div class="modal-overlay flicker"></div>
-      </div>
-    </div> -->
-
-    <!-- (modal dialogs) each Gallery item -->
     <div v-for="item in modalItems" :key="item.id" :class="['modal-wrapper', { 'md-show': showModal(item.id) }]">
       <div :id="`modal-${item.id}`" class="md-modal" @click="closeModal()">
         <div class="md-content">
