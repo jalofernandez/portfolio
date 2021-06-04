@@ -15,7 +15,7 @@
     "id": 2,
     "img": "upplication-business-card-cover_by-jalofernandez.jpg",
     "title": "Upplication business card cover",
-    "tags": ["all", "layout"]
+    "tags": ["all", "graph"]
   },
   {
     "id": 3,
@@ -27,7 +27,7 @@
     "id": 19,
     "img": "ecomerzpro_email-template-marketplace_by-jalofernandez.jpg",
     "title": "EcomerzPro email layout",
-    "tags": ["all", "layout"]
+    "tags": ["all", "layout", "web"]
   },
   {
     "id": 4,
@@ -81,7 +81,7 @@
     "id": 21,
     "img": "wellness_promo-flyerA5-sideA_by-jalofernandez.jpg",
     "title": "Wellness promo flyer layout",
-    "tags": ["all", "layout"]
+    "tags": ["all", "graph"]
   },
   {
     "id": 22,
@@ -135,7 +135,7 @@
     "id": 65,
     "img": "upplication_crew-team-manifest_by-jalofernandez.jpg",
     "title": "Upplication crew infography",
-    "tags": ["all", "layout", "graph"]
+    "tags": ["all", "layout", "graph", "photo"]
   },
   {
     "id": 66,
@@ -201,7 +201,7 @@
     "id": 28,
     "img": "ecomerzpro-club_landing-page_by-jalofernandez.jpg",
     "title": "Ecomerz Pro landing page",
-    "tags": ["all", "layout", "web"]
+    "tags": ["all", "web"]
   },
   {
     "id": 29,
@@ -315,7 +315,7 @@
     "id": 49,
     "img": "teayudamosavendermas_folder_by-jalofernandez.jpg",
     "title": "Te ayudamos a vender más promo folders",
-    "tags": ["all", "pack", "photo"]
+    "tags": ["all", "pack"]
   },
   {
     "id": 52,
@@ -369,7 +369,7 @@
     "id": 35,
     "img": "wellness_bcard-sideA-designed-by-jalofernandez.jpg",
     "title": "Wellness business card side A",
-    "tags": ["all", "pack", "photo"]
+    "tags": ["all", "graph"]
   },
   {
     "id": 36,
@@ -447,13 +447,13 @@
     "id": 77,
     "img": "echounamano-imagotipo-motion_by-jalofernandez.gif",
     "title": "#EchoUnaMano NGO imagotype in motion",
-    "tags": ["all", "graph", "motion"]
+    "tags": ["all", "graph", "video"]
   },
   {
     "id": 78,
     "img": "echounamano-logo-designs_by-jalofernandez.jpg",
     "title": "#EchoUnaMano NGO logotype designs",
-    "tags": ["all", "layout", "web", "graph", "pack", "photo", "motion"]
+    "tags": ["all", "graph"]
   },
   {
     "id": 79,
@@ -531,6 +531,6 @@
     "id": 91,
     "img": "haztunegociodigital-restaurant-qrcodes-prints_by-jalofernandez.jpg",
     "title": "#HazTuNegocioDigital restaurant QR codes prints",
-    "tags": ["all", "layout", "graph"]
+    "tags": ["all", "photo", "graph"]
   }
 ]
