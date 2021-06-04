@@ -31,7 +31,7 @@
               </li>
               <li :class="`menu--item ${design.tag}`" v-for="(design, index) in links.designer" :key="index">
                 <nuxt-link
-                  :to="{ name: 'portfolio' }"
+                  :to="{ name: 'portfolio', params: { filter: design.tag } }"
                   class="menu--link glitch"
                   :data-text="design.copy"
                   :title="`Ver Portfolio completo de ${owner.nickname}`"
@@ -151,8 +151,12 @@ export default {
             copy: 'graphisms; draws',
           },
           {
-            tag: 'videos',
+            tag: 'video',
             copy: 'videos ? motion',
+          },
+          {
+            tag: 'all',
+            copy: '>_ver portfolio completo',
           },
         ],
         coder: [

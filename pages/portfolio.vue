@@ -26,9 +26,9 @@
         v-for="(link, index) in links"
         :key="index"
         type="button"
-        value="text"
-        name="all"
-        aria-labelledby="all"
+        :name="link.name"
+        :value="link.name"
+        :aria-labelledby="link.name"
         :data-text="link.name"
         @click="filterItems(link.tag)"
       >
@@ -80,7 +80,7 @@ export default {
     return new Promise((resolve) => {
       setTimeout(function () {
         resolve({ portfolio: portfolio })
-      }, 1000)
+      }, 500)
     })
   },
   data() {
@@ -94,10 +94,10 @@ export default {
         { name: 'UX/UI/Web', tag: 'web' },
         { name: 'Packaging', tag: 'pack' },
         { name: 'Graphs/Draws', tag: 'graph' },
-        { name: 'Motion', tag: 'videos' },
+        { name: 'Motion', tag: 'video' },
       ],
-      // portfolio: portfolio,
-      currentTag: 'all',
+      // portfolio: portfolio, // without "asyncData" method
+      currentTag: this.$route.params.filter || 'all',
       currentModal: 0,
     }
   },
