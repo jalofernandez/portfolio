@@ -3,7 +3,9 @@ const description = '@'+author+', designer + coder, personal portfolio and profe
 const lang = 'es-ES'
 
 export default {
-  mode: 'universal',
+  mode: 'universal', // deprecated
+  ssr: 'true', // use it instead "mode"
+  target: 'static',
   head: {
     htmlAttrs: {
       lang: lang,
